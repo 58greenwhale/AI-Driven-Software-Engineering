@@ -1,6 +1,6 @@
 # 制品目录
 
-制品由用途决定，编号稳定，实例随项目和版本更新。本目录列出 A01–A22 的用途、适用条件和生成规范，每类配套空白模板及教学填写示例。
+制品由用途决定，编号稳定，实例随项目和版本更新。本目录列出 A01–A27 的用途、适用条件和生成规范，每类配套空白模板及教学填写示例。
 
 下表输出位置以目标项目为根目录，是实例存放位置的建议。教学输入见 [FocusTask 上下文](../examples/focustask/docs/context.md)，文档覆盖与建设进度见[执行状态](../execution/status.md)。
 
@@ -30,12 +30,19 @@
 | A20 | [维护验证报告](artifacts/A20-maintenance.md) | 项目按维护事件触发；每次修复/变更/回退演练 | `evidence/maintenance/report.md` |
 | A21 | [实际人机交互记录](artifacts/A21-interaction-log.md) | 研究实证时必要；普通项目可简化；关键活动、决定、反馈和恢复时记录 | `evidence/interactions.md` |
 | A22 | [模型实证评价](artifacts/A22-model-evaluation.md) | 开展模型评价时使用；先定义问题，再填真实观察与局限 | `evaluation.md` |
+| A23 | [原型版本与反馈确认记录](artifacts/A23-prototype-feedback.md) | 每轮原型构建必要；轻量项目可并入A10/A16章节但保留版本与确认字段；新版本、体验反馈或确认行为变化时更新 | `evidence/prototypes/{版本}/feedback.md` |
+| A24 | [工程化差距与重构方案](artifacts/A24-refactoring-plan.md) | 条件触发；开展重构、模拟实现替换或整体重写时必要；无重构需要不强制 | `docs/refactoring-plan.md` |
+| A25 | [面向人的实现解读](artifacts/A25-implementation-guide.md) | 首轮系统审查后必要；可按模块增量；代码变化后同步更新 | `docs/implementation-guide.md` |
+| A26 | [同类问题排查与修复记录](artifacts/A26-pattern-remediation.md) | 发现缺陷、验收失败或维护问题时必要；未发现其他实例也记录范围、方法与限制 | `evidence/pattern-remediation.md` |
+| A27 | [视觉与交互设计交付包](artifacts/A27-design-delivery.md) | 有UI且开展精修时必要；无UI不生成但保留A05；设计来源、版本或交付内容变化时更新 | `docs/design/{特性}/delivery.md` |
 
 ## 依赖与更新
 
 制品按当前活动需要增量生成，不要求全部需求与设计文档完成后才能构建原型。功能规则、设计、计划与代码在反馈中同步演化；A06 在重要取舍时产生，A08 可先以部分信息建立，再补真实命令。A09 的脚本是初始化输出，不能作为初始化前置条件。候选形成后以 A12–A16 支持审查、交接与独立验收，再按需要产生 A17–A20。
 
 维护由 A15 输入到受影响的 A01–A11，然后重新验证并更新 A20。A21 伴随活动采集，A22 先设评价问题、后使用真实证据填结果。A16 是持续维护的索引，不要求所有将来产物在开始时存在；未产生引用标为待生成。
+
+A23–A27 由四项开发活动产生：[原型构建](stages/prototype-building.md)输出A23，[原型重构](stages/prototype-refactoring.md)输出A24，[原型审查](stages/prototype-review.md)输出A25与A26，[原型精修](stages/prototype-polishing.md)输出A27。A12 管理审查过程与结论，A25 保存持续维护的实现说明，A26 管理具体问题模式的排查闭环；A24 聚焦重构差距，实施任务统一关联A10；A27 管理设计交付，当前用于编码与验证的UI行为以A05为准。
 
 ## 按制品操作
 
@@ -46,7 +53,7 @@
 ## 人驱动制品选择
 
 ```text
-[CATALOG-SELECT] 请根据 {本轮目标} 和 {现有制品路径}，用 A01–A22 建立本轮制品表。
+[CATALOG-SELECT] 请根据 {本轮目标} 和 {现有制品路径}，用 A01–A27 建立本轮制品表。
 说明每种制品由谁使用、缺少会阻止什么动作，标记必要/条件触发/可合并。
 先列本轮需要新建或更新的内容，不重新生成仍有效的文档。
 输出包含具体路径与下一条提示词编号，未知信息标记待澄清。

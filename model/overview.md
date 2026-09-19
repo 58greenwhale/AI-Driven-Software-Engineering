@@ -10,6 +10,8 @@
 
 原型重构对齐技术栈、架构和非功能约束，同步实现、测试与工作规则。原型审查检查实现、生成面向人的解读，并从单个问题排查全项目同类实例。原型精修使用 AI、人工或混合设计改善 UI 与交互；行为变化同步规格并重新审查、回归。
 
+四项活动分别产生 A23 原型版本与反馈确认记录、A24 工程化差距与重构方案、A25 面向人的实现解读、A26 同类问题排查与修复记录、A27 视觉与交互设计交付包。
+
 活动可按功能并行、按迭代顺序或混合组织，可裁剪合并。适用的质量、确认和追踪责任持续有效，安全与数据保护从构建开始落实。
 
 独立验收依据确认规格和固定候选，验收者只读实现；发现问题后交回相关活动，修复后对新候选复验。发布与维护在本地目标环境操作，按项目要求验证服务、数据及恢复能力。
@@ -18,6 +20,8 @@
 
 - [制品目录](artifact-catalog.md)：按用途选择规范、模板与教学例。
 - [初始化](practices/initialization.md)、[裁剪](tailoring.md)、[提示词协议](practices/prompt-protocol.md)：准备工作与操作方法。
+- [原型构建](stages/prototype-building.md)、[原型重构](stages/prototype-refactoring.md)、[原型审查](stages/prototype-review.md)、[原型精修](stages/prototype-polishing.md)：四项开发活动的操作链与提示词。
+- [生命周期图解](visual-guide.md)：活动关系、人机协作、制品流转与组织方式。
 - [交接](practices/context.md)、[变更](practices/change-control.md)、[验证规则](practices/verification.md)：贯穿各项活动的工作机制。
 - [独立验收](stages/verification.md)、[发布](stages/release.md)、[维护](stages/maintenance.md)：候选交付与运行反馈的操作指南。
 - [教学上下文](../examples/focustask/docs/context.md)：创建任务和任务列表的示例输入。

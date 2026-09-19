@@ -19,7 +19,7 @@ function fixture(t) {
     fs.mkdirSync(path.dirname(file), { recursive: true });
     fs.writeFileSync(file, content);
   };
-  const index = Array.from({ length: 22 }, (_, i) => {
+  const index = Array.from({ length: 27 }, (_, i) => {
     const id = `A${String(i + 1).padStart(2, '0')}`;
     const item = { id, title: id, spec: `model/artifacts/${id}.md`, template: `templates/${id}.md`, example: `examples/${id}.md` };
     write(item.spec, `# ${id}\n\n## 必填内容与字段含义\n\n## 质量标准与边界\n\n${artifactPrompts.map((key) => `[${id}-${key}]`).join('\n')}\n`);
@@ -28,7 +28,11 @@ function fixture(t) {
     return item;
   });
   write('model/artifact-index.json', JSON.stringify(index));
-  for (const [name, prefix] of Object.entries({ verification: 'VAL', release: 'REL', maintenance: 'MAINT' })) {
+  const guides = {
+    'prototype-building': 'BUILD', 'prototype-refactoring': 'REFR', 'prototype-review': 'AUDIT', 'prototype-polishing': 'POLISH',
+    verification: 'VAL', release: 'REL', maintenance: 'MAINT',
+  };
+  for (const [name, prefix] of Object.entries(guides)) {
     write(`model/stages/${name}.md`, `# ${name}\n\n${stagePrompts.map((key) => `[${prefix}-${key}]`).join('\n')}\n`);
   }
   write('README.md', '# Fixture\n\n[Specification](model/artifacts/A01.md#必填内容与字段含义)\n');
@@ -43,12 +47,13 @@ function run(root) {
   return { code: result.status, report: JSON.parse(result.stdout) };
 }
 
-test('complete artifact set and three lifecycle guides pass', (t) => {
+test('complete artifact set, four activities and three lifecycle guides pass', (t) => {
   const f = fixture(t);
   const { code, report } = run(f.root);
   assert.equal(code, 0);
   assert.deepEqual(report.errors, []);
-  assert.equal(report.artifacts, 22);
+  assert.equal(report.artifacts, 27);
+  assert.equal(report.activities, 4);
   assert.equal(report.stages, 3);
   assert.equal(report.localLinks, 1);
 });
@@ -57,9 +62,10 @@ const cases = [
   ['missing spec', (f) => fs.unlinkSync(path.join(f.root, 'model/artifacts/A01.md')), /A01: spec.*missing or unreadable/],
   ['missing template', (f) => fs.unlinkSync(path.join(f.root, 'templates/A01.md')), /A01: template.*missing or unreadable/],
   ['missing example', (f) => fs.unlinkSync(path.join(f.root, 'examples/A01.md')), /A01: example.*missing or unreadable/],
-  ['duplicate ID', (f) => { f.index[1].id = 'A01'; f.write('model/artifact-index.json', JSON.stringify(f.index)); }, /Expected 22 unique/],
-  ['missing indexed type', (f) => f.write('model/artifact-index.json', JSON.stringify(f.index.slice(1))), /Expected 22 unique/],
-  ['unexpected ID', (f) => { f.index[21].id = 'A99'; f.write('model/artifact-index.json', JSON.stringify(f.index)); }, /Expected 22 unique/],
+  ['duplicate ID', (f) => { f.index[1].id = 'A01'; f.write('model/artifact-index.json', JSON.stringify(f.index)); }, /Expected 27 unique/],
+  ['missing indexed type', (f) => f.write('model/artifact-index.json', JSON.stringify(f.index.slice(1))), /Expected 27 unique/],
+  ['missing A23 entry', (f) => f.write('model/artifact-index.json', JSON.stringify(f.index.slice(0, 26))), /Expected 27 unique/],
+  ['unexpected ID', (f) => { f.index[26].id = 'A99'; f.write('model/artifact-index.json', JSON.stringify(f.index)); }, /Expected 27 unique/],
   ['malformed JSON', (f) => f.write('model/artifact-index.json', '{'), /expected a JSON array/],
   ['wrong index shape', (f) => f.write('model/artifact-index.json', '{}'), /expected a JSON array/],
   ['invalid entry', (f) => { f.index[0] = null; f.write('model/artifact-index.json', JSON.stringify(f.index)); }, /Invalid artifact entry/],
@@ -71,6 +77,11 @@ const cases = [
   ['missing guide', (f) => fs.unlinkSync(path.join(f.root, 'model/stages/release.md')), /stages\/release.md: missing/],
   ['missing stage prompt', (f) => f.replace('model/stages/release.md', '[REL-START]', ''), /release: missing START prompt/],
   ['wrong stage prefix', (f) => f.replace('model/stages/release.md', '[REL-START]', '[VAL-START]'), /release: missing START prompt/],
+  ['missing A25 prompt', (f) => f.replace('model/artifacts/A25.md', '[A25-VERIFY]', ''), /A25: missing VERIFY prompt/],
+  ['missing A27 example boundary', (f) => f.replace('examples/A27.md', '不作通过结论', ''), /A27: example lacks evidence boundary/],
+  ['missing activity guide', (f) => fs.unlinkSync(path.join(f.root, 'model/stages/prototype-review.md')), /stages\/prototype-review.md: missing/],
+  ['missing activity prompt', (f) => f.replace('model/stages/prototype-review.md', '[AUDIT-RECOVER]', ''), /prototype-review: missing RECOVER prompt/],
+  ['wrong activity prefix', (f) => f.replace('model/stages/prototype-polishing.md', '[POLISH-START]', '[BUILD-START]'), /prototype-polishing: missing START prompt/],
   ['broken link', (f) => f.write('README.md', '# Fixture\n\n[Missing](absent.md)\n'), /missing link target/],
   ['broken anchor', (f) => f.write('README.md', '# Fixture\n\n[Missing](model/artifacts/A01.md#absent)\n'), /missing anchor/],
   ['invalid URL encoding', (f) => f.write('README.md', '# Fixture\n\n[Bad](%XX.md)\n'), /invalid link encoding/],
@@ -113,11 +124,47 @@ test('invalid CLI arguments return usage failure', () => {
   assert.match(result.stderr, /Usage:/);
 });
 
-test('renderer rejects missing sources before invoking an external tool', () => {
-  const result = spawnSync(process.execPath, [renderer, '--cli', '/nonexistent/test-mmdc'], { encoding: 'utf8' });
+function rendererInFixture(t, sources) {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'lifecycle-render-'));
+  t.after(() => fs.rmSync(root, { recursive: true, force: true }));
+  const scripts = path.join(root, 'scripts');
+  fs.mkdirSync(scripts, { recursive: true });
+  fs.copyFileSync(renderer, path.join(scripts, 'render-model-diagrams.mjs'));
+  const directory = path.join(root, 'model/diagrams');
+  fs.mkdirSync(directory, { recursive: true });
+  for (const name of sources) fs.writeFileSync(path.join(directory, `${name}.mmd`), 'flowchart TD\n  A["甲"]\n');
+  return spawnSync(process.execPath, [path.join(scripts, 'render-model-diagrams.mjs'), '--cli', '/nonexistent/test-mmdc'], { encoding: 'utf8' });
+}
+
+test('renderer rejects missing sources before invoking an external tool', (t) => {
+  const result = rendererInFixture(t, []);
   assert.equal(result.status, 1);
   assert.match(result.stderr, /缺少图解源码/);
   assert.match(result.stderr, /organization.mmd/);
   assert.doesNotMatch(result.stderr, /ENOENT|spawnSync/);
   assert.equal(result.stdout, '');
+});
+
+test('renderer lists only the sources still missing', (t) => {
+  const result = rendererInFixture(t, ['lifecycle', 'collaboration', 'artifacts']);
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /缺少图解源码：organization.mmd/);
+  assert.doesNotMatch(result.stderr, /lifecycle\.mmd/);
+});
+
+test('repository diagram sources and exports exist and cover A01-A27', () => {
+  const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+  const directory = path.join(root, 'model/diagrams');
+  for (const name of ['lifecycle', 'collaboration', 'artifacts', 'organization']) {
+    const source = fs.readFileSync(path.join(directory, `${name}.mmd`), 'utf8');
+    assert.match(source, /^flowchart (TD|TB|LR|RL)/);
+    for (const ext of ['svg', 'png']) {
+      assert.ok(fs.statSync(path.join(directory, `${name}.${ext}`)).size > 0, `${name}.${ext} is empty`);
+    }
+  }
+  const artifactsSource = fs.readFileSync(path.join(directory, 'artifacts.mmd'), 'utf8');
+  for (let i = 1; i <= 27; i += 1) {
+    const id = `A${String(i).padStart(2, '0')}`;
+    assert.ok(artifactsSource.includes(`${id} `), `artifacts.mmd misses ${id}`);
+  }
 });

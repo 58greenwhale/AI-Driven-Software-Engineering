@@ -90,9 +90,9 @@ if (indexText !== null) {
   } catch { errors.push('model/artifact-index.json: expected a JSON array'); }
 }
 const promptTypes = ['START', 'CLARIFY', 'SELECT', 'GENERATE', 'REVIEW', 'REVISE', 'VERIFY', 'HANDOFF', 'FAILURE'];
-const expectedIds = Array.from({ length: 22 }, (_, i) => `A${String(i + 1).padStart(2, '0')}`);
+const expectedIds = Array.from({ length: 27 }, (_, i) => `A${String(i + 1).padStart(2, '0')}`);
 const ids = new Set(artifacts.map((item) => item?.id));
-if (artifacts.length !== 22 || ids.size !== 22 || expectedIds.some((id) => !ids.has(id))) errors.push('Expected 22 unique artifact types A01-A22');
+if (artifacts.length !== 27 || ids.size !== 27 || expectedIds.some((id) => !ids.has(id))) errors.push('Expected 27 unique artifact types A01-A27');
 for (const item of artifacts) {
   if (!item || typeof item !== 'object' || typeof item.id !== 'string' || typeof item.title !== 'string') {
     errors.push('Invalid artifact entry: id and title are required');
@@ -112,14 +112,18 @@ for (const item of artifacts) {
   }
   if (typeof texts.example === 'string' && (!texts.example.includes('教学填写示例') || !texts.example.includes('不作通过结论'))) errors.push(`${item.id}: example lacks evidence boundary`);
 }
-// Validate the lifecycle guides included in this repository.
+// Validate development activity guides and lifecycle stage guides separately; the seven guides are not one stage list.
+const guideKeys = ['START', 'DECIDE', 'GENERATE', 'REVIEW', 'VERIFY', 'HANDOFF', 'RECOVER'];
+const activities = { 'prototype-building': 'BUILD', 'prototype-refactoring': 'REFR', 'prototype-review': 'AUDIT', 'prototype-polishing': 'POLISH' };
 const stages = { verification: 'VAL', release: 'REL', maintenance: 'MAINT' };
-for (const [stage, prefix] of Object.entries(stages)) {
-  const source = readText(path.join(root, `model/stages/${stage}.md`));
-  if (source === null) continue;
-  for (const key of ['START', 'DECIDE', 'GENERATE', 'REVIEW', 'VERIFY', 'HANDOFF', 'RECOVER']) {
-    if (!source.includes(`[${prefix}-${key}]`)) errors.push(`${stage}: missing ${key} prompt`);
+for (const guides of [activities, stages]) {
+  for (const [guide, prefix] of Object.entries(guides)) {
+    const source = readText(path.join(root, `model/stages/${guide}.md`));
+    if (source === null) continue;
+    for (const key of guideKeys) {
+      if (!source.includes(`[${prefix}-${key}]`)) errors.push(`${guide}: missing ${key} prompt`);
+    }
   }
 }
-console.log(JSON.stringify({ files: files.length, localLinks: links, artifacts: artifacts.length, stages: Object.keys(stages).length, errors }, null, 2));
+console.log(JSON.stringify({ files: files.length, localLinks: links, artifacts: artifacts.length, activities: Object.keys(activities).length, stages: Object.keys(stages).length, errors }, null, 2));
 process.exitCode = errors.length ? 1 : 0;

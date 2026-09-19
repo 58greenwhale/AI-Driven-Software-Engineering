@@ -152,5 +152,40 @@
     "spec": "model/artifacts/A22-model-evaluation.md",
     "template": "templates/A22-model-evaluation.md",
     "example": "examples/focustask/docs/artifact-examples/A22-model-evaluation.md"
+  },
+  {
+    "id": "A23",
+    "title": "原型版本与反馈确认记录",
+    "spec": "model/artifacts/A23-prototype-feedback.md",
+    "template": "templates/A23-prototype-feedback.md",
+    "example": "examples/focustask/docs/artifact-examples/A23-prototype-feedback.md"
+  },
+  {
+    "id": "A24",
+    "title": "工程化差距与重构方案",
+    "spec": "model/artifacts/A24-refactoring-plan.md",
+    "template": "templates/A24-refactoring-plan.md",
+    "example": "examples/focustask/docs/artifact-examples/A24-refactoring-plan.md"
+  },
+  {
+    "id": "A25",
+    "title": "面向人的实现解读",
+    "spec": "model/artifacts/A25-implementation-guide.md",
+    "template": "templates/A25-implementation-guide.md",
+    "example": "examples/focustask/docs/artifact-examples/A25-implementation-guide.md"
+  },
+  {
+    "id": "A26",
+    "title": "同类问题排查与修复记录",
+    "spec": "model/artifacts/A26-pattern-remediation.md",
+    "template": "templates/A26-pattern-remediation.md",
+    "example": "examples/focustask/docs/artifact-examples/A26-pattern-remediation.md"
+  },
+  {
+    "id": "A27",
+    "title": "视觉与交互设计交付包",
+    "spec": "model/artifacts/A27-design-delivery.md",
+    "template": "templates/A27-design-delivery.md",
+    "example": "examples/focustask/docs/artifact-examples/A27-design-delivery.md"
   }
 ]
