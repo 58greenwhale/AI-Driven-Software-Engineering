@@ -1,11 +1,17 @@
-# 新版图解生成准备
+# 图解生成说明
 
-当前仅保留 [Mermaid 配置](mermaid-config.json)。新版源码和导出仍待[修订计划](../../AI_LIFECYCLE_V03_REFINEMENT_PLAN.md)生成，见[图解说明](../visual-guide.md)。
+图解使用 [Mermaid 配置](mermaid-config.json)，以 `.mmd` 为可编辑源，导出 SVG 和 PNG。设计范围见[图解说明](../visual-guide.md)。
 
-后续创建 lifecycle、collaboration、artifacts、organization 的 `.mmd`，由渲染脚本生成 SVG/PNG。Mermaid 是可编辑源，不手改导出图。
+## 输入
+
+渲染器需要本目录下的四份源码：`lifecycle.mmd`、`collaboration.mmd`、`artifacts.mmd`、`organization.mmd`。当前源码未提供，任务安排见[建设计划](../../AI_LIFECYCLE_V03_REFINEMENT_PLAN.md)。
+
+## 运行与检查
 
 ```sh
 node scripts/render-model-diagrams.mjs
 ```
 
-可用 `--cli /path/to/mmdc` 和 `--puppeteer-config /path/to/config.json` 指定工具。没有源码时应在调用渲染器前报告“新版图解待建立”并非零退出。当前不安装工具或生成替代图，待源码齐备再验证实际导出及视觉质量。
+可用 `--cli /path/to/mmdc` 和 `--puppeteer-config /path/to/config.json` 指定渲染器和浏览器配置。缺输入时脚本在调用外部工具前报告“缺少图解源码”及文件列表，退出码为 1。
+
+输入齐备后核验工具、运行导出，再检查文字、连线、遮挡和语义；导出图由源码生成，不直接编辑。

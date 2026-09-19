@@ -1,28 +1,36 @@
 # 人驱动 AI 的软件生命周期模型
 
-人通过目标、约束和反馈驱动 AI 完成软件开发。最新方向以演化型原型为核心：**原型构建、原型重构、原型审查、原型精修**可按功能或迭代裁剪组合，之后进行独立验收、直接本地发布和维护。
+本模型以演化型原型为核心，由人提供目标、约束和反馈，驱动 AI 完成软件开发。开发活动包括**原型构建、原型重构、原型审查、原型精修**，可以按功能或迭代裁剪组合，并衔接独立验收、本地发布与维护。
 
-## 当前状态
+仓库提供方法论、制品规范、空白模板和教学示例。教学材料使用虚构场景，用于说明工作方法与文档内容，不作为运行结果或模型效果的证据。
 
-仓库已按[清理计划](AI_LIFECYCLE_V03_CLEANUP_PLAN.md)整理。现有 A01–A22、通用实践及教学例是后续输入；四项活动的详细指南、A23–A27 和新版图解仍待[修订计划](AI_LIFECYCLE_V03_REFINEMENT_PLAN.md)实施。
+## 如何使用
 
-本仓库仅含方法论和教学材料，不提供应用、数据库或真实实证记录。教学例不代表实现完成、运行通过或模型效果已验证。
+1. 阅读[模型总纲](model/overview.md)，了解活动关系、人和 AI 的职责及适用边界。
+2. 从[制品目录](model/artifact-catalog.md)选择所需规范、模板和填写示例。
+3. 根据[初始化](model/practices/initialization.md)与[裁剪规则](model/tailoring.md)确定工作环境和制品组合。
+4. 使用[提示词协议](model/practices/prompt-protocol.md)驱动 AI 生成、检查、修订和交接制品。
+5. 结合[FocusTask 教学上下文](examples/focustask/docs/context.md)和[示例入口](examples/focustask/README.md)练习完整的输入与输出表达。
 
-## 阅读与执行入口
+## 目录
 
-1. [最新修订计划](AI_LIFECYCLE_V03_REFINEMENT_PLAN.md)：原则、任务与验收标准。
-2. [模型总纲](model/overview.md)：活动与生命周期边界。
-3. [制品目录](model/artifact-catalog.md)：规范、空白模板和教学例。
-4. [提示词协议](model/practices/prompt-protocol.md)：输入、生成、检查与交接。
-5. [初始化](model/practices/initialization.md)与[裁剪](model/tailoring.md)：工作规则和项目适配。
-6. [FocusTask 教学入口](examples/focustask/README.md)：业务上下文及填写示例。
+| 目录 | 用途 |
+| --- | --- |
+| `model/` | 模型、制品规范与通用实践 |
+| `templates/` | 可填写的制品模板 |
+| `examples/focustask/` | 教学上下文及制品填写示例 |
+| `scripts/` | 文档检查和图解生成工具 |
+| `execution/` | 建设状态和任务检查结果 |
 
-当前任务以[执行状态](execution/status.md)为准，提交及删除范围见[清理记录](execution/cleanup.md)。不要重复执行已完成的清理或恢复旧方案入口。
+## 检查与贡献
 
-## 目录与检查
+文档覆盖与建设进度见[执行状态](execution/status.md)，交付目标及任务见[方法论建设计划](AI_LIFECYCLE_V03_REFINEMENT_PLAN.md)。贡献前阅读 [AGENTS.md](AGENTS.md)，一次推进一个可检查任务，同步相关规范、示例、索引和状态。
 
-`model/` 保存规范和实践，`templates/` 保存模板，`examples/focustask/` 只保存教学材料，`execution/` 保存当前执行记录。
+在仓库根目录运行：
 
-在根目录运行 `node scripts/check-docs.mjs` 检查文档，运行 `node --test scripts/check-docs.test.mjs` 检查工具。没有应用 npm 命令；新版图解源码尚未建立，渲染器应报告缺输入。
+```sh
+node scripts/check-docs.mjs
+node --test scripts/check-docs.test.mjs
+```
 
-贡献前读取 [AGENTS.md](AGENTS.md)。一次推进一个可检查任务，同步规格、示例、索引和状态；不把教学或计划当作真实确认和通过证据。
+图解的输入与导出方式见[图解说明](model/visual-guide.md)。本仓库的检查针对文档与工具；教学中的应用命令需要在实际目标项目中建立并验证。

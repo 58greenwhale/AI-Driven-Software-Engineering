@@ -43,7 +43,7 @@ function run(root) {
   return { code: result.status, report: JSON.parse(result.stdout) };
 }
 
-test('complete current artifact set and three guides pass without old guides', (t) => {
+test('complete artifact set and three lifecycle guides pass', (t) => {
   const f = fixture(t);
   const { code, report } = run(f.root);
   assert.equal(code, 0);
@@ -113,10 +113,10 @@ test('invalid CLI arguments return usage failure', () => {
   assert.match(result.stderr, /Usage:/);
 });
 
-test('renderer rejects missing new sources before invoking an external tool', () => {
-  const result = spawnSync(process.execPath, [renderer, '--cli', '/nonexistent/cleanup-test-mmdc'], { encoding: 'utf8' });
+test('renderer rejects missing sources before invoking an external tool', () => {
+  const result = spawnSync(process.execPath, [renderer, '--cli', '/nonexistent/test-mmdc'], { encoding: 'utf8' });
   assert.equal(result.status, 1);
-  assert.match(result.stderr, /新版图解待建立/);
+  assert.match(result.stderr, /缺少图解源码/);
   assert.match(result.stderr, /organization.mmd/);
   assert.doesNotMatch(result.stderr, /ENOENT|spawnSync/);
   assert.equal(result.stdout, '');

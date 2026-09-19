@@ -16,7 +16,7 @@ const directory = path.join(root, 'model/diagrams');
 const names = ['lifecycle', 'collaboration', 'artifacts', 'organization'];
 const missing = names.filter((name) => !fs.existsSync(path.join(directory, `${name}.mmd`)));
 if (missing.length) {
-  console.error(`新版图解待建立；缺少源码：${missing.map((name) => `${name}.mmd`).join(', ')}`);
+  console.error(`缺少图解源码：${missing.map((name) => `${name}.mmd`).join(', ')}`);
   process.exit(1);
 }
 for (const name of names) {

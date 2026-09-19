@@ -4,28 +4,30 @@
 
 This repository documents a human-directed AI software lifecycle based on evolutionary prototypes. Development activities are prototype building, refactoring, review and polishing, followed by independent acceptance, direct local release and maintenance. Activities can be tailored per feature or iteration.
 
-Read `execution/status.md`, `AI_LIFECYCLE_V03_REFINEMENT_PLAN.md`, `model/overview.md` and `model/conventions.md` before model changes. For cleanup, also read `AI_LIFECYCLE_V03_CLEANUP_PLAN.md` and its execution record. Do not repeat completed cleanup or assume the full v0.3 model is implemented.
+Before model changes, read `model/overview.md`, `model/conventions.md`, `AI_LIFECYCLE_V03_REFINEMENT_PLAN.md` and `execution/status.md`. Use the active task identified in status as the execution scope. Check actual files and available commands before declaring work ready or complete.
 
 ## Organization
 
-- `model/`: artifact specifications, practices and available lifecycle guides.
+- `model/`: artifact specifications, practices and lifecycle guides.
 - `templates/`: unfilled artifact templates.
-- `examples/focustask/`: teaching context and examples only; read its local AGENTS.
-- `execution/`: current status, cleanup manifest and verification records.
+- `examples/focustask/`: teaching context and examples; read its local AGENTS.
+- `execution/`: current tasks, coverage and verification results.
 - `scripts/`: documentation checks and diagram tooling.
 
-There is no application, database or empirical evidence directory. A01-A22 exist; the four detailed activity guides, A23-A27 and new diagrams remain planned. Do not generate them during cleanup.
+Teaching scenarios describe inputs and expected behavior. Actual product development or empirical work requires its own confirmed scope, implementation and evidence.
 
 ## Working Rules
 
-Preserve unrelated edits and complete one verifiable task at a time. Update specifications, examples, indexes and links together. Confirm new business rules with the user; resolve routine choices within scope. Record consequential decisions without inventing approval.
+Preserve unrelated edits and complete one verifiable task at a time. Update specifications, examples, indexes and links together. Confirm new business rules with the user; resolve routine choices within scope. Record consequential decisions with their source.
 
-Every AI-driven workflow needs actionable prompts. When a problem is found, check related patterns across the project, distinguish confirmed instances from suspicions, and recheck fixes. Stable rules belong here; transient progress belongs in execution status.
+Write standalone instructions that explain the current model, inputs, outputs and checks. Keep repository progress in execution status. Every AI-driven workflow needs actionable prompts. When a problem is found, inspect related patterns across the project, distinguish confirmed instances from suspicions, fix authorized issues and recheck them.
 
-## Verification and Safety
+## Verification and Delivery
 
-Run `node scripts/check-docs.mjs` and `node --test scripts/check-docs.test.mjs` for documentation tooling. Inspect semantics too. Missing tools or inputs are unavailable, not passing. Diagram generation requires new source files; its missing-input diagnostic does not prove rendering succeeded.
+Run `node scripts/check-docs.mjs` and `node --test scripts/check-docs.test.mjs` for documentation tooling. Inspect semantics as well as links. Diagram generation requires Mermaid sources and a working renderer; a missing-input diagnostic is not a successful export.
 
-Use fictional teaching data. Never record credentials, fabricate test or deployment results, or treat examples as empirical evidence. Stop only task-owned processes. Cleanup requires its recorded pre-cleanup commit; do not create another commit, push, or restore deleted history without new authorization.
+Use fictional teaching data. Never record credentials, fabricate approval, tests or deployment results, or treat examples as evidence. Stop only task-owned processes.
 
-Report changed scope, actual checks, risks and the next task. Commit messages describe intent and scope, such as `docs: clarify artifact handoffs`.
+After completing changes to code, scripts, configuration or documentation, run the relevant checks, commit the task's changes, and push the current branch to its configured upstream remote. This is the default delivery workflow; proceed without asking again unless the user explicitly instructs otherwise. Exclude unrelated edits, secrets and ignored files. Verify the remote branch matches the local commit before reporting delivery. If committing or pushing fails, preserve the work and report the blocker; do not force push without explicit authorization.
+
+Report changed scope, actual checks, risks and the next task. Use intent-focused commit messages with a scope, such as `docs: clarify artifact handoffs`.

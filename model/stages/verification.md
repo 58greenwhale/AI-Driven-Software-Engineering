@@ -71,7 +71,7 @@
 
 ## FocusTask 教学填写示例
 
-本目录只有[教学上下文](../../examples/focustask/docs/context.md)，没有可运行候选或环境。以下指令只生成文档，不作通过结论。
+示例输入为 [FocusTask 教学上下文](../../examples/focustask/docs/context.md)。以下指令生成验收文档，运行类检查未执行，不作通过结论。
 
 ```text
 [VAL-START / 已填参数示例] 从仓库根读取 examples/focustask/docs/context.md

@@ -102,7 +102,7 @@
 用 templates/A03-feature-spec.md 完善 TASK-001 的教学规格，
 写入 examples/focustask/docs/artifact-examples/A03-feature-spec.md。
 保持 AC-01 至 AC-13 的业务判据；身份/项目/成员仅作为教学前置输入，
-不要把夹具说成已实现邀请。网络丢失后重试必须保持同键、同任务ID和一条数据。
+本例不包含邀请功能。网络丢失后重试必须保持同键、同任务ID和一条数据。
 列出来源、冲突、需同步的界面/测试内容及未决项；现在仅生成规格，不编码。
 ```
 

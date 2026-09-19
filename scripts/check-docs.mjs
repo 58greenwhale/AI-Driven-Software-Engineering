@@ -112,7 +112,7 @@ for (const item of artifacts) {
   }
   if (typeof texts.example === 'string' && (!texts.example.includes('教学填写示例') || !texts.example.includes('不作通过结论'))) errors.push(`${item.id}: example lacks evidence boundary`);
 }
-// Detailed prototype activity guides are still a v0.3 deliverable.
+// Validate the lifecycle guides included in this repository.
 const stages = { verification: 'VAL', release: 'REL', maintenance: 'MAINT' };
 for (const [stage, prefix] of Object.entries(stages)) {
   const source = readText(path.join(root, `model/stages/${stage}.md`));
