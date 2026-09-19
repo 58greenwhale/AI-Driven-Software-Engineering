@@ -13,6 +13,10 @@
 - 下游用途：工程初始化、服务端/界面实现、集成验证和发布者。
 - 生成方式：按制品模板填写的教学例。
 
+## 现状、目标与确认设计
+
+现状为教学设定的 Route Handler→server→Prisma 分层与 PostgreSQL；目标约束是创建接口幂等与 P95≤500ms；已确认设计取自教学上下文，缓存与队列等未确认方案不写入本文，差距与替换步骤留给 A24。
+
 ## 组件与边界
 
 Next Route Handler→server→Prisma→PostgreSQL；页面不直接调用 Prisma。
