@@ -14,6 +14,18 @@
 
 文档检查与测试的数字在建立本目录三份记录之后运行取得，已包含这三份文件自身。
 
+## V03-02 实际检查
+
+| 命令 | 退出码 | 结果 |
+| --- | --- | --- |
+| `node scripts/check-docs.mjs` | 0 | 111 份 Markdown、375 个本地链接、artifacts 27、activities 4、stages 3、errors 0 |
+| `node --test scripts/check-docs.test.mjs` | 0 | 36 项通过、0 失败/跳过 |
+| `git diff --check` | 0 | 无空白错误 |
+
+改动文件：`model/overview.md`（组织方式指向裁剪、地图条目描述）、`model/tailoring.md`（标题改为“裁剪、组合与并行”，新增活动组织与并行小节及 TAILOR-ORG 提示词）、`model/practices/initialization.md`（AGENTS 七项最低内容与工程基线清单）、`model/conventions.md`（新增追踪范围与演化）、`model/practices/change-control.md`（同类问题排查横贯规则）、四份活动指南的交接出口各补一句裁剪与并行衔接、`execution/status.md` 覆盖行措辞。
+
+一致性核对：四份活动指南的触发、输入、产出、退出与失败返回逐项对应计划 2.2 至 2.5；产出制品与总纲点名的 A23 至 A27 一致；`model/visual-guide.md` 的活动组织段与裁剪文档新增表格口径一致（按功能、按迭代、混合组织，裁剪选择记录在 A10）；同类问题排查在重构、审查、维护指南与变更控制实践中均已出现，构建、精修与独立验收指南的点名留待 V03-03。本轮未运行图解导出，8 个导出文件未变。
+
 ## 材料与工具盘点事实
 
 | 项目 | 事实 |
