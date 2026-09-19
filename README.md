@@ -7,9 +7,9 @@
 ## 如何使用
 
 1. 阅读[模型总纲](model/overview.md)，了解活动关系、人和 AI 的职责及适用边界。
-2. 从[制品目录](model/artifact-catalog.md)选择所需规范、模板和填写示例。
-3. 根据[初始化](model/practices/initialization.md)与[裁剪规则](model/tailoring.md)确定工作环境和制品组合。
-4. 使用[提示词协议](model/practices/prompt-protocol.md)驱动 AI 生成、检查、修订和交接制品。
+2. 根据[初始化](model/practices/initialization.md)与[裁剪规则](model/tailoring.md)确定工作环境和制品组合。
+3. 使用[提示词协议](model/practices/prompt-protocol.md)驱动 AI 生成、检查、修订和交接制品。
+4. 进入[原型构建](model/stages/prototype-building.md)、[原型重构](model/stages/prototype-refactoring.md)、[原型审查](model/stages/prototype-review.md)、[原型精修](model/stages/prototype-polishing.md)等活动指南，从[制品目录](model/artifact-catalog.md)选择所需规范、模板和填写示例。
 5. 结合[FocusTask 教学上下文](examples/focustask/docs/context.md)和[示例入口](examples/focustask/README.md)练习完整的输入与输出表达。
 
 ## 目录
