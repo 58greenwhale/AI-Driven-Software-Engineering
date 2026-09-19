@@ -1,0 +1,14 @@
+
+ RUN  v4.1.11 /Users/chenzhenyang/Codes/AI-Driven Software Engineering/examples/focustask/app
+
+API07_REAL_CONNECTION [{"route":"health","status":503,"durationMs":15.41858400000001,"requestId":"562dca48-db3a-4930-a3d6-9f1f331db2f7","cacheControl":"no-store","body":{"error":{"code":"UNAVAILABLE","message":"服务暂不可用，请稍后重试","requestId":"562dca48-db3a-4930-a3d6-9f1f331db2f7"}}},{"route":"auth/login","status":503,"durationMs":0.625458000000009,"requestId":"952e861a-9594-40a5-8ade-a1810c779919","cacheControl":"no-store","body":{"error":{"code":"UNAVAILABLE","message":"服务暂不可用，请稍后重试","requestId":"952e861a-9594-40a5-8ade-a1810c779919"}}}]
+API07_FAKE_CLOCK {"simulatedDependency":"never-resolving health query","status":503,"durationMs":9500}
+ ✓ tests/api-health.test.ts > API-07 database failure and response deadline > returns generic 503 within ten seconds for real refused database connections 173ms
+ ✓ tests/api-health.test.ts > API-07 database failure and response deadline > finishes a never-resolving health dependency within the ten-second deadline 4ms
+ ✓ tests/api-health.test.ts > API-07 database failure and response deadline > does not expose an internal exception in the response or request log 1ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  09:21:29
+   Duration  362ms (transform 26ms, setup 0ms, import 127ms, tests 178ms, environment 0ms)
+

@@ -1,0 +1,4 @@
+
+> focustask-lifecycle-example@0.1.0 typecheck
+> tsc --noEmit
+

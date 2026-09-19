@@ -1,0 +1,13 @@
+
+> focustask-lifecycle-example@0.2.0 test
+> vitest run
+
+
+ RUN  v4.1.11 /Users/chenzhenyang/Codes/AI-Driven Software Engineering/examples/focustask/app
+
+
+ Test Files  3 passed (3)
+      Tests  15 passed (15)
+   Start at  10:53:59
+   Duration  659ms (transform 33ms, setup 0ms, import 174ms, tests 328ms, environment 0ms)
+

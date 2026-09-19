@@ -1,0 +1,35 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import { randomUUID } from 'node:crypto';
+import { localConfig, appRoot, runtime } from './env.mjs';
+const label = process.argv[2] || 'smoke';
+if (!/^[a-zA-Z0-9_.-]+$/.test(label)) throw new Error('Invalid label');
+const env = localConfig('release');
+const base = env.APP_BASE_URL;
+const project = '20000000-0000-4000-8000-000000000001';
+async function login(role) {
+  const response = await fetch(`${base}/api/v1/auth/login`, { method: 'POST', headers: { 'Content-Type': 'application/json', Origin: base }, body: JSON.stringify({ email: `${role}@example.test`, password: env.FOCUSTASK_SEED_PASSWORD }) });
+  assert.equal(response.status, 200); return response.headers.get('set-cookie').split(';')[0];
+}
+const cookie = await login('editor');
+const headers = { Cookie: cookie, 'Content-Type': 'application/json', Origin: base };
+const before = await fetch(`${base}/api/v1/projects/${project}/tasks`, { headers }); assert.equal(before.status, 200);
+const rows = (await before.json()).data.tasks;
+const checkpointFile = path.join(runtime, 'release-data-checkpoints.json');
+const checkpoints = fs.existsSync(checkpointFile) ? JSON.parse(fs.readFileSync(checkpointFile, 'utf8')) : [];
+for (const id of checkpoints) assert(rows.some(row => row.id === id), `Previously confirmed task ${id} must survive`);
+const key = randomUUID(); const body = JSON.stringify({ title: `发布验证 ${label}` });
+const create = () => fetch(`${base}/api/v1/projects/${project}/tasks`, { method: 'POST', headers: { ...headers, 'Idempotency-Key': key }, body });
+const first = await create(); assert.equal(first.status, 201); const task = (await first.json()).data;
+const retry = await create(); assert.equal(retry.status, 201); assert.equal((await retry.json()).data.id, task.id);
+const viewerCookie = await login('viewer');
+const denied = await fetch(`${base}/api/v1/projects/${project}/tasks`, { method: 'POST', headers: { ...headers, Cookie: viewerCookie, 'Idempotency-Key': randomUUID() }, body }); assert.equal(denied.status, 403);
+const after = await fetch(`${base}/api/v1/projects/${project}/tasks`, { headers }); const saved = (await after.json()).data.tasks;
+assert.equal(saved.length, rows.length + 1); assert.equal(saved.filter(row => row.id === task.id).length, 1);
+checkpoints.push(task.id); fs.writeFileSync(checkpointFile, JSON.stringify(checkpoints));
+const health = await (await fetch(`${base}/api/v1/health`)).json();
+const result = { label, at: new Date().toISOString(), base, health, before: rows.length, after: saved.length, survivedTaskIds: checkpoints.slice(0, -1), createdTaskId: task.id, retrySameId: true, viewerStatus: denied.status, result: '通过' };
+const evidence = path.resolve(appRoot, '../evidence/releases'); fs.mkdirSync(evidence, { recursive: true });
+fs.writeFileSync(path.join(evidence, `${label}-${Date.now()}.json`), JSON.stringify(result, null, 2) + '\n');
+console.log(JSON.stringify(result));

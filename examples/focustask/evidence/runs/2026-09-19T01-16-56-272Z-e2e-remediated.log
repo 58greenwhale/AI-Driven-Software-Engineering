@@ -1,0 +1,353 @@
+
+> focustask-lifecycle-example@0.1.0 test:e2e
+> playwright test
+
+[WebServer] (node:71060) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 39 tests using 1 worker
+
+(node:71062) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/e2e/core.spec.ts:40:1 › API-01/03/05 and AC-09/10: auth, server permissions and logout (110ms)
+  ✓   2 [chromium] › tests/e2e/core.spec.ts:68:1 › AC-01/03/07: empty validation, create once and persist after refresh (996ms)
+  ✓   3 [chromium] › tests/e2e/core.spec.ts:85:1 › AC-08/12: lost response retains input; retry recovers same task (608ms)
+  ✓   4 [chromium] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1440x900 (1.6s)
+  ✓   5 [chromium] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1024x768 (1.5s)
+  ✓   6 [chromium] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 768x1024 (1.5s)
+  ✓   7 [chromium] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 390x844 (1.6s)
+  ✓   8 [chromium] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 320x844 (1.5s)
+  ✓   9 [chromium] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1920x1080 (1.6s)
+  ✓  10 [chromium] › tests/e2e/core.spec.ts:243:1 › AC-02/06/11: field dates, assignee, archive during open form (585ms)
+  ✓  11 [chromium] › tests/e2e/core.spec.ts:280:1 › API-02/06: origin, expired session and failed-login rate limit (314ms)
+  ✓  12 [chromium] › tests/e2e/core.spec.ts:326:1 › permission removal while form is open closes it and hides project (479ms)
+  ✓  13 [chromium] › tests/e2e/core.spec.ts:362:1 › 200% zoom equivalent layout and long content remain operable (590ms)
+(node:71316) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  14 [firefox] › tests/e2e/core.spec.ts:40:1 › API-01/03/05 and AC-09/10: auth, server permissions and logout (63ms)
+  ✓  15 [firefox] › tests/e2e/core.spec.ts:68:1 › AC-01/03/07: empty validation, create once and persist after refresh (1.6s)
+  ✓  16 [firefox] › tests/e2e/core.spec.ts:85:1 › AC-08/12: lost response retains input; retry recovers same task (724ms)
+  ✓  17 [firefox] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1440x900 (2.1s)
+  ✓  18 [firefox] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1024x768 (2.0s)
+  ✓  19 [firefox] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 768x1024 (2.1s)
+  ✓  20 [firefox] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 390x844 (1.9s)
+  ✓  21 [firefox] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 320x844 (1.9s)
+  ✓  22 [firefox] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1920x1080 (2.0s)
+  ✓  23 [firefox] › tests/e2e/core.spec.ts:243:1 › AC-02/06/11: field dates, assignee, archive during open form (717ms)
+  ✓  24 [firefox] › tests/e2e/core.spec.ts:280:1 › API-02/06: origin, expired session and failed-login rate limit (320ms)
+  ✓  25 [firefox] › tests/e2e/core.spec.ts:326:1 › permission removal while form is open closes it and hides project (1.1s)
+  ✓  26 [firefox] › tests/e2e/core.spec.ts:362:1 › 200% zoom equivalent layout and long content remain operable (730ms)
+(node:71696) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  27 [webkit] › tests/e2e/core.spec.ts:40:1 › API-01/03/05 and AC-09/10: auth, server permissions and logout (63ms)
+  ✘  28 [webkit] › tests/e2e/core.spec.ts:68:1 › AC-01/03/07: empty validation, create once and persist after refresh (0ms)
+(node:71708) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  29 [webkit] › tests/e2e/core.spec.ts:85:1 › AC-08/12: lost response retains input; retry recovers same task (0ms)
+(node:71711) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  30 [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1440x900 (0ms)
+(node:71714) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  31 [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1024x768 (1ms)
+(node:71716) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  32 [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 768x1024 (0ms)
+(node:71728) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  33 [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 390x844 (0ms)
+(node:71730) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  34 [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 320x844 (0ms)
+(node:71732) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  35 [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1920x1080 (0ms)
+(node:71734) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  36 [webkit] › tests/e2e/core.spec.ts:243:1 › AC-02/06/11: field dates, assignee, archive during open form (0ms)
+(node:71745) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  37 [webkit] › tests/e2e/core.spec.ts:280:1 › API-02/06: origin, expired session and failed-login rate limit (338ms)
+  ✘  38 [webkit] › tests/e2e/core.spec.ts:326:1 › permission removal while form is open closes it and hides project (0ms)
+(node:71748) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  39 [webkit] › tests/e2e/core.spec.ts:362:1 › 200% zoom equivalent layout and long content remain operable (0ms)
+
+
+  1) [webkit] › tests/e2e/core.spec.ts:68:1 › AC-01/03/07: empty validation, create once and persist after refresh 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/chenzhenyang/Library/Caches/ms-playwright/webkit-2359/pw_run.sh
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/core-AC-01-03-07-empty-val-d3062-e-and-persist-after-refresh-webkit/error-context.md
+
+    Error Context: test-results/core-AC-01-03-07-empty-val-d3062-e-and-persist-after-refresh-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/core-AC-01-03-07-empty-val-d3062-e-and-persist-after-refresh-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/core-AC-01-03-07-empty-val-d3062-e-and-persist-after-refresh-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [webkit] › tests/e2e/core.spec.ts:85:1 › AC-08/12: lost response retains input; retry recovers same task 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/chenzhenyang/Library/Caches/ms-playwright/webkit-2359/pw_run.sh
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/core-AC-08-12-lost-respons-3f5dd-ut-retry-recovers-same-task-webkit/error-context.md
+
+    Error Context: test-results/core-AC-08-12-lost-respons-3f5dd-ut-retry-recovers-same-task-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/core-AC-08-12-lost-respons-3f5dd-ut-retry-recovers-same-task-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/core-AC-08-12-lost-respons-3f5dd-ut-retry-recovers-same-task-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1440x900 ─────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /Users/chenzhenyang/Library/Caches/ms-playwright/webkit-2359/pw_run.sh
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/core-UI-states-and-keyboard-1440x900-webkit/error-context.md
+
+    Error Context: test-results/core-UI-states-and-keyboard-1440x900-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/core-UI-states-and-keyboard-1440x900-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/core-UI-states-and-keyboard-1440x900-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1024x768 ─────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /Users/chenzhenyang/Library/Caches/ms-playwright/webkit-2359/pw_run.sh
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/core-UI-states-and-keyboard-1024x768-webkit/error-context.md
+
+    Error Context: test-results/core-UI-states-and-keyboard-1024x768-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/core-UI-states-and-keyboard-1024x768-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/core-UI-states-and-keyboard-1024x768-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 768x1024 ─────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /Users/chenzhenyang/Library/Caches/ms-playwright/webkit-2359/pw_run.sh
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/core-UI-states-and-keyboard-768x1024-webkit/error-context.md
+
+    Error Context: test-results/core-UI-states-and-keyboard-768x1024-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/core-UI-states-and-keyboard-768x1024-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/core-UI-states-and-keyboard-768x1024-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 390x844 ──────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /Users/chenzhenyang/Library/Caches/ms-playwright/webkit-2359/pw_run.sh
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/core-UI-states-and-keyboard-390x844-webkit/error-context.md
+
+    Error Context: test-results/core-UI-states-and-keyboard-390x844-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/core-UI-states-and-keyboard-390x844-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/core-UI-states-and-keyboard-390x844-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 320x844 ──────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /Users/chenzhenyang/Library/Caches/ms-playwright/webkit-2359/pw_run.sh
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/core-UI-states-and-keyboard-320x844-webkit/error-context.md
+
+    Error Context: test-results/core-UI-states-and-keyboard-320x844-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/core-UI-states-and-keyboard-320x844-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/core-UI-states-and-keyboard-320x844-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1920x1080 ────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at /Users/chenzhenyang/Library/Caches/ms-playwright/webkit-2359/pw_run.sh
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/core-UI-states-and-keyboard-1920x1080-webkit/error-context.md
+
+    Error Context: test-results/core-UI-states-and-keyboard-1920x1080-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/core-UI-states-and-keyboard-1920x1080-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/core-UI-states-and-keyboard-1920x1080-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [webkit] › tests/e2e/core.spec.ts:243:1 › AC-02/06/11: field dates, assignee, archive during open form 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/chenzhenyang/Library/Caches/ms-playwright/webkit-2359/pw_run.sh
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/core-AC-02-06-11-field-dat-f7696-ee-archive-during-open-form-webkit/error-context.md
+
+    Error Context: test-results/core-AC-02-06-11-field-dat-f7696-ee-archive-during-open-form-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/core-AC-02-06-11-field-dat-f7696-ee-archive-during-open-form-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/core-AC-02-06-11-field-dat-f7696-ee-archive-during-open-form-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [webkit] › tests/e2e/core.spec.ts:326:1 › permission removal while form is open closes it and hides project 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/chenzhenyang/Library/Caches/ms-playwright/webkit-2359/pw_run.sh
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/core-permission-removal-wh-9f48f-closes-it-and-hides-project-webkit/error-context.md
+
+    Error Context: test-results/core-permission-removal-wh-9f48f-closes-it-and-hides-project-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/core-permission-removal-wh-9f48f-closes-it-and-hides-project-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/core-permission-removal-wh-9f48f-closes-it-and-hides-project-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11) [webkit] › tests/e2e/core.spec.ts:362:1 › 200% zoom equivalent layout and long content remain operable 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/chenzhenyang/Library/Caches/ms-playwright/webkit-2359/pw_run.sh
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/core-200-zoom-equivalent-l-e06bc-ong-content-remain-operable-webkit/error-context.md
+
+    Error Context: test-results/core-200-zoom-equivalent-l-e06bc-ong-content-remain-operable-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/core-200-zoom-equivalent-l-e06bc-ong-content-remain-operable-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/core-200-zoom-equivalent-l-e06bc-ong-content-remain-operable-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11 failed
+    [webkit] › tests/e2e/core.spec.ts:68:1 › AC-01/03/07: empty validation, create once and persist after refresh 
+    [webkit] › tests/e2e/core.spec.ts:85:1 › AC-08/12: lost response retains input; retry recovers same task 
+    [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1440x900 ──────────────────────
+    [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1024x768 ──────────────────────
+    [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 768x1024 ──────────────────────
+    [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 390x844 ───────────────────────
+    [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 320x844 ───────────────────────
+    [webkit] › tests/e2e/core.spec.ts:127:3 › UI states and keyboard 1920x1080 ─────────────────────
+    [webkit] › tests/e2e/core.spec.ts:243:1 › AC-02/06/11: field dates, assignee, archive during open form 
+    [webkit] › tests/e2e/core.spec.ts:326:1 › permission removal while form is open closes it and hides project 
+    [webkit] › tests/e2e/core.spec.ts:362:1 › 200% zoom equivalent layout and long content remain operable 
+  28 passed (37.1s)

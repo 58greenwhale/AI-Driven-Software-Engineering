@@ -1,0 +1,14 @@
+{
+  "file": "../evidence/maintenance/permission/repaired-2026-09-19T03-26-38-867Z.json",
+  "conclusion": "通过",
+  "status": 403,
+  "before": 4,
+  "after": 4,
+  "taskId": null,
+  "requestId": "9cf36f02-d606-41f8-8020-ff07b884986b",
+  "ui": {
+    "createButtonCount": 0,
+    "screenshot": "repaired-2026-09-19T03-26-38-867Z-viewer.png",
+    "conclusion": "通过"
+  }
+}

@@ -1,0 +1,77 @@
+:root {
+  --ink: #17202a;
+  --muted: #667085;
+  --green: #176b5b;
+  --line: #d0d5dd;
+  --paper: #f7f8fa;
+  --error: #b42318;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font:
+    14px/22px Inter,
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button,
+a,
+input,
+select {
+  outline-offset: 4px;
+}
+button {
+  cursor: pointer;
+  min-height: 44px;
+}
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #327b61;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 18px;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

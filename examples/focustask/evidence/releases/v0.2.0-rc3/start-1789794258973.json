@@ -1,0 +1,16 @@
+{
+  "version": "v0.2.0-rc3",
+  "directory": "/Users/chenzhenyang/Codes/AI-Driven Software Engineering/examples/focustask/app/.runtime/releases/v0.2.0-rc3",
+  "pid": 54829,
+  "startedAt": "2026-09-19T05:04:18.220Z",
+  "previousVersion": "v0.2.0-rc2",
+  "url": "http://127.0.0.1:3212",
+  "health": {
+    "data": {
+      "status": "ok",
+      "database": "ok",
+      "version": "0.2.0"
+    }
+  },
+  "result": "通过"
+}

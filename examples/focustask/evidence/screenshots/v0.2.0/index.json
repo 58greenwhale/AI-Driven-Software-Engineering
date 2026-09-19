@@ -1,0 +1,907 @@
+{
+  "version": "v0.2.0",
+  "collectedAt": "2026-09-19T02:58:44.253Z",
+  "description": "Actual browser state screenshots; not by themselves proof of backend/data requirements.",
+  "files": [
+    {
+      "file": "chromium-1024-archived.png",
+      "bytes": 33796,
+      "sha256": "f2583664cf1bc5e4255e64f06bd3248aa2e9e10e7aa1fbc413e183e91dfd2313"
+    },
+    {
+      "file": "chromium-1024-empty.png",
+      "bytes": 34999,
+      "sha256": "e7678b399ed2816e58e388d35c71c0dfec486972c1fc4e2008cbe906faa8a948"
+    },
+    {
+      "file": "chromium-1024-failure.png",
+      "bytes": 34759,
+      "sha256": "df890ab8d22253429311881eacf93d1e3d32b7389aebda34bb49bf5c9517448e"
+    },
+    {
+      "file": "chromium-1024-field-error.png",
+      "bytes": 266805,
+      "sha256": "e9ff1e738023617f3a79c6263ac9fe526642043567253c37a9f08c9a7996c035"
+    },
+    {
+      "file": "chromium-1024-filtered-create.png",
+      "bytes": 43038,
+      "sha256": "80e750e59da79b2df710fe716ce549559beb520301fc1e2170e0ef9a325a1404"
+    },
+    {
+      "file": "chromium-1024-filtered-empty.png",
+      "bytes": 44121,
+      "sha256": "332f1c08eb903a85019276c5d22d899e3268050819996d86893588ed8c7eda6d"
+    },
+    {
+      "file": "chromium-1024-filtered.png",
+      "bytes": 38407,
+      "sha256": "8bac8ae47a7ae9f8265c680bf9050ccd5815e8357340067d728fced8192d52a4"
+    },
+    {
+      "file": "chromium-1024-loading.png",
+      "bytes": 26901,
+      "sha256": "2fa078295cf69549c560ad23135f258955bbba7748abbca30e22890b578d95ef"
+    },
+    {
+      "file": "chromium-1024-normal.png",
+      "bytes": 249576,
+      "sha256": "dad68035410583e8ebdf5818a21fd02829dc8046be5d37f718c5af16e7e536ac"
+    },
+    {
+      "file": "chromium-1024-not-found.png",
+      "bytes": 24020,
+      "sha256": "97a089186680ae27b9588da93dd77e64cb95c8cd8f8a2f012c0a5bc818140a3a"
+    },
+    {
+      "file": "chromium-1024-viewer.png",
+      "bytes": 252763,
+      "sha256": "2f520ea8e68facbae592ebfa7a65c99439ce31fc46de126944692120145082a2"
+    },
+    {
+      "file": "chromium-1440-archived.png",
+      "bytes": 36638,
+      "sha256": "5a52601b590c1eed8f06358f27f28f058a2444d06a95aee1fcd6c187fb806494"
+    },
+    {
+      "file": "chromium-1440-empty.png",
+      "bytes": 37898,
+      "sha256": "b954068052767346c0581297a3ed288a002cbaa2c121946b9536994731c546d2"
+    },
+    {
+      "file": "chromium-1440-failure.png",
+      "bytes": 37594,
+      "sha256": "64e44389648f3847274c361541123eb0eab586ec3405edd1385c774d4e87b6d4"
+    },
+    {
+      "file": "chromium-1440-field-error.png",
+      "bytes": 311998,
+      "sha256": "9af19531c4671697f35d14bbd08a7cde566b971b19db3060c5d57d1d0be7dcd7"
+    },
+    {
+      "file": "chromium-1440-filtered-create.png",
+      "bytes": 45632,
+      "sha256": "ae8a366d25ae7cc1cb1a9520b7b73bb9312bc92671ed352e510196b19ed4840b"
+    },
+    {
+      "file": "chromium-1440-filtered-empty.png",
+      "bytes": 46691,
+      "sha256": "af5997708dbf50028606223bf8559e812824ad3b958d33413ae401d3b232931e"
+    },
+    {
+      "file": "chromium-1440-filtered.png",
+      "bytes": 41171,
+      "sha256": "08319415c8f62706dfb79cb763f0607dba640d21d1dd8e1a091b8deecf658daa"
+    },
+    {
+      "file": "chromium-1440-loading.png",
+      "bytes": 28847,
+      "sha256": "e31fed72eb9d8478cfc4c24e585ca0b53a78c018778dbac8bf95849521f67020"
+    },
+    {
+      "file": "chromium-1440-normal.png",
+      "bytes": 261343,
+      "sha256": "9962755d131b02b5fb643ed8d3e7ae8140b10d0451c5c469c03cd312acd023e9"
+    },
+    {
+      "file": "chromium-1440-not-found.png",
+      "bytes": 26386,
+      "sha256": "61d3c42374c8f902b8f8eb4220430af570029c064e638064127c322017e07f23"
+    },
+    {
+      "file": "chromium-1440-viewer.png",
+      "bytes": 264556,
+      "sha256": "20db8bdf3f828e9f0bd0f2edb08e4959f4df58fae8d382859f0cd2e1b41fb388"
+    },
+    {
+      "file": "chromium-1920-archived.png",
+      "bytes": 39411,
+      "sha256": "f19fe8936605e8d036234975fbb92d203b6474939a3e5c006771146abb478c07"
+    },
+    {
+      "file": "chromium-1920-empty.png",
+      "bytes": 40786,
+      "sha256": "a22eae8dbc89d35c89940d49c67f2e64ca00d987e6fcc5877fc2a66ad2e4db52"
+    },
+    {
+      "file": "chromium-1920-failure.png",
+      "bytes": 40381,
+      "sha256": "1b371dd0dbe24d26fc71655beeab1aec2a1f7476f419d505377196e34900abed"
+    },
+    {
+      "file": "chromium-1920-field-error.png",
+      "bytes": 321145,
+      "sha256": "3c2c9908fec0db536946c30cb52faaeb690dfde87a4d92e6b71dbec7e371ee1f"
+    },
+    {
+      "file": "chromium-1920-loading.png",
+      "bytes": 31646,
+      "sha256": "8a9da5cd8f2c3cbc683b17e3af332e40b6d369697eea16ea2de39ade10dbec19"
+    },
+    {
+      "file": "chromium-1920-normal.png",
+      "bytes": 268926,
+      "sha256": "66340269ab0bdecf15f7501bcdb64035498299f0c6e01a619028647398d4e778"
+    },
+    {
+      "file": "chromium-1920-not-found.png",
+      "bytes": 29134,
+      "sha256": "98b5a5d355f4cd25a781b2c6104a364623bfd621b0feccc3e2fd4c5f42626dff"
+    },
+    {
+      "file": "chromium-1920-viewer.png",
+      "bytes": 272050,
+      "sha256": "3beb74e4e7a7b68908bb829ec812a03d7f105ae88fe4fc48d2c5af72f6591a7f"
+    },
+    {
+      "file": "chromium-320-archived.png",
+      "bytes": 24655,
+      "sha256": "7da06c629566361c8680415324c1dc481a473ba9526d132a93f9edebb2b2ccd4"
+    },
+    {
+      "file": "chromium-320-empty.png",
+      "bytes": 24165,
+      "sha256": "2429921299fca6c75ad5ddd5817c69b2e441a37e01a6c333e1615353aade4709"
+    },
+    {
+      "file": "chromium-320-failure.png",
+      "bytes": 24003,
+      "sha256": "0070d9e10f54b02573eb7929a1d8851219ef49e59ac30e75f262f3f755c63b3b"
+    },
+    {
+      "file": "chromium-320-field-error.png",
+      "bytes": 204393,
+      "sha256": "efb5af6ddd2d906d7bcee77167c09b525e95d1de63516d589ecf035293821f1b"
+    },
+    {
+      "file": "chromium-320-loading.png",
+      "bytes": 16205,
+      "sha256": "023c088f75bd7c4fa5f561d9dbd68d6e4e6fd5d603ec6a6f5d58d6ed2cdb4aea"
+    },
+    {
+      "file": "chromium-320-normal.png",
+      "bytes": 212723,
+      "sha256": "765fa6f4a4b53eace3d15f5f9755420cbe35f0722fcad7eb8cc28314a72e7c06"
+    },
+    {
+      "file": "chromium-320-not-found.png",
+      "bytes": 15668,
+      "sha256": "66c248b570108da62dae6b2f607b756c7f49ff9d319d92ae046b0af518430d08"
+    },
+    {
+      "file": "chromium-320-viewer.png",
+      "bytes": 217053,
+      "sha256": "2f016c535d2fc4d49e9b3b03ceaa0121d76eb804f8a045c28c8c95abb4c43b50"
+    },
+    {
+      "file": "chromium-390-archived.png",
+      "bytes": 25410,
+      "sha256": "7820c2bdb4bbe7a96f702190a212b8ba47bde85d510fa697f0276cec89cd0d55"
+    },
+    {
+      "file": "chromium-390-empty.png",
+      "bytes": 24902,
+      "sha256": "7b9ed2d8dcc09bf858d001e23ae575d4ee789e3dc37263546c1dd61ca3ddf913"
+    },
+    {
+      "file": "chromium-390-failure.png",
+      "bytes": 24701,
+      "sha256": "18db97a3fc07fc4625d8939eb090cf275d97b7f513f3d027ee01de5f822fe9ed"
+    },
+    {
+      "file": "chromium-390-field-error.png",
+      "bytes": 208275,
+      "sha256": "dc2bed552eb433d91fd2e30a853edac0537915e83542ac5836e5ea593cfd8722"
+    },
+    {
+      "file": "chromium-390-filtered-create.png",
+      "bytes": 29123,
+      "sha256": "15669b0f28b01fd01207149041837daffc2f9fadb82388ee1ce20e36467b774f"
+    },
+    {
+      "file": "chromium-390-filtered-empty.png",
+      "bytes": 33218,
+      "sha256": "502f02a6cd9ea8f1d44e50570c63dab22bee5a4db9264bae56cef01be5718e3a"
+    },
+    {
+      "file": "chromium-390-filtered.png",
+      "bytes": 24830,
+      "sha256": "0adf9008135f985405017f476c7400a8a477573077935dabed86b338ba5e4762"
+    },
+    {
+      "file": "chromium-390-loading.png",
+      "bytes": 16734,
+      "sha256": "5a5e620a1188957e23ea4d5f8e2172b1fc3bc1dcb928afabf56b588988b263d3"
+    },
+    {
+      "file": "chromium-390-normal.png",
+      "bytes": 216748,
+      "sha256": "c48c4532283b59ed2f01a105a1e79cbecf76d74796be11cfd4b50249d8fac37f"
+    },
+    {
+      "file": "chromium-390-not-found.png",
+      "bytes": 16189,
+      "sha256": "7c5f426089c7e7c0415ee8d3496f51ad2dbbb742cfea094acb613b6bb82af58b"
+    },
+    {
+      "file": "chromium-390-viewer.png",
+      "bytes": 221185,
+      "sha256": "4fa3578536a7e89c579ab87b44c4efc664064f72c613a3569416a6658798e565"
+    },
+    {
+      "file": "chromium-768-archived.png",
+      "bytes": 25897,
+      "sha256": "4c8b74db3a2c62c04af9893ffe305c8f7827874a66c64b4962e130fe2ec26ac5"
+    },
+    {
+      "file": "chromium-768-empty.png",
+      "bytes": 27118,
+      "sha256": "d73dfd61813473e6a47e8a1ad73a31a5593534f05189a3cf03f250e0d0873e84"
+    },
+    {
+      "file": "chromium-768-failure.png",
+      "bytes": 26834,
+      "sha256": "ebdc3324cb2044d8a9facccc2e48586fe182ff895abfca5c8ab4ad849b1e681e"
+    },
+    {
+      "file": "chromium-768-field-error.png",
+      "bytes": 244512,
+      "sha256": "63d9edd0615fb91831eed83fa52d76b3adc70752d629245efa7c50ed27cd4718"
+    },
+    {
+      "file": "chromium-768-filtered-create.png",
+      "bytes": 34942,
+      "sha256": "dd533e381e269105b9fe46bd4e1f783ddebd0a7a0a498240088a957519e7e931"
+    },
+    {
+      "file": "chromium-768-filtered-empty.png",
+      "bytes": 36002,
+      "sha256": "d353b482f67df2e2da37301e3f14c838f12f79c387c0fcc07cab6d5bd650f216"
+    },
+    {
+      "file": "chromium-768-filtered.png",
+      "bytes": 30413,
+      "sha256": "44d7d4ec2128c97e162ac8673367745459534bd53c3d8be96c9c9265569db181"
+    },
+    {
+      "file": "chromium-768-loading.png",
+      "bytes": 18331,
+      "sha256": "bf02c4fb60025b42a3029e9101957621f339067ba1d45b2cec3d33152c3a53b0"
+    },
+    {
+      "file": "chromium-768-normal.png",
+      "bytes": 233775,
+      "sha256": "72502f9603e301a26a98b85fe7886e89d1b678df1d32baff74efb9427f7a3c80"
+    },
+    {
+      "file": "chromium-768-not-found.png",
+      "bytes": 15878,
+      "sha256": "82be1b3b7106d198c5fab9b00a0c306a34d4c1c2ca08b3f779c0a654b6cec5b8"
+    },
+    {
+      "file": "chromium-768-viewer.png",
+      "bytes": 236788,
+      "sha256": "292681fbe4195dde2ae71def79adaf205ff08c1fdce9766d67f306236547b7fe"
+    },
+    {
+      "file": "firefox-1024-archived.png",
+      "bytes": 42018,
+      "sha256": "b3237eb4659b91f51bb856162661ddcd69d14c0c051a15be8b90ae84bde20191"
+    },
+    {
+      "file": "firefox-1024-empty.png",
+      "bytes": 43285,
+      "sha256": "8a2a3dbe857c0801b31e1b14cecd7ab4a8eb18945f47423c6e026dd4898a278e"
+    },
+    {
+      "file": "firefox-1024-failure.png",
+      "bytes": 42874,
+      "sha256": "264070c0bfb8f81187319acc5366c372f1274ffd5bc8755c0ca44b758e680ae5"
+    },
+    {
+      "file": "firefox-1024-field-error.png",
+      "bytes": 361336,
+      "sha256": "978b4f57d72cb10f86715bee2d7d03da6d6ef98544b501be0fd80889f870410c"
+    },
+    {
+      "file": "firefox-1024-filtered-create.png",
+      "bytes": 52168,
+      "sha256": "e0856a509dbb29d85697e1f040734f8b7fc28bd068e6a60c5b494de4ed257d03"
+    },
+    {
+      "file": "firefox-1024-filtered-empty.png",
+      "bytes": 52975,
+      "sha256": "772b02a72567ad4a77b77638e314ab352111092903ed54646ecfad864d21bee8"
+    },
+    {
+      "file": "firefox-1024-filtered.png",
+      "bytes": 46994,
+      "sha256": "c333843476f3be9cb737e8df43cb0f4602968571028c3001bf7d0fdeeacc8943"
+    },
+    {
+      "file": "firefox-1024-loading.png",
+      "bytes": 34087,
+      "sha256": "506de3a217193098835827f26492d459c6c34e64c93853d6c6acc693781bd87b"
+    },
+    {
+      "file": "firefox-1024-normal.png",
+      "bytes": 325212,
+      "sha256": "3d70c805a816d1c80a9146449095293ee7b9e687ed155f5b5a67c6b8b08accb0"
+    },
+    {
+      "file": "firefox-1024-not-found.png",
+      "bytes": 29559,
+      "sha256": "72f84cb9256f984156f6c9dfc01e74d79f896c17d5b080a4bcebe2cba6293efd"
+    },
+    {
+      "file": "firefox-1024-viewer.png",
+      "bytes": 329102,
+      "sha256": "a77230b7c3b49f837bb9e71888c0c9395f73cad3be67c969024941422f0aeff5"
+    },
+    {
+      "file": "firefox-1440-archived.png",
+      "bytes": 45527,
+      "sha256": "5645f2337d32731c311cef83a493a629a0cf53d1ec9c6c9ced4639b424f8cfb1"
+    },
+    {
+      "file": "firefox-1440-empty.png",
+      "bytes": 46866,
+      "sha256": "f7933cd98903bfabb0619bcceac9caf2dc9a48dafa23d4fcda6ac17e803fc2bc"
+    },
+    {
+      "file": "firefox-1440-failure.png",
+      "bytes": 46320,
+      "sha256": "f898d18a946a8b7ffcb728ab9f335ab034a27651b078f1c47feeab5d54ed9504"
+    },
+    {
+      "file": "firefox-1440-field-error.png",
+      "bytes": 412681,
+      "sha256": "dfd028b315461785ef46b1d3594762a2f0e26a1bef9d7b5f1b56201b20dbd1a7"
+    },
+    {
+      "file": "firefox-1440-filtered-create.png",
+      "bytes": 56079,
+      "sha256": "090c156eddda8fa1aaa95e7915ebe1fefbc1042c15067fde5461727483d1412a"
+    },
+    {
+      "file": "firefox-1440-filtered-empty.png",
+      "bytes": 57021,
+      "sha256": "ecfeac103c8d4a1ebc1593bd618b840991262949302f5e7c771cd635b0a29882"
+    },
+    {
+      "file": "firefox-1440-filtered.png",
+      "bytes": 50945,
+      "sha256": "9789a6a17b65462aadd1a465acac1609454180421e6d73da14cf1849bd4d86fa"
+    },
+    {
+      "file": "firefox-1440-loading.png",
+      "bytes": 37092,
+      "sha256": "3595bf7c4262d7439ed208e9fa2e8ae35ae7a370b8d06e6b1585225aa957606d"
+    },
+    {
+      "file": "firefox-1440-normal.png",
+      "bytes": 341113,
+      "sha256": "c5bb28210eecd4f7f3ba2cb0a8ffcf59295fd4fe888239ceb59b81239068d195"
+    },
+    {
+      "file": "firefox-1440-not-found.png",
+      "bytes": 32606,
+      "sha256": "091d79f167f89f19d94d296e467609b8b749fe3dba37ee0fe76c6f80151bc52e"
+    },
+    {
+      "file": "firefox-1440-viewer.png",
+      "bytes": 344652,
+      "sha256": "82e8b5d3c03c89c50c7e9ce32549f3b8357e92eee6b1e43990b2032b69c26caf"
+    },
+    {
+      "file": "firefox-1920-archived.png",
+      "bytes": 51722,
+      "sha256": "7debe020a71d8a57b81856a617943be8f485b9166bdad3288186948870c53334"
+    },
+    {
+      "file": "firefox-1920-empty.png",
+      "bytes": 53343,
+      "sha256": "89ef8f17e424d186a80dc4091a2993a898ca6a6b585c4dc18f6339017bb11558"
+    },
+    {
+      "file": "firefox-1920-failure.png",
+      "bytes": 52566,
+      "sha256": "0dd01e61cb51df058da27203340d089bb63ff17457ba3b39180a64494967a87e"
+    },
+    {
+      "file": "firefox-1920-field-error.png",
+      "bytes": 435889,
+      "sha256": "b59079eb299cc337de5e58c890e23464bd78bb471aeb26667006c526ede883ae"
+    },
+    {
+      "file": "firefox-1920-loading.png",
+      "bytes": 44013,
+      "sha256": "76330c37fbf28b4a647ae80f3f59f862d634c89e48f4d9f11ca745ab5a92e945"
+    },
+    {
+      "file": "firefox-1920-normal.png",
+      "bytes": 360953,
+      "sha256": "75b36df70af80e49c234811f9ad046f60c273b009f1be7ca0b7b330b7dc67a50"
+    },
+    {
+      "file": "firefox-1920-not-found.png",
+      "bytes": 36785,
+      "sha256": "31b122b2cc040395c8ee0041d7b08ef8ae47247a4433a11dd5efd62a04f09dde"
+    },
+    {
+      "file": "firefox-1920-viewer.png",
+      "bytes": 365240,
+      "sha256": "46827d50946764f99e5b6c0db3feea6e7a73c6e7fa3e8c0c9803d80454ada7b5"
+    },
+    {
+      "file": "firefox-320-archived.png",
+      "bytes": 29179,
+      "sha256": "223b5d4dbce0188c85aabdf032a8cd9523cf08777d1527f267f995979a300bdf"
+    },
+    {
+      "file": "firefox-320-empty.png",
+      "bytes": 28573,
+      "sha256": "4e03af3f731cec2bd27bf15efbf5b6d20d86d4717ddb55931e064420dee52a4a"
+    },
+    {
+      "file": "firefox-320-failure.png",
+      "bytes": 28082,
+      "sha256": "f0a9c9c8e894593afa26591f93c9f2cb979cfd6f5a1b8c2f4e0b5869bf3949d1"
+    },
+    {
+      "file": "firefox-320-field-error.png",
+      "bytes": 263616,
+      "sha256": "fc835e95a7f5fad7d950dbaecc1aa93383d53742cf0758548f0f1919cdd0763b"
+    },
+    {
+      "file": "firefox-320-loading.png",
+      "bytes": 20210,
+      "sha256": "f5d9fee7426814d40a38fd4b0e6a67786b575bb2a5cc0ef391a927388dd30780"
+    },
+    {
+      "file": "firefox-320-normal.png",
+      "bytes": 273987,
+      "sha256": "eb7d058f75f7a997038c836e1ab0d4ac5e944291959a4a15c4a7c841eef7741d"
+    },
+    {
+      "file": "firefox-320-not-found.png",
+      "bytes": 18127,
+      "sha256": "47670dcf99c28fd2a50065936ba1a8e5a2d09c70a70445bff3d932552ba2e7ce"
+    },
+    {
+      "file": "firefox-320-viewer.png",
+      "bytes": 278867,
+      "sha256": "f73634f89d9afd4d9997aad775bb1392205e8cb7d21fcfa5c5f7d716bbdc5f4f"
+    },
+    {
+      "file": "firefox-390-archived.png",
+      "bytes": 29626,
+      "sha256": "b6785ed0b9fa78e63804e78429ff922d9fe4952a34b3526782d38b88c641d732"
+    },
+    {
+      "file": "firefox-390-empty.png",
+      "bytes": 29150,
+      "sha256": "86d9d033cc65244c9e9800c3bf8b310bd5af89894c06690de4a5e26f20f68ff3"
+    },
+    {
+      "file": "firefox-390-failure.png",
+      "bytes": 28616,
+      "sha256": "1fa2b1fd0d5acd5b8d98832444d487a7467e9464c80e8fecfa487e5780780f13"
+    },
+    {
+      "file": "firefox-390-field-error.png",
+      "bytes": 269955,
+      "sha256": "1e412d8abb334538d7d6380fa6f04a2419e274b3a372aec457b7eeb84069eb9a"
+    },
+    {
+      "file": "firefox-390-filtered-create.png",
+      "bytes": 33969,
+      "sha256": "d91ffa6726d84ea79656a3a85e99b96fe297c06b68184d15dc3c95c00a8c48d8"
+    },
+    {
+      "file": "firefox-390-filtered-empty.png",
+      "bytes": 38199,
+      "sha256": "cb1b6a94d025fe638ef5a72c72f73b3e6e6ea3eed539c8e4ae4c347ae31d3b25"
+    },
+    {
+      "file": "firefox-390-filtered.png",
+      "bytes": 29090,
+      "sha256": "08db2056d69beb1be6e9ee18899b7763ec1e8419313045ca5131925c96f2d210"
+    },
+    {
+      "file": "firefox-390-loading.png",
+      "bytes": 20654,
+      "sha256": "6b8238de9eb6f7a388b8f5ccf747f77335076b34afc45c83f68aa0b9900a409f"
+    },
+    {
+      "file": "firefox-390-normal.png",
+      "bytes": 281001,
+      "sha256": "e337129c68cc2a3c2373fd14569519924f6d5cc3be56ea7f0daff9b24e7861f6"
+    },
+    {
+      "file": "firefox-390-not-found.png",
+      "bytes": 18335,
+      "sha256": "70f0f0a674d9e3eafe442874fa7e2b724c2e299140d38932cafa37ee2886a725"
+    },
+    {
+      "file": "firefox-390-viewer.png",
+      "bytes": 286041,
+      "sha256": "6ef6485aeee72c73ab499f6d710ecf5adccc43b3c4bbacf66fc1b79cedc5f1eb"
+    },
+    {
+      "file": "firefox-768-archived.png",
+      "bytes": 33268,
+      "sha256": "ad1b1f049e8b47b5553969b1fb3d62eb8c1e43576f5e63afef6c35f7da14cd63"
+    },
+    {
+      "file": "firefox-768-empty.png",
+      "bytes": 34789,
+      "sha256": "279a1d96fa88d6832e8524e3a71a8db09c217ac7232056c66a5fec54f4e251a8"
+    },
+    {
+      "file": "firefox-768-failure.png",
+      "bytes": 34147,
+      "sha256": "7b1c59f169e48a0693b489e39a0bfb88f7b724ac3612fef9c3957c044be2ef35"
+    },
+    {
+      "file": "firefox-768-field-error.png",
+      "bytes": 329872,
+      "sha256": "069dccc628c618d9c5002c9dbf8bd1e2cdf9cbf05a32f3b505f58ddeaaad62f0"
+    },
+    {
+      "file": "firefox-768-filtered-create.png",
+      "bytes": 42830,
+      "sha256": "708f896110deeb94a4e9344e794406ee64125f79206396ee353b3c9cf96a1c77"
+    },
+    {
+      "file": "firefox-768-filtered-empty.png",
+      "bytes": 43414,
+      "sha256": "1cd07ee42bde658b725b5e67fc95aacf02daeb26d8c596342a13f2c401fd291c"
+    },
+    {
+      "file": "firefox-768-filtered.png",
+      "bytes": 38499,
+      "sha256": "8744a7670a71222ec9b3900497eaab2e38321c58effb7c484765241344a0ad45"
+    },
+    {
+      "file": "firefox-768-loading.png",
+      "bytes": 24841,
+      "sha256": "6220349c6310763c5e8cc18f34b8de96a0be52ab9a0a93eeb7677830a0564213"
+    },
+    {
+      "file": "firefox-768-normal.png",
+      "bytes": 306460,
+      "sha256": "04ed2f8c59e4b8ffdfeab6c64e7437011ba0866a26ec53d9599d4a595dc4f18d"
+    },
+    {
+      "file": "firefox-768-not-found.png",
+      "bytes": 20987,
+      "sha256": "dddc2b14f4e6cf9c195cccb2823b754fa399a825cf8075b0a89f9c2c8d54674e"
+    },
+    {
+      "file": "firefox-768-viewer.png",
+      "bytes": 310023,
+      "sha256": "c11eceb3e0626daef16c377bf01174fb576f510702e26150f16b38c4198e6df1"
+    },
+    {
+      "file": "webkit-1024-archived.png",
+      "bytes": 135993,
+      "sha256": "6d6d48c24b2f88047b2fda99881d790195ea73eb8a65b448871df9d27bb5faac"
+    },
+    {
+      "file": "webkit-1024-empty.png",
+      "bytes": 138834,
+      "sha256": "55b9ef2048b80b91f11678b9eb39e0387d62c127845407f15a1cb6497e723712"
+    },
+    {
+      "file": "webkit-1024-failure.png",
+      "bytes": 137435,
+      "sha256": "b985d590c5e7d462507ba0ca690b0760c0f82f24f884780c9c7646f1de79da24"
+    },
+    {
+      "file": "webkit-1024-field-error.png",
+      "bytes": 1045355,
+      "sha256": "7e3f03b7ccae956db37b7112f5bf5c5b55b09a9fe2cd348d3f023b0ae856e8a9"
+    },
+    {
+      "file": "webkit-1024-filtered-create.png",
+      "bytes": 158658,
+      "sha256": "800052b8ac4011b46dcf1168b30e2c96e781aeb4cfbc024da4195161b29cee50"
+    },
+    {
+      "file": "webkit-1024-filtered-empty.png",
+      "bytes": 162155,
+      "sha256": "31e29b93bd800ace4199b9922634326450dfa6022b2910e1145bb9259b26245f"
+    },
+    {
+      "file": "webkit-1024-filtered.png",
+      "bytes": 148433,
+      "sha256": "d17cf2c17d10903eaf7633de3a1c1972464c44f54b5dca3eb38239c7acbe6f78"
+    },
+    {
+      "file": "webkit-1024-loading.png",
+      "bytes": 117989,
+      "sha256": "c0b3aadf720704e3fc82920d7b3f361250fce6fbb8660ea3aafd81f2984f7e50"
+    },
+    {
+      "file": "webkit-1024-normal.png",
+      "bytes": 1009927,
+      "sha256": "1b7c2d40994e0549887a3aabccf35a8e72e0be4b0f7ef0ffea320e5f3198353e"
+    },
+    {
+      "file": "webkit-1024-not-found.png",
+      "bytes": 106836,
+      "sha256": "b7f86fd7eb417ef4cc2b4ea6fe9b534ed8ae681a8da2797acdb674239b54c555"
+    },
+    {
+      "file": "webkit-1024-viewer.png",
+      "bytes": 1020726,
+      "sha256": "2745d76b32697c193ce1d074b07e869a644892fbc33f4d69d55ec5518925d301"
+    },
+    {
+      "file": "webkit-1440-archived.png",
+      "bytes": 172814,
+      "sha256": "7337812fd186dc7086eca7302bb53d4553de59097cfeaccbaeb9e6622a0c388e"
+    },
+    {
+      "file": "webkit-1440-empty.png",
+      "bytes": 175836,
+      "sha256": "112b5a5f6bee3195987d1678de4675d304ba3eabdfc546bcc7fee2d95fdff52e"
+    },
+    {
+      "file": "webkit-1440-failure.png",
+      "bytes": 173573,
+      "sha256": "dc74ec190f30b3d1e36e8a44320cf51fa734cbbadfa1a9ffc72a940f68e42100"
+    },
+    {
+      "file": "webkit-1440-field-error.png",
+      "bytes": 1262060,
+      "sha256": "3fa9b7019a5e53c28ae488b8cb47ca376ba164f9d5c7bf606a10f7d91e604d29"
+    },
+    {
+      "file": "webkit-1440-filtered-create.png",
+      "bytes": 197395,
+      "sha256": "c70002300b5128cc69d00024fa4a1e3d6f0dce840e6f324490e481dc4843c8f3"
+    },
+    {
+      "file": "webkit-1440-filtered-empty.png",
+      "bytes": 199892,
+      "sha256": "989e13f9578b34a09e1b9d2f2a08b5d515021a6d9d4cd441b74616cfbf52e429"
+    },
+    {
+      "file": "webkit-1440-filtered.png",
+      "bytes": 185457,
+      "sha256": "8a72e734746241002e4304a246a16e410ed5dc514105e60104881b571dd92e70"
+    },
+    {
+      "file": "webkit-1440-loading.png",
+      "bytes": 153640,
+      "sha256": "cef837160365632f6f547b285f42eb1262137d4f43a338cce99f3f7f7f8b0f52"
+    },
+    {
+      "file": "webkit-1440-normal.png",
+      "bytes": 1142763,
+      "sha256": "c2c01b979f237bab34ec44e6a84e86ed7616acffbe20571d43d629ba367178b5"
+    },
+    {
+      "file": "webkit-1440-not-found.png",
+      "bytes": 143190,
+      "sha256": "d605efea3cf614a16756b905f68df837090a7a0893c8c6c1d097dc9969078e04"
+    },
+    {
+      "file": "webkit-1440-viewer.png",
+      "bytes": 1155302,
+      "sha256": "958dadc4a59254b500c5c86389f557b86f79bd934edb477b8df7999da2a03223"
+    },
+    {
+      "file": "webkit-1920-archived.png",
+      "bytes": 229426,
+      "sha256": "dbc05861edf350fbe24b1ceb29caf50054f8965def3b8b4a0e420fd9e7d7f9cb"
+    },
+    {
+      "file": "webkit-1920-empty.png",
+      "bytes": 232091,
+      "sha256": "90819bfa510bd39e9bc5f41e21aae5feb9e7a5aac08a34b380c4e85a6d55cdf1"
+    },
+    {
+      "file": "webkit-1920-failure.png",
+      "bytes": 230637,
+      "sha256": "9e7c916f39e99f40eb1afb0997fb68b04df69f03bb635590fa6a583d0ba2fc11"
+    },
+    {
+      "file": "webkit-1920-field-error.png",
+      "bytes": 1372428,
+      "sha256": "117c93339e0d6e32aad99bbdbc126c84ba5505d1ade536f37b0336a32e220d7a"
+    },
+    {
+      "file": "webkit-1920-loading.png",
+      "bytes": 209686,
+      "sha256": "010afb132a763a41401deb6ea9833a0b56db29a46248f74a090ad66e2b5a059c"
+    },
+    {
+      "file": "webkit-1920-normal.png",
+      "bytes": 1253309,
+      "sha256": "e5b3786dab079d8629f02e2aea274f750f7c983761ac7c6c19f43dfe680077ad"
+    },
+    {
+      "file": "webkit-1920-not-found.png",
+      "bytes": 200531,
+      "sha256": "2cba820b602f65ae2e6221412fec341286193e3f6ba6e58840b26aef3db549b9"
+    },
+    {
+      "file": "webkit-1920-viewer.png",
+      "bytes": 1269370,
+      "sha256": "14b84e1518011fda47ba54ab1723987a087d068b36a8759912c58d61865367df"
+    },
+    {
+      "file": "webkit-320-archived.png",
+      "bytes": 83309,
+      "sha256": "634883e5cb580cf3f67fd6025dcb351a2be7bda1bb91671119f42f3e93f95af6"
+    },
+    {
+      "file": "webkit-320-empty.png",
+      "bytes": 82335,
+      "sha256": "b6b3ab89b03a8333139119685906c50846b7442d8246403e82d02b1d07a64517"
+    },
+    {
+      "file": "webkit-320-failure.png",
+      "bytes": 80892,
+      "sha256": "47a33fc52199fd02954250b4f517f326944d28792861721548881aaeccc0ae29"
+    },
+    {
+      "file": "webkit-320-field-error.png",
+      "bytes": 734734,
+      "sha256": "2ecab411407d7e4cc124fd70178e7352b5d71ee683ae859fbfd7f5b41d87eec7"
+    },
+    {
+      "file": "webkit-320-loading.png",
+      "bytes": 62216,
+      "sha256": "e192dc99dc18bc406cddaa0ccbdc8d0bf9dedc244caee0195450faf130d07a69"
+    },
+    {
+      "file": "webkit-320-normal.png",
+      "bytes": 759619,
+      "sha256": "dda3e7beca4a4ad4116c3f21f0dc446d84799c7ef309286820aa47a25b3f42db"
+    },
+    {
+      "file": "webkit-320-not-found.png",
+      "bytes": 57930,
+      "sha256": "bf85872efc4d1d32a4e54e8dc93194250ab51bc4e54c7364724be6aa451c4074"
+    },
+    {
+      "file": "webkit-320-viewer.png",
+      "bytes": 771301,
+      "sha256": "2bfae728b05e38c50d61b80fd0165babee5a27ba6e9a4e43d254f1d2a0a110b8"
+    },
+    {
+      "file": "webkit-390-archived.png",
+      "bytes": 88105,
+      "sha256": "4af705325d73e84b39198bf26c43f4a76411cea4dcffcf15edf5eb0d8cabf036"
+    },
+    {
+      "file": "webkit-390-empty.png",
+      "bytes": 86732,
+      "sha256": "1e44ab1d200cd15d969c831cd9283dd7595fe1e9ba7291e15c846f45d34c471f"
+    },
+    {
+      "file": "webkit-390-failure.png",
+      "bytes": 85590,
+      "sha256": "42adbd8800b3fa45b93a47b2053c3db64cdb5336824d1b9a9659619b1ef70eff"
+    },
+    {
+      "file": "webkit-390-field-error.png",
+      "bytes": 771155,
+      "sha256": "e987b766c0b49a06b313778060c2d482ead6c686a9214164ea5a3d51f1489228"
+    },
+    {
+      "file": "webkit-390-filtered-create.png",
+      "bytes": 96286,
+      "sha256": "efd8f9f2a91360d5823a92bcb7a1b3b469c6893da286625aafd0eaaa15177ddc"
+    },
+    {
+      "file": "webkit-390-filtered-empty.png",
+      "bytes": 108064,
+      "sha256": "dbf93a908a332daa683ead502212f5479ad97579b93ae06a11003042bbb09d00"
+    },
+    {
+      "file": "webkit-390-filtered.png",
+      "bytes": 86923,
+      "sha256": "b91e88bf9e16ba948e636482df946ab35a31d0785d2dd7004fa9c79f2638444f"
+    },
+    {
+      "file": "webkit-390-loading.png",
+      "bytes": 66632,
+      "sha256": "a6551804e8fa1c88133f85f530e4d015c8d0a90c71e268cf0f03ccfe7c8dd224"
+    },
+    {
+      "file": "webkit-390-normal.png",
+      "bytes": 797092,
+      "sha256": "d24117ed53b035d5e1aadd226fe294a38c04309906bacf2de74161034a938ce1"
+    },
+    {
+      "file": "webkit-390-not-found.png",
+      "bytes": 62746,
+      "sha256": "fe0fd4a48ccbb36215e1eba1e1237992538a32cac6dfd82984dc088cbde9e0eb"
+    },
+    {
+      "file": "webkit-390-viewer.png",
+      "bytes": 809582,
+      "sha256": "fc90d32337abf21d8a8df69019a334720598ac6f0578c0c2ebd29342da745cd3"
+    },
+    {
+      "file": "webkit-768-archived.png",
+      "bytes": 117169,
+      "sha256": "96ef2b2a6b7828e4673e9a6f986fd7e639e0e29667a69f323518f3515d1f358b"
+    },
+    {
+      "file": "webkit-768-empty.png",
+      "bytes": 119833,
+      "sha256": "635ee97ad8ad5da55f8d1013cdd3bde66d31a15b6219ee1fe505ef7e906d2b75"
+    },
+    {
+      "file": "webkit-768-failure.png",
+      "bytes": 118431,
+      "sha256": "f7d5444b7de6cabae67c2d279c85531fcebd3e5bb898769afe0e4254c03256bd"
+    },
+    {
+      "file": "webkit-768-field-error.png",
+      "bytes": 925756,
+      "sha256": "588617feede2237ebbf70f34f652986ffe7b16794ed3f532824f31485065c4a0"
+    },
+    {
+      "file": "webkit-768-filtered-create.png",
+      "bytes": 138717,
+      "sha256": "555bed5429f27729d65e842a4153560c286a7c73c403c169580987c72c4b611f"
+    },
+    {
+      "file": "webkit-768-filtered-empty.png",
+      "bytes": 142990,
+      "sha256": "af588717f8f4c65b95cb284f48a303ed5a1c38c871a6d2b104a0e957e20e50d2"
+    },
+    {
+      "file": "webkit-768-filtered.png",
+      "bytes": 128166,
+      "sha256": "31657dbbccbf7e5980ed34bcc312d74e1e1cd9e24287cfa343ee3fecf86dc677"
+    },
+    {
+      "file": "webkit-768-loading.png",
+      "bytes": 98241,
+      "sha256": "d32804c2c0208948c7bf62df09dbe5096e14a0222b520b0686ebe59b39841f09"
+    },
+    {
+      "file": "webkit-768-normal.png",
+      "bytes": 908922,
+      "sha256": "13f6482eb5a17303e49ab16dcf07ee72425761952f74c4ed21ef99c04beafd67"
+    },
+    {
+      "file": "webkit-768-not-found.png",
+      "bytes": 86775,
+      "sha256": "a336fae2d5db7dd0bf6cb2dff8a48dbb9d2effd04a926050246c107034b3dc2d"
+    },
+    {
+      "file": "webkit-768-viewer.png",
+      "bytes": 918721,
+      "sha256": "3cd50502645d588e4d6234df0c9e5c317ad31bc87746aa4cbed66cc4d6dd6117"
+    }
+  ]
+}

@@ -1,35 +1,31 @@
 # Repository Guidelines
 
-## Repository Purpose
+## Purpose and Sources
 
-This repository documents a specification-driven workflow for using AI throughout software development. It contains the FocusTask example specification, architecture constraints, roadmap, and coding and acceptance-agent rules. It is documentation-only; no runnable implementation or `package.json` is currently present.
+This repository defines a human-directed AI software lifecycle, from requirements through maintenance. Every stage has artifacts, reusable templates, actionable prompts, and evidence requirements. FocusTask is the local empirical example; its original product vision is broader than the selected experiment.
 
-## Structure and Sources of Truth
+Read `AI_LIFECYCLE_IMPLEMENTATION_PLAN.md`, `execution/status.md`, `model/overview.md`, and `model/conventions.md` before changing the model. For application work, also read the nearest AGENTS file, empirical scope, relevant domain/permissions, feature/page specifications, architecture, decisions, and quality criteria under `examples/focustask`.
 
-- `README.md`: repository overview and document precedence.
-- `docs/product.md`, `docs/glossary.md`, `docs/domain.md`, `docs/permissions.md`: product and domain rules.
-- `docs/features/` and `docs/pages/`: feature and page specifications.
-- `docs/architecture.md` and `docs/non-functional.md`: implementation and quality constraints.
-- `docs/roadmap.md`: ordered work items and statuses.
-- `docs/decisions/`: durable decisions; add one for consequential or hard-to-reverse changes.
-- `docs/definition-of-done.md`: completion checklist and delivery-report template.
+## Organization
 
-When documents conflict, follow the priority defined in `README.md`. Do not invent unresolved business, permission, or billing rules.
+- `model/`: stages, artifact specifications, shared practices and tailoring.
+- `templates/`: unfilled artifact templates.
+- `examples/focustask/`: example specifications, application and real evidence.
+- `execution/`: task progress, decisions and blockers; `baseline/` is a frozen historical archive.
+- `docs/`: compatibility links to migrated material.
 
-## Contribution Workflow
+## Working Rules
 
-Work on one independently verifiable roadmap item at a time. Read the relevant product, glossary, feature/page, domain, permission, architecture, decision, and completion documents first. Keep changes scoped and reuse established patterns. Update affected specifications and tests together. Do not add secrets, tokens, or real personal data.
+Preserve existing edits. Advance one independently verifiable task from the execution plan at a time; application tasks use their empirical iteration plan. Reuse existing conventions and update affected specifications, tests, links and traceability together.
 
-Specification changes must update every affected cross-reference, acceptance criterion, dependency, and roadmap status in the same change. New decision records should state the context, decision, alternatives considered, and consequences. Keep examples fictional and prefer stable, explicit terminology from `docs/glossary.md`.
+Follow recorded user decisions, including direct local deployment without Docker. Resolve routine implementation choices within scope; surface missing rules that change business data, permissions or acceptance. Record consequential technical choices in ADRs. Never invent human approval, external PR/CI status, test results or deployment history.
 
-For implementation work, the intended commands are `npm run lint`, `npm run typecheck`, `npm test`, `npm run test:e2e`, and `npm run build`; these are architectural expectations and cannot be run until the application scaffold exists. Report unavailable commands as unable to execute, never as passing. UI work must check `1440x900`, `1024x768`, `768x1024`, and `390x844` plus all specified states.
+## Verification and Evidence
 
-## Testing and Acceptance
+Run `node scripts/check-docs.mjs` for documentation; inspect semantics as well as links. Once the application exists, run its real lint, typecheck, unit/integration, E2E and build commands. UI checks cover 1440x900, 1024x768, 768x1024 and 390x844 with specified states. Missing tools or commands are unavailable, not passing.
 
-Business rules require automated coverage. The coding agent reports changed files, verification results, evidence, risks, and specification deviations. An independent acceptance agent must not modify product implementation and must classify each criterion as `通过`, `失败`, `无法判定`, or `阻塞`, with reproduction steps and evidence for failures.
+Independent acceptance reads confirmed specifications and the exact candidate without modifying implementation. Report each criterion as 通过, 失败, 无法判定 or 阻塞, with reproduction and evidence for failures. Template examples are never execution evidence.
 
-For documentation changes, check links, headings, terminology, examples, and consistency with `README.md` and source-of-truth documents. Once implementation exists, apply the full command and UI checks above.
+## Delivery and Safety
 
-## Commits and Pull Requests
-
-This directory has no Git history, so no established commit convention can be inferred. Use concise imperative messages with a scope when useful, for example `docs: clarify task acceptance flow`. Pull requests should explain the affected specification or roadmap item, list validation results and known risks, and include screenshots or test evidence for UI changes.
+Report scope, changed files, actual checks, evidence, risks and next step. Maintain execution status across sessions. Use fictional data, ignore real credentials and local databases, and stop only task-owned processes. Local review records may substitute for hosted PRs when documented; do not claim remote integration occurred. Commit messages describe intent with a scope, such as `docs: define artifact handoffs`.

@@ -1,0 +1,40 @@
+---
+title: 人驱动 AI 的软件生命周期 · 六阶段与反馈
+---
+flowchart TB
+  accTitle: 人驱动 AI 的软件生命周期总览
+  accDescr: 人用目标、约束、示例提示词和反馈驱动各阶段。需求、设计、实现、验证、发布、维护形成迭代；验证和维护发现的问题回到受影响阶段。初始化只在首次或重大环境变化时进行，制品追踪等机制贯穿全过程。
+
+  HUMAN["人贯穿全过程<br/>目标与约束 · 关键选择 · 审阅与反馈<br/>每个操作入口都有示例提示词"]:::human
+  PREP["首次准备 / 重大环境变化<br/>AGENTS.md + 工程基线<br/>已有内容按需补齐"]:::support
+
+  subgraph CYCLE["每次迭代：选择一个可验证目标，按影响推进或返回"]
+    direction LR
+    R["01 需求分析<br/>AI 澄清与编写规格<br/>出口：范围与判据明确"]:::stage
+    D["02 设计<br/>AI 比较方案与定义契约<br/>出口：关键风险可验证"]:::stage
+    I["03 实现<br/>AI 编码、测试与自检<br/>出口：可验收候选版本"]:::stage
+    V["04 验证<br/>独立 AI 按确认标准取证<br/>出口：适用验收通过"]:::verify
+    L["05 发布<br/>AI 构建、部署与冒烟<br/>出口：版本和数据验证"]:::stage
+    M["06 维护<br/>AI 诊断、修复与再验证<br/>出口：关闭依据可追踪"]:::stage
+    R --> D --> I --> V
+    V -- "验收通过 / 集成" --> L
+    L --> M
+    V -. "规则缺失" .-> R
+    V -. "契约矛盾" .-> D
+    V -. "实现缺陷" .-> I
+    M -. "新要求" .-> R
+    M -. "修复" .-> I
+    M -. "部署问题 / 恢复" .-> L
+  end
+
+  HUMAN --> CYCLE
+  PREP --> CYCLE
+  CYCLE --- SHARED["贯穿机制<br/>上下文交接 · 制品版本与追踪 · 变更控制<br/>安全与权限 · 独立验证 · 交互记录与评价"]:::support
+  SHARED --- NOTE["每个阶段：人驱动 → AI 执行 → 制品与证据 → 审阅修订<br/>已授权工作连续推进；变更后更新受影响内容，再验证"]:::note
+
+  classDef human fill:#eee8f8,stroke:#76569d,color:#38244e,stroke-width:2px;
+  classDef stage fill:#edf6f1,stroke:#387761,color:#173c2e,stroke-width:1.5px;
+  classDef verify fill:#fff1d9,stroke:#a57626,color:#573b10,stroke-width:2px;
+  classDef support fill:#f0f3f6,stroke:#8393a1,color:#2d4150,stroke-width:1px;
+  classDef note fill:#ffffff,stroke:#d3dce3,color:#415364,stroke-dasharray:4 3;
+  style CYCLE fill:#fbfdfb,stroke:#c8dacf,stroke-width:1px

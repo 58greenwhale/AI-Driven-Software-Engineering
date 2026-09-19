@@ -1,0 +1,32 @@
+
+> focustask-lifecycle-example@0.1.0 test
+> vitest run
+
+
+ RUN  v4.1.11 /Users/chenzhenyang/Codes/AI-Driven Software Engineering/examples/focustask/app
+
+ ❯ tests/tasks.test.ts (7 tests | 1 failed) 123ms
+     × UUID case variants share the same idempotency lock and normalized fingerprint 3ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/tasks.test.ts > TASK-001 database invariants > UUID case variants share the same idempotency lock and normalized fingerprint
+Error: 未找到项目
+ ❯ membership src/server/tasks.ts:19:22
+     17|     include: { project: true },
+     18|   });
+     19|   if (!member) throw new ApiError(404, "NOT_FOUND", "未找到项目");
+       |                      ^
+     20|   return member;
+     21| }
+ ❯ createTask src/server/tasks.ts:50:3
+ ❯ tests/tasks.test.ts:115:20
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 10 passed (11)
+   Start at  09:14:25
+   Duration  400ms (transform 33ms, setup 0ms, import 130ms, tests 137ms, environment 0ms)
+

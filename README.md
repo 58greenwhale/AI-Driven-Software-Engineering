@@ -1,54 +1,42 @@
-# FocusTask 示例项目
+# 人驱动 AI 的软件生命周期模型
 
-FocusTask 是一个供小型团队使用的轻量任务管理器。本仓库当前提供一套完整的示例需求文档，用于演示如何让编码 Agent 实现功能，并让验收 Agent 根据相同规格独立验收。
+这个仓库定义从需求分析到维护的 AI 驱动开发流程。人表达目标、提供约束、作出关键决定；AI 完成澄清、设计、编码、测试、发布和修订。每个阶段定义制品，每个人机操作配套可复制的示例提示词。
 
-> 这是文档示例，不包含可运行的产品代码。
+## 从哪里开始
 
-## 示例范围
+先看[生命周期模型图解](model/visual-guide.md)：总览、协作时序和制品流转，均附可编辑源码与 SVG/PNG。
 
-首个版本支持：
+![人驱动AI的软件生命周期总览](model/diagrams/lifecycle.svg)
 
-- 用户登录；
-- 创建和查看项目；
-- 邀请项目成员；
-- 创建、查看和完成任务；
-- 基于角色的访问控制。
+1. [模型总纲](model/overview.md)：六阶段、反馈路径、人和 AI 的职责。
+2. [制品目录](model/artifact-catalog.md)：A01–A22 的用途、生成规范和下游使用方式。
+3. [提示词协议](model/practices/prompt-protocol.md)：参数、执行链、失败处理与事实来源。
+4. [A03 功能规格样板](model/artifacts/A03-feature-spec.md)：内容规范、操作提示词、模板与教学示例。
+5. [团队裁剪](model/tailoring.md)：个人、小团队和大型团队如何简化。
+6. [FocusTask 示例](examples/focustask/README.md)：产品输入、实证切片、应用与证据入口。
 
-批量操作、通知、评论、附件和第三方集成不在首个版本范围内。
+## 生命周期指南
 
-## 文档入口
+[需求分析](model/stages/requirements.md) → [设计](model/stages/design.md) → [实现](model/stages/implementation.md) → [验证](model/stages/verification.md) → [发布](model/stages/release.md) → [维护](model/stages/maintenance.md)。失败按原因返回相关阶段，不必重建全部文档。
 
-建议按以下顺序阅读：
+首次准备见[仓库初始化](model/practices/initialization.md)。[上下文交接](model/practices/context.md)、[变更控制](model/practices/change-control.md)和[验证规则](model/practices/verification.md)贯穿全过程。
 
-1. [`docs/product.md`](docs/product.md)：产品目标、用户和版本范围；
-2. [`docs/glossary.md`](docs/glossary.md)：统一术语；
-3. [`docs/domain.md`](docs/domain.md)：数据模型和业务状态；
-4. [`docs/permissions.md`](docs/permissions.md)：角色与权限；
-5. [`docs/user-journeys.md`](docs/user-journeys.md)：端到端用户流程；
-6. [`docs/design-system.md`](docs/design-system.md)：全局 UI 规则；
-7. [`docs/architecture.md`](docs/architecture.md)：技术约束；
-8. [`docs/non-functional.md`](docs/non-functional.md)：性能、安全和可靠性指标；
-9. [`docs/roadmap.md`](docs/roadmap.md)：实施顺序；
-10. [`docs/definition-of-done.md`](docs/definition-of-done.md)：统一完成标准。
+## 规范、模板、示例、证据
 
-具体任务从 [`docs/features/`](docs/features/) 和 [`docs/pages/`](docs/pages/) 开始。Agent 的执行规则见 [`AGENTS.md`](AGENTS.md)。
+- model：可重复使用的模型与制品规范。
+- templates：空白模板；不代表真实决定或结果。
+- examples/focustask/docs：保留的产品规格、实证范围和标注为教学的填写示例。
+- examples/focustask/evidence：仅存真实运行与交互记录；未执行的步骤不能预填通过。
+- execution：实施计划的进度、决定、阻塞和迁移基线。
 
-## 当前示例任务
+当前建设状态见[执行状态](execution/status.md)，范围和最终验收见[实施计划](AI_LIFECYCLE_IMPLEMENTATION_PLAN.md)。FocusTask已完成首版发布、筛选迭代、权限缺陷修复、坏版本回退、独立会话接手和最终rc3缩放修复发布；[交付报告](execution/delivery-report.md)与[实证评价](examples/focustask/evaluation.md)分别记录结论和局限。应用的实际准备/运行入口见示例README，不能据此声称效率提升、企业规模有效性或真实生产就绪。
 
-`TASK-001`：项目编辑者创建任务。
+## 文档验证
 
-- 功能规格：[`docs/features/TASK-001-create-task.md`](docs/features/TASK-001-create-task.md)
-- 页面规格：[`docs/pages/task-list.md`](docs/pages/task-list.md)
-- 决策记录：[`docs/decisions/0001-task-status-model.md`](docs/decisions/0001-task-status-model.md)
+在仓库根目录运行 `node scripts/check-docs.mjs`。应用目录examples/focustask/app提供真实的lint、typecheck、test、test:e2e和build脚本；需先按示例README准备隔离环境。实际结果见evidence/runs，不存在或未执行的命令不记为通过。
 
-## 文档优先级
+## 事实来源与贡献
 
-发生冲突时按以下优先级处理：
+模型变更依据用户确认的目标和实施计划。项目业务冲突按[约定](model/conventions.md)处理：适用的已接受 ADR > 当前功能/页面规格 > 领域/权限/非功能规则 > 范围与路线图 > 概述。模板和教学实例没有覆盖已确认规则的权力。
 
-1. 已确认的决策记录；
-2. 功能规格和页面规格；
-3. 领域、权限及非功能规则；
-4. 产品总纲和路线图；
-5. README 中的概述。
-
-如果高优先级文档仍存在歧义，Agent 应记录问题并请求产品负责人决策，不得自行创造关键业务规则。
+先阅读[AGENTS.md](AGENTS.md)，一次完成一个可验收任务，保存证据和版本。原文档入口保留迁移链接，历史正文冻结于 execution/baseline，不再作为活动操作指南。

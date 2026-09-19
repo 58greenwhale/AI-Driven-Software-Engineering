@@ -1,0 +1,26 @@
+{
+  "capturedAt": "2026-09-19 05:12:25 UTC",
+  "checks": [
+    {
+      "command": "node scripts/check-docs.mjs",
+      "exitCode": 0,
+      "output": "{\n  \"files\": 169,\n  \"localLinks\": 489,\n  \"artifacts\": 22,\n  \"stages\": 6,\n  \"errors\": []\n}\n"
+    },
+    {
+      "command": "node scripts/audit-evidence.mjs",
+      "exitCode": 0,
+      "output": "{\n  \"hashesChecked\": 10715,\n  \"runRecords\": 91,\n  \"secretCheckedFiles\": 474,\n  \"failures\": []\n}\n"
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "lsof task service ports",
+      "exitCode": 1,
+      "output": ""
+    }
+  ],
+  "note": "lsof exit 1 with no output means no listeners on task ports; data and artifacts retained. Semantic/independent review is recorded separately in completion-audit and final-review."
+}

@@ -1,0 +1,10 @@
+{
+  "type": "deliberate-isolated-mutation",
+  "at": "2026-09-19T03:04:12.744Z",
+  "source": "src/server/tasks.ts",
+  "normalHash": "f6deb19f5bec54793fa600e76b28cca6dad8810708e7b401a571f35e6cfd140f",
+  "mutatedHash": "26142f50d693dc6b461539cc3a3a89870ae34be4338ccfe4f67109b1026ed57b",
+  "change": "Replace viewer guard with unreachable role in isolated copy only",
+  "normalProduct": "src/server/tasks.ts",
+  "environment": "focustask_drill / 3213"
+}

@@ -1,0 +1,58 @@
+[WebServer] (node:29119) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:29135) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/e2e/zoom.spec.ts:4:1 › actual browser 200% zoom preserves form and core creation (1.6s)
+
+
+  1) [chromium] › tests/e2e/zoom.spec.ts:4:1 › actual browser 200% zoom preserves form and core creation 
+
+    Error: locator.fill: Error: strict mode violation: getByLabel('截止日期') resolved to 59 elements:
+        1) <span aria-label="无截止日期" class="ui_date__qwc_j">无截止日期</span> aka locator('li').filter({ hasText: '真实缩放验证 1789792167053' }).getByLabel('无截止日期')
+        2) <span aria-label="无截止日期" class="ui_date__qwc_j">无截止日期</span> aka locator('li').filter({ hasText: '真实缩放验证 1789789261554' }).getByLabel('无截止日期')
+        3) <span aria-label="无截止日期" class="ui_date__qwc_j">无截止日期</span> aka locator('li').filter({ hasText: 'ca36a659' }).getByLabel('无截止日期')
+        4) <span aria-label="无截止日期" class="ui_date__qwc_j">无截止日期</span> aka locator('li').filter({ hasText: '网络恢复 2bf497b4待处理未分配无截止日期' }).getByLabel('无截止日期')
+        5) <span aria-label="无截止日期" class="ui_date__qwc_j">无截止日期</span> aka locator('li').filter({ hasText: '创建验收 42423df4待处理未分配无截止日期' }).getByLabel('无截止日期')
+        6) <span aria-label="无截止日期" class="ui_date__qwc_j">无截止日期</span> aka locator('li').filter({ hasText: '80c9ae3c' }).getByLabel('无截止日期')
+        7) <span aria-label="无截止日期" class="ui_date__qwc_j">无截止日期</span> aka locator('li:nth-child(7) > .ui_date__qwc_j')
+        8) <span aria-label="无截止日期" class="ui_date__qwc_j">无截止日期</span> aka locator('li:nth-child(8) > .ui_date__qwc_j')
+        9) <span aria-label="无截止日期" class="ui_date__qwc_j">无截止日期</span> aka locator('li:nth-child(9) > .ui_date__qwc_j')
+        10) <span aria-label="无截止日期" class="ui_date__qwc_j">无截止日期</span> aka locator('li:nth-child(10) > .ui_date__qwc_j')
+        ...
+
+    Call log:
+      - waiting for getByLabel('截止日期')
+
+
+      33 |     await page.screenshot({path:'.runtime/screenshots/chromium-200-real-zoom-viewport.png',fullPage:false});
+      34 |     await page.getByLabel('负责人').selectOption('10000000-0000-4000-8000-000000000002');
+    > 35 |     await page.getByLabel('截止日期').fill('2099-01-01');
+         |                                   ^
+      36 |     const dateRect=await page.getByLabel('截止日期').boundingBox();expect(dateRect).not.toBeNull();
+      37 |     expect(dateRect!.y).toBeGreaterThanOrEqual(0);expect(dateRect!.y+dateRect!.height).toBeLessThanOrEqual(formGeometry.submit.y-20);
+      38 |     await page.screenshot({path:'.runtime/screenshots/chromium-200-real-zoom-date.png',fullPage:false});
+        at /Users/chenzhenyang/Codes/AI-Driven Software Engineering/examples/focustask/app/tests/e2e/zoom.spec.ts:35:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/zoom-actual-browser-200-zo-22cab-rves-form-and-core-creation-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/zoom-actual-browser-200-zo-22cab-rves-form-and-core-creation-chromium/test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/zoom-actual-browser-200-zo-22cab-rves-form-and-core-creation-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/zoom-actual-browser-200-zo-22cab-rves-form-and-core-creation-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/zoom-actual-browser-200-zo-22cab-rves-form-and-core-creation-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/e2e/zoom.spec.ts:4:1 › actual browser 200% zoom preserves form and core creation 

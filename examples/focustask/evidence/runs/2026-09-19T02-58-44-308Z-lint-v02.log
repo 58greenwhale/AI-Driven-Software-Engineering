@@ -1,0 +1,10 @@
+
+> focustask-lifecycle-example@0.2.0 lint
+> eslint .
+
+
+/Users/chenzhenyang/Codes/AI-Driven Software Engineering/examples/focustask/app/src/features/tasks.tsx
+  98:18  warning  The ref value 'latestLoad.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'latestLoad.current' to a variable inside the effect, and use that variable in the cleanup function  react-hooks/exhaustive-deps
+
+✖ 1 problem (0 errors, 1 warning)
+
