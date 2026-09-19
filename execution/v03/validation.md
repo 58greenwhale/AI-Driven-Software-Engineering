@@ -26,6 +26,19 @@
 
 一致性核对：四份活动指南的触发、输入、产出、退出与失败返回逐项对应计划 2.2 至 2.5；产出制品与总纲点名的 A23 至 A27 一致；`model/visual-guide.md` 的活动组织段与裁剪文档新增表格口径一致（按功能、按迭代、混合组织，裁剪选择记录在 A10）；同类问题排查在重构、审查、维护指南与变更控制实践中均已出现，构建、精修与独立验收指南的点名留待 V03-03。本轮未运行图解导出，8 个导出文件未变。
 
+## V03-03 实际检查
+
+| 命令 | 退出码 | 结果 |
+| --- | --- | --- |
+| `node scripts/check-docs.mjs` | 0 | 111 份 Markdown、380 个本地链接、artifacts 27、activities 4、stages 3、errors 0 |
+| `node --test scripts/check-docs.test.mjs` | 0 | 36 项通过、0 失败/跳过 |
+| `git diff --check` | 0 | 无空白错误 |
+| `grep -rn 独立验证 model/ examples/ README.md` | 1 | 无匹配，阶段名已统一 |
+
+文档检查的数字在更新本目录记录之后运行取得。改动文件：`model/stages/verification.md`（标题与 VAL-START 小节名、验收者与独立性表述、产出补 A26、VAL-REVIEW 补同类排查）、四份活动指南（链接文字统一，构建与精修补同类排查）、`model/stages/release.md`（失败返回点名四项活动）、`model/stages/maintenance.md`、`model/conventions.md`、`model/practices/verification.md` 与两份教学例的术语。
+
+一致性核对：三份阶段指南的触发、输入、产出、退出与失败返回均点名上游活动与制品，独立验收输入含 A23 至 A27，维护返回构建/重构/精修并经审查，发布返回四项活动；同类问题排查在构建、重构、审查、精修、独立验收、维护六份指南与变更控制实践中均可到达；`.mmd` 源码未改，8 个导出文件未变。
+
 ## 材料与工具盘点事实
 
 | 项目 | 事实 |
