@@ -95,14 +95,13 @@
 
 ## FocusTask 可直接使用的填写示例
 
-使用时机：现有 TASK-001 已有草案，要迁移到实证项目。当前仍在迁移前可使用根 docs 路径；迁移后改为 examples/focustask/docs 下的对应路径。输出为修订草稿，不能把原产品的完整 MVP 声称已经实现。
+使用时机：依据教学上下文完善 TASK-001 功能规格。输出仅为教学草稿，不创建应用，也不建立真实用户确认。
 
 ```text
-[A03-GENERATE / 已填示例] 请读取 docs/product.md、docs/domain.md、
-docs/permissions.md、docs/features/TASK-001-create-task.md 和实施计划1.1。
-用 templates/A03-feature-spec.md 建立 TASK-001 的实证规格草稿，
-写入 examples/focustask/docs/features/TASK-001-create-task.md。
-保持原 AC-01 至 AC-13 的业务判据；依赖调整为预置身份/项目/成员数据，
+[A03-GENERATE / 已填示例] 请从仓库根读取 examples/focustask/docs/context.md，
+用 templates/A03-feature-spec.md 完善 TASK-001 的教学规格，
+写入 examples/focustask/docs/artifact-examples/A03-feature-spec.md。
+保持 AC-01 至 AC-13 的业务判据；身份/项目/成员仅作为教学前置输入，
 不要把夹具说成已实现邀请。网络丢失后重试必须保持同键、同任务ID和一条数据。
 列出来源、冲突、需同步的界面/测试内容及未决项；现在仅生成规格，不编码。
 ```
@@ -117,4 +116,4 @@ docs/permissions.md、docs/features/TASK-001-create-task.md 和实施计划1.1�
 | 独立检查 | VERIFY，候选填规格文件内容摘要 | AC完整性、规则来源及错误路径的检查记录 | 无运行环境不声称应用通过 |
 | 跨阶段交接 | HANDOFF，交接路径填任务交接文档 | A03版本、必读文件、未决项、下一步A07测试策略指令 | 下一位无需原聊天即可开始 |
 
-这些是操作样板及判据；实际执行结果单独存到 evidence，不在此预填成功。
+这些是操作样板及判据；未来实际项目应另外保存真实执行结果，不在教学例预填成功。

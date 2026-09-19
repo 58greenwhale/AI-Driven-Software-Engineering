@@ -13,7 +13,13 @@ for (let i = 0; i < args.length; i += 2) {
   options[args[i].slice(2)] = args[i + 1];
 }
 const directory = path.join(root, 'model/diagrams');
-for (const name of ['lifecycle', 'collaboration', 'artifacts']) {
+const names = ['lifecycle', 'collaboration', 'artifacts', 'organization'];
+const missing = names.filter((name) => !fs.existsSync(path.join(directory, `${name}.mmd`)));
+if (missing.length) {
+  console.error(`新版图解待建立；缺少源码：${missing.map((name) => `${name}.mmd`).join(', ')}`);
+  process.exit(1);
+}
+for (const name of names) {
   for (const format of ['svg', 'png']) {
     const output = path.join(directory, `${name}.${format}`);
     const parameters = [

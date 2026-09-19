@@ -1,6 +1,8 @@
 # 制品目录
 
-制品由用途决定，编号稳定，实例随项目和版本更新。以下是类型定义，尚不表示实例已通过实证。每类规范配套模板和标注为教学的填写示例；真实运行证据另存于示例项目 evidence。
+制品由用途决定，编号稳定，实例随项目和版本更新。现有 A01–A22 是可复用基础，配套空白模板和纯教学示例；本仓库不含可运行应用或实证证据。A23–A27 及活动关联的完整修订见 [v0.3 待实施计划](../AI_LIFECYCLE_V03_REFINEMENT_PLAN.md)。
+
+下表输出位置是未来目标项目的推荐路径，不是本仓库已有文件；教学输入统一见 [FocusTask 上下文](../examples/focustask/docs/context.md)。
 
 ## 导航
 
@@ -22,16 +24,16 @@
 | A14 | [独立验收报告](artifacts/A14-acceptance.md) | 必要；只读产品实现；候选自检后及影响行为的变更后 | `evidence/acceptance.md` |
 | A15 | [缺陷与变更单](artifacts/A15-change-defect.md) | 条件触发；缺陷和需求变更标不同类型；问题或范围变化出现时，早于改代码 | `docs/changes/CHANGE-001.md` |
 | A16 | [制品与验收追踪表](artifacts/A16-traceability.md) | 必要；表格即可，可自动汇总但需查内容；每次生成、修订、验证、发布后增量更新 | `evidence/traceability.md` |
-| A17 | [发布清单](artifacts/A17-release-manifest.md) | 每次发布必要；每个发布候选生成，变化则重新核对 | `evidence/releases/v0.1.0/manifest.md` |
+| A17 | [发布清单](artifacts/A17-release-manifest.md) | 每次发布必要；每个发布候选生成，变化则重新核对 | `evidence/releases/{版本}/manifest.md` |
 | A18 | [部署与回退指南](artifacts/A18-deploy-rollback.md) | 每个部署目标必要；可共享版本化脚本；首次部署目标、配置或兼容性变化 | `docs/deploy-rollback.md` |
-| A19 | [发布运行记录](artifacts/A19-release-run.md) | 每次发布必要；教学记录不可代替；实际部署或回退发生时逐步记录 | `evidence/releases/v0.1.0/run.md` |
-| A20 | [维护验证报告](artifacts/A20-maintenance.md) | 本次实证必要；项目按维护事件触发；每次修复/变更/回退演练 | `evidence/maintenance/report.md` |
-| A21 | [实际人机交互记录](artifacts/A21-interaction-log.md) | 本次实证必要；普通项目可简化；关键阶段、决策、反馈、失败恢复时记录 | `evidence/interactions.md` |
-| A22 | [模型实证评价](artifacts/A22-model-evaluation.md) | 本次实证必要；实证前建评价基线，结束后填观察并修订 | `evaluation.md` |
+| A19 | [发布运行记录](artifacts/A19-release-run.md) | 每次发布必要；教学记录不可代替；实际部署或回退发生时逐步记录 | `evidence/releases/{版本}/run.md` |
+| A20 | [维护验证报告](artifacts/A20-maintenance.md) | 项目按维护事件触发；每次修复/变更/回退演练 | `evidence/maintenance/report.md` |
+| A21 | [实际人机交互记录](artifacts/A21-interaction-log.md) | 研究实证时必要；普通项目可简化；关键活动、决定、反馈和恢复时记录 | `evidence/interactions.md` |
+| A22 | [模型实证评价](artifacts/A22-model-evaluation.md) | 开展模型评价时使用；先定义问题，再填真实观察与局限 | `evaluation.md` |
 
 ## 依赖与更新
 
-首次路径是 A01→A02/A03→A04/A05/A06/A07→A08/A09/A10→A11/A12/A13→A14/A16→A17/A18/A19。A06 仅在重要取舍发生时产生；A08 可以在首轮需求前以部分信息建立，再补真实命令。A09 的脚本是初始化输出，不能作为初始化前置条件。
+制品按当前活动需要增量生成，不要求全部需求与设计文档完成后才能构建原型。功能规则、设计、计划与代码在反馈中同步演化；A06 在重要取舍时产生，A08 可先以部分信息建立，再补真实命令。A09 的脚本是初始化输出，不能作为初始化前置条件。候选形成后以 A12–A16 支持审查、交接与独立验收，再按需要产生 A17–A20。
 
 维护由 A15 输入到受影响的 A01–A11，然后重新验证并更新 A20。A21 伴随活动采集，A22 先设评价问题、后使用真实证据填结果。A16 是持续维护的索引，不要求所有将来产物在开始时存在；未产生引用标为待生成。
 

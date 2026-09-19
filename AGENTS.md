@@ -2,30 +2,30 @@
 
 ## Purpose and Sources
 
-This repository defines a human-directed AI software lifecycle, from requirements through maintenance. Every stage has artifacts, reusable templates, actionable prompts, and evidence requirements. FocusTask is the local empirical example; its original product vision is broader than the selected experiment.
+This repository documents a human-directed AI software lifecycle based on evolutionary prototypes. Development activities are prototype building, refactoring, review and polishing, followed by independent acceptance, direct local release and maintenance. Activities can be tailored per feature or iteration.
 
-Read `AI_LIFECYCLE_IMPLEMENTATION_PLAN.md`, `execution/status.md`, `model/overview.md`, and `model/conventions.md` before changing the model. For application work, also read the nearest AGENTS file, empirical scope, relevant domain/permissions, feature/page specifications, architecture, decisions, and quality criteria under `examples/focustask`.
+Read `execution/status.md`, `AI_LIFECYCLE_V03_REFINEMENT_PLAN.md`, `model/overview.md` and `model/conventions.md` before model changes. For cleanup, also read `AI_LIFECYCLE_V03_CLEANUP_PLAN.md` and its execution record. Do not repeat completed cleanup or assume the full v0.3 model is implemented.
 
 ## Organization
 
-- `model/`: stages, artifact specifications, shared practices and tailoring.
+- `model/`: artifact specifications, practices and available lifecycle guides.
 - `templates/`: unfilled artifact templates.
-- `examples/focustask/`: example specifications, application and real evidence.
-- `execution/`: task progress, decisions and blockers; `baseline/` is a frozen historical archive.
-- `docs/`: compatibility links to migrated material.
+- `examples/focustask/`: teaching context and examples only; read its local AGENTS.
+- `execution/`: current status, cleanup manifest and verification records.
+- `scripts/`: documentation checks and diagram tooling.
+
+There is no application, database or empirical evidence directory. A01-A22 exist; the four detailed activity guides, A23-A27 and new diagrams remain planned. Do not generate them during cleanup.
 
 ## Working Rules
 
-Preserve existing edits. Advance one independently verifiable task from the execution plan at a time; application tasks use their empirical iteration plan. Reuse existing conventions and update affected specifications, tests, links and traceability together.
+Preserve unrelated edits and complete one verifiable task at a time. Update specifications, examples, indexes and links together. Confirm new business rules with the user; resolve routine choices within scope. Record consequential decisions without inventing approval.
 
-Follow recorded user decisions, including direct local deployment without Docker. Resolve routine implementation choices within scope; surface missing rules that change business data, permissions or acceptance. Record consequential technical choices in ADRs. Never invent human approval, external PR/CI status, test results or deployment history.
+Every AI-driven workflow needs actionable prompts. When a problem is found, check related patterns across the project, distinguish confirmed instances from suspicions, and recheck fixes. Stable rules belong here; transient progress belongs in execution status.
 
-## Verification and Evidence
+## Verification and Safety
 
-Run `node scripts/check-docs.mjs` for documentation; inspect semantics as well as links. Once the application exists, run its real lint, typecheck, unit/integration, E2E and build commands. UI checks cover 1440x900, 1024x768, 768x1024 and 390x844 with specified states. Missing tools or commands are unavailable, not passing.
+Run `node scripts/check-docs.mjs` and `node --test scripts/check-docs.test.mjs` for documentation tooling. Inspect semantics too. Missing tools or inputs are unavailable, not passing. Diagram generation requires new source files; its missing-input diagnostic does not prove rendering succeeded.
 
-Independent acceptance reads confirmed specifications and the exact candidate without modifying implementation. Report each criterion as 通过, 失败, 无法判定 or 阻塞, with reproduction and evidence for failures. Template examples are never execution evidence.
+Use fictional teaching data. Never record credentials, fabricate test or deployment results, or treat examples as empirical evidence. Stop only task-owned processes. Cleanup requires its recorded pre-cleanup commit; do not create another commit, push, or restore deleted history without new authorization.
 
-## Delivery and Safety
-
-Report scope, changed files, actual checks, evidence, risks and next step. Maintain execution status across sessions. Use fictional data, ignore real credentials and local databases, and stop only task-owned processes. Local review records may substitute for hosted PRs when documented; do not claim remote integration occurred. Commit messages describe intent with a scope, such as `docs: define artifact handoffs`.
+Report changed scope, actual checks, risks and the next task. Commit messages describe intent and scope, such as `docs: clarify artifact handoffs`.

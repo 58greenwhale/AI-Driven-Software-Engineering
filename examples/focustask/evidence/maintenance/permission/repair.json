@@ -1,7 +1,0 @@
-{
-  "at": "2026-09-19T03:25:42.914Z",
-  "previousHash": "26142f50d693dc6b461539cc3a3a89870ae34be4338ccfe4f67109b1026ed57b",
-  "repairedHash": "f6deb19f5bec54793fa600e76b28cca6dad8810708e7b401a571f35e6cfd140f",
-  "normalHash": "f6deb19f5bec54793fa600e76b28cca6dad8810708e7b401a571f35e6cfd140f",
-  "change": "Restore viewer role check; unchanged acceptance rule"
-}

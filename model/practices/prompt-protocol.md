@@ -55,9 +55,9 @@
 
 ```text
 [PROMPT-RUN / 教学填写示例] 请在 examples/focustask 为 TASK-001 创建任务执行 A03 操作链。
-输入是 docs/product.md、docs/domain.md、docs/permissions.md、docs/architecture.md
-和 docs/features/TASK-001-create-task.md。输出为同一功能规格的修订草稿。
-保留原验收规则，区分原产品愿景和实施计划选定的本地实证切片。
+输入是 docs/context.md 和 docs/artifact-examples/A03-feature-spec.md，
+模板是仓库根 templates/A03-feature-spec.md。输出为同一教学规格的修订草稿。
+保留上下文的验收规则；不要实现应用或把教学设定记录为实际批准。
 新业务规则不要自行确认；给出可执行的测试映射和接下来生成 A07 的指令。
 ```
 

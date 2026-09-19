@@ -6,7 +6,7 @@
 - 生产者：人驱动的 AI；责任角色：本次发布执行责任人。
 - 输入：A17/A18、真实工具输出与部署观察。
 - 使用者与用途：发布验收者、维护执行者与评价者。
-- 输出：项目内 `evidence/releases/v0.1.0/run.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
+- 输出：目标项目内 `evidence/releases/{版本}/run.md`；这是推荐路径，不是本仓库文件。实例、版本、来源及失效遵循[约定](../conventions.md)。
 - 配套：[模板](../../templates/A19-release-run.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A19-release-run.md)。
 
 ## 必填内容与字段含义
