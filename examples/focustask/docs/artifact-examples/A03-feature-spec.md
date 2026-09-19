@@ -1,4 +1,4 @@
-# A03 功能规格 — FocusTask 教学示例
+# A03 功能规格（SOP） — FocusTask 教学示例
 
 > 教学填写示例。用于演示文档内容与检查方法，不作通过结论。
 
@@ -27,7 +27,7 @@ title trim 后 1–100；assignee 可空或本项目成员；dueDate 不早于�
 
 ## 流程与数据变化
 
-提交带 Idempotency-Key；服务端验证后事务创建，返回 201，刷新可见。
+提交带 Idempotency-Key；Editor 权限校验通过后事务创建，返回 201，任务写入该项目并刷新可见；Viewer 不进入该流程。
 
 ## 异常与界面状态
 

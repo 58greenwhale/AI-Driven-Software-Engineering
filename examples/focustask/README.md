@@ -8,7 +8,7 @@ FocusTask 用创建任务和任务列表场景演示生命周期制品的填写�
 
 建议从以下示例开始：
 
-1. [A03 功能规格](docs/artifact-examples/A03-feature-spec.md)：将业务规则写成可验证行为。
+1. [A03 功能规格（SOP）](docs/artifact-examples/A03-feature-spec.md)：将业务规则写成可验证行为。
 2. [A07 验证策略](docs/artifact-examples/A07-verification-strategy.md)：选择观察手段和测试条件。
 3. [A14 验收记录](docs/artifact-examples/A14-acceptance.md)：区分预期结果、实际结果和运行条件缺口。
 

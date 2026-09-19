@@ -39,6 +39,19 @@
 
 一致性核对：三份阶段指南的触发、输入、产出、退出与失败返回均点名上游活动与制品，独立验收输入含 A23 至 A27，维护返回构建/重构/精修并经审查，发布返回四项活动；同类问题排查在构建、重构、审查、精修、独立验收、维护六份指南与变更控制实践中均可到达；`.mmd` 源码未改，8 个导出文件未变。
 
+## V03-04 批次 1 实际检查
+
+| 命令 | 退出码 | 结果 |
+| --- | --- | --- |
+| `node scripts/check-docs.mjs` | 0 | 111 份 Markdown、381 个本地链接、artifacts 27、activities 4、stages 3、errors 0 |
+| `node --test scripts/check-docs.test.mjs` | 0 | 36 项通过、0 失败/跳过 |
+| `git diff --check` | 0 | 无空白错误 |
+| `grep -rn 任务与依赖计划 model/ templates/ examples/ README.md` | 1 | 无匹配，A10 旧名已清除 |
+
+改动文件：A03 与 A10 的规范、模板、教学例，`model/artifact-index.json` 两条 title，`model/artifact-catalog.md` 两行，`model/artifacts/A01-scope.md` 与 `model/artifacts/A02-domain-permissions.md` 的质量标准段，`model/artifacts/A23-prototype-feedback.md` 与 `examples/focustask/README.md` 的引用。
+
+内容改写依据计划 3.1：A03 标题明确为功能规格（SOP），必填章节的流程与数据变化补角色与权限判定，并写明顶层目标留在 A01、术语与权限以 A02 为准、模拟与假设须澄清；A10 标题改为设计与实施计划（plan），新增方案与理由、活动裁剪与并行边界、验证与集成条件三章，模板与教学例同步填 FocusTask 教学内容，九类提示词中的名称与检查要点一并更新；A01 补顶层目标与细节边界，A02 补未确认交互不自动进入规则。文档检查的数字在更新本目录记录之后运行取得。
+
 ## 材料与工具盘点事实
 
 | 项目 | 事实 |
