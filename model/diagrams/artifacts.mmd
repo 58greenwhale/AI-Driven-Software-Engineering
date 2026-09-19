@@ -1,0 +1,80 @@
+flowchart LR
+  subgraph G1["目标与规格"]
+    direction TB
+    A01["A01 范围说明"]
+    A02["A02 领域与权限规则"]
+    A03["A03 功能规格 SOP"]
+    A01 --> A02
+    A02 --> A03
+  end
+  subgraph G2["设计与约束"]
+    direction TB
+    A04["A04 架构与契约"]
+    A05["A05 UI 与交互规格"]
+    A06["A06 重要决定记录"]
+    A07["A07 验证策略"]
+  end
+  subgraph G3["工作环境"]
+    direction TB
+    A08["A08 Agent 工作规则"]
+    A09["A09 工程基线"]
+  end
+  subgraph G4["计划与实现"]
+    direction TB
+    A10["A10 设计与实施计划"]
+    A11["A11 实现包"]
+    A10 --> A11
+  end
+  subgraph G5["审查与交接"]
+    direction TB
+    A12["A12 评审记录"]
+    A13["A13 会话交接"]
+    A12 --> A13
+  end
+  subgraph G9["演化、解读与设计"]
+    direction TB
+    A23["A23 原型版本与反馈确认"]
+    A24["A24 差距与重构方案"]
+    A25["A25 实现解读"]
+    A26["A26 同类问题排查"]
+    A27["A27 设计交付包"]
+    A23 --> A24
+    A24 --> A25
+    A25 --> A26
+    A26 --> A27
+  end
+  subgraph G6["验收与追踪"]
+    direction TB
+    A14["A14 独立验收报告"]
+    A15["A15 缺陷与变更单"]
+    A16["A16 追踪表"]
+    A14 --> A16
+    A15 --> A16
+  end
+  subgraph G7["发布与维护"]
+    direction TB
+    A17["A17 发布清单"]
+    A18["A18 部署与回退指南"]
+    A19["A19 发布运行记录"]
+    A20["A20 维护验证报告"]
+    A17 --> A19
+    A18 --> A19
+    A19 --> A20
+  end
+  subgraph G8["实证"]
+    direction TB
+    A21["A21 交互记录"]
+    A22["A22 模型评价"]
+    A21 --> A22
+  end
+  A03 --> A04
+  A04 --> A10
+  A08 --> A10
+  A07 --> A14
+  A11 --> A12
+  A11 --> A23
+  A12 --> A25
+  A12 --> A14
+  A12 --> A16
+  A14 --> A17
+  A14 --> A21

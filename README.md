@@ -33,4 +33,4 @@ node scripts/check-docs.mjs
 node --test scripts/check-docs.test.mjs
 ```
 
-图解的输入与导出方式见[图解说明](model/visual-guide.md)。本仓库的检查针对文档与工具；教学中的应用命令需要在实际目标项目中建立并验证。
+生命周期、人机协作、制品流转与活动组织四组图解含 Mermaid 源码及 SVG/PNG 导出，读图与生成方式见[图解说明](model/visual-guide.md)。本仓库的检查针对文档与工具；教学中的应用命令需要在实际目标项目中建立并验证。

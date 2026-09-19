@@ -1,0 +1,40 @@
+flowchart TD
+  TAILOR["按项目裁剪与组织方式选择：A10 计划"]
+  subgraph PAR["按功能并行"]
+    direction TB
+    SHARED["共享约束 A01/A02/A08"]
+    FA["功能A：构建 重构 审查 精修"]
+    FB["功能B：构建 重构 审查 精修"]
+    INT["集成点：依赖边界与集成验证"]
+    CAND["集成候选进入 A12 与 A14"]
+    SHARED --> FA
+    SHARED --> FB
+    FA --> INT
+    FB --> INT
+    INT --> CAND
+  end
+  subgraph SEQ["按迭代顺序"]
+    direction TB
+    I1["迭代1：选定功能与活动组合"]
+    V1["独立验收与本地发布"]
+    I2["迭代2：以反馈与确认结果输入"]
+    V2["独立验收与本地发布"]
+    I3["迭代3：继续演化下一轮"]
+    I1 --> V1
+    V1 --> I2
+    I2 --> V2
+    V2 --> I3
+  end
+  subgraph MIX["混合组织"]
+    direction TB
+    M1["迭代内多功能并行"]
+    M2["迭代间顺序推进"]
+    M3["冲突与缺陷经 A15/A16 处理"]
+    M4["集成候选进入审查与验收"]
+    M1 --> M2
+    M2 --> M3
+    M3 --> M4
+  end
+  TAILOR --> PAR
+  TAILOR --> SEQ
+  TAILOR --> MIX

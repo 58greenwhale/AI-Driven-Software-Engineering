@@ -1,0 +1,28 @@
+flowchart TD
+  GOAL["目标与最小准备 A01/A02/A07/A08/A09"]
+  subgraph DEV["可组合开发活动：默认顺序，可裁剪合并"]
+    direction LR
+    BUILD["原型构建 A03/A10/A11/A23"]
+    LOOP["体验反馈与需求澄清"]
+    REFR["原型重构 A24/A04/A06/A08"]
+    AUDIT["原型审查 A12/A25/A26"]
+    POLISH["原型精修 A27/A05"]
+    BUILD --> LOOP
+    LOOP --> BUILD
+    BUILD --> REFR
+    REFR --> AUDIT
+    AUDIT --> POLISH
+  end
+  ACC["独立验收：只读固定候选 A14/A15/A16"]
+  REL["直接本地发布 A17/A18/A19"]
+  MAINT["维护与运行验证 A20/A15"]
+  GOAL --> DEV
+  DEV --> ACC
+  ACC -->|"通过"| REL
+  REL --> MAINT
+  ACC -.->|"不通过，返回受影响活动"| DEV
+  MAINT -.->|"问题或变更经 A15 返回活动"| DEV
+  MAINT -.->|"下一轮演化，进入新一轮活动"| DEV
+  POLISH -.->|"行为变化，重新澄清与审查"| BUILD
+  AUDIT -.->|"发现缺陷，修复后重新审查"| BUILD
+  LOOP -.->|"同步 A03/A10/A11 与 A23 确认"| BUILD

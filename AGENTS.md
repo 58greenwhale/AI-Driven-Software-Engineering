@@ -28,6 +28,8 @@ Run `node scripts/check-docs.mjs` and `node --test scripts/check-docs.test.mjs` 
 
 Use fictional teaching data. Never record credentials, fabricate approval, tests or deployment results, or treat examples as evidence. Stop only task-owned processes.
 
+Diagram exports are generated from `.mmd` sources; after changing a source, re-export its SVG/PNG and confirm the rendered text and semantics match the documents. A missing-input diagnostic is not a successful export.
+
 After completing changes to code, scripts, configuration or documentation, run the relevant checks, commit the task's changes, and push the current branch to its configured upstream remote. This is the default delivery workflow; proceed without asking again unless the user explicitly instructs otherwise. Exclude unrelated edits, secrets and ignored files. Verify the remote branch matches the local commit before reporting delivery. If committing or pushing fails, preserve the work and report the blocker; do not force push without explicit authorization.
 
 Report changed scope, actual checks, risks and the next task. Use intent-focused commit messages with a scope, such as `docs: clarify artifact handoffs`.
