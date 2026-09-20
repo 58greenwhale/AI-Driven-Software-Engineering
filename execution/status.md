@@ -4,7 +4,7 @@
 
 [文档编辑完善计划](../AI_LIFECYCLE_EDITORIAL_PLAN.md)已完成。[扩展建设计划](../AI_LIFECYCLE_EXPANSION_PLAN.md)的 DG-01 至 DG-09 已完成，内容是四项活动指南、A23–A27 制品与四组生命周期图解，属 V03-03、V03-04 与 V03-06 的越序部分。方法论建设计划的 V03-01 至 V03-03 已完成，V03-04 进行中（批次 1 改写 A01–A03 与 A10，批次 2 改写 A04–A07，批次 3 改写 A08–A09 与 A11–A14），盘点结论、决定与检查记录见 [V03 任务状态](v03/status.md)，该文件是中断后的恢复入口；V03-05、V03-07 仍待执行，V03-06 为部分完成，下一任务为 V03-04 批次 4。
 
-导航顺序调整：`model/overview.md` 的「模型文档地图」按阅读时机重排为 总纲 → 生命周期图解 → 约定 → 裁剪 → 实践 → 制品目录 → 活动与阶段 → 教学上下文 → 执行状态与建设计划，「制品与操作入口」保持按用途分组，两节各补一句分工说明；地图的图解条目补 `model/diagrams/README.md` 生成入口、制品目录条目补 `model/artifact-index.json` 索引入口，条目仍为九条；`README.md`「如何使用」把制品目录并入活动指南一步并补四项活动指南链接，使三处入口口径一致。本次只调整导航顺序、入口与说明，未改文档语义，已往验收记录（含 AC-EDIT-01 表述）保持原文。实际检查：`node scripts/check-docs.mjs` 退出 0（108 份 Markdown、357 个本地链接、artifacts 27、activities 4、stages 3、errors 0）；`node --test scripts/check-docs.test.mjs` 36 项通过、0 失败/跳过；`git diff --check` 退出 0。
+导航顺序调整：`model/overview.md` 的「模型文档地图」按阅读时机排列为 总纲 → 生命周期图解 → 约定 → 裁剪 → 制品目录 → 实践 → 活动与阶段 → 教学上下文 → 执行状态与建设计划，「制品与操作入口」保持按用途分组，两节各补一句分工说明；地图的图解条目补 `model/diagrams/README.md` 生成入口、制品目录条目补 `model/artifact-index.json` 索引入口，条目仍为九条；`README.md`「如何使用」先引导制品目录，再进入初始化、提示词协议和活动指南，使三处入口口径一致。本次只调整导航顺序、入口与说明，未改文档语义，已往验收记录（含 AC-EDIT-01 表述）保持原文。实际检查：`node scripts/check-docs.mjs` 退出 0（111 份 Markdown、382 个本地链接、artifacts 27、activities 4、stages 3、errors 0）；`node --test scripts/check-docs.test.mjs` 36 项通过、0 失败/跳过；`git diff --check` 退出 0。
 
 | 任务 | 状态 | 下一步 |
 | --- | --- | --- |

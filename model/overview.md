@@ -32,14 +32,14 @@
 
 ## 模型文档地图
 
-本节按阅读时机排列：先看全景与规则，再准备与查阅，然后进入操作，最后是教学与建设状态。
+本节按阅读时机排列：先看全景与规则，再确定制品和准备方式，然后进入操作，最后是教学与建设状态。
 
 - 总纲（本文）：活动关系、人与 AI 职责及适用边界；首次阅读与模型变更前的起点。
 - [生命周期图解](visual-guide.md)：四组图解与读图要点；需要整体关系或向人解释模型时，改源码或重新导出见[生成说明](diagrams/README.md)。
 - [约定](conventions.md)：制品标识、状态分类、证据与失效规则；生成或修订任何制品前核对。
 - [裁剪](tailoring.md)：不可裁剪能力、活动组织与并行、条件制品与团队规模映射；首次采用、组织方式或团队/风险变化时。
-- 实践：对应操作开始前读相应实践，含[初始化](practices/initialization.md)、[提示词协议](practices/prompt-protocol.md)、[交接](practices/context.md)、[变更](practices/change-control.md)、[验证规则](practices/verification.md)。
 - [制品目录](artifact-catalog.md)：A01–A27 的规范、模板与教学例入口；选择或填写制品时。机器可读清单见[制品索引](artifact-index.json)，供文档检查器校验编号与三类文档齐备。
+- 实践：对应操作开始前读相应实践，含[初始化](practices/initialization.md)、[提示词协议](practices/prompt-protocol.md)、[交接](practices/context.md)、[变更](practices/change-control.md)、[验证规则](practices/verification.md)。
 - 活动与阶段：进入对应活动或阶段时读相应指南，含四项活动（[构建](stages/prototype-building.md)、[重构](stages/prototype-refactoring.md)、[审查](stages/prototype-review.md)、[精修](stages/prototype-polishing.md)）与[独立验收](stages/verification.md)、[发布](stages/release.md)、[维护](stages/maintenance.md)。
 - [教学上下文](../examples/focustask/docs/context.md)：虚构教学输入；练习填写与检查方法时。
 - [执行状态](../execution/status.md)与[方法论建设计划](../AI_LIFECYCLE_V03_REFINEMENT_PLAN.md)：当前任务、覆盖与验收标准；接手或交付前。
