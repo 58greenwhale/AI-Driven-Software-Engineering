@@ -35,7 +35,7 @@
 | `git diff --check` | 0 | 无空白错误 |
 | `grep -rn 独立验证 model/ examples/ README.md` | 1 | 无匹配，阶段名已统一 |
 
-文档检查的数字在更新本目录记录之后运行取得。改动文件：`model/stages/verification.md`（标题与 VAL-START 小节名、验收者与独立性表述、产出补 A26、VAL-REVIEW 补同类排查）、四份活动指南（链接文字统一，构建与精修补同类排查）、`model/stages/release.md`（失败返回点名四项活动）、`model/stages/maintenance.md`、`model/conventions.md`、`model/practices/verification.md` 与两份教学例的术语。
+文档检查的数字在更新本目录记录之后运行取得。改动文件：`model/stages/05-verification.md`（标题与 VAL-START 小节名、验收者与独立性表述、产出补 A26、VAL-REVIEW 补同类排查）、四份活动指南（链接文字统一，构建与精修补同类排查）、`model/stages/06-release.md`（失败返回点名四项活动）、`model/stages/07-maintenance.md`、`model/conventions.md`、`model/practices/verification.md` 与两份教学例的术语。
 
 一致性核对：三份阶段指南的触发、输入、产出、退出与失败返回均点名上游活动与制品，独立验收输入含 A23 至 A27，维护返回构建/重构/精修并经审查，发布返回四项活动；同类问题排查在构建、重构、审查、精修、独立验收、维护六份指南与变更控制实践中均可到达；`.mmd` 源码未改，8 个导出文件未变。
 
@@ -83,7 +83,7 @@
 | 项目 | 事实 |
 | --- | --- |
 | 制品三类文档 | `model/artifacts/`、`templates/`、`examples/focustask/docs/artifact-examples/` 各 27 份，编号 A01–A27 连续无缺 |
-| 指南 | `model/stages/` 7 份：prototype-building、prototype-refactoring、prototype-review、prototype-polishing、verification、release、maintenance |
+| 指南 | `model/stages/` 7 份：01-prototype-building、02-prototype-refactoring、03-prototype-review、04-prototype-polishing、05-verification、06-release、07-maintenance |
 | 实践 | `model/practices/` 5 份：initialization、prompt-protocol、context、change-control、verification |
 | 图解 | `model/diagrams/` 4 份 `.mmd`（lifecycle、collaboration、artifacts、organization）、4 份 `.svg`、4 份 `.png`，另有 `mermaid-config.json` 与生成说明 |
 | 索引 | `model/artifact-index.json` 为 27 条数组；`model/workflow-index.json` 不存在 |

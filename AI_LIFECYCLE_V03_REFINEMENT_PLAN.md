@@ -245,7 +245,7 @@ A12 管理审查过程和结论，A25 保存持续维护的实现说明，A26 �
 
 ### 指南与图解
 
-四项活动指南位于 `model/stages/`：`prototype-building.md`、`prototype-refactoring.md`、`prototype-review.md`、`prototype-polishing.md`。保留 verification、release、maintenance 并更新输入与返回。新指南需说明触发、输入版本、操作链、人/AI 职责、决策点、制品、提示词、出口和失败恢复。
+四项活动指南位于 `model/stages/`：`01-prototype-building.md`、`02-prototype-refactoring.md`、`03-prototype-review.md`、`04-prototype-polishing.md`。保留 `05-verification.md`、`06-release.md`、`07-maintenance.md` 并更新输入与返回。新指南需说明触发、输入版本、操作链、人/AI 职责、决策点、制品、提示词、出口和失败恢复。
 
 | 图解基名 | 必须表达 |
 | --- | --- |

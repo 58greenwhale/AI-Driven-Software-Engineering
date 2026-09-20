@@ -114,11 +114,20 @@ for (const item of artifacts) {
 }
 // Validate development activity guides and lifecycle stage guides separately; the seven guides are not one stage list.
 const guideKeys = ['START', 'DECIDE', 'GENERATE', 'REVIEW', 'VERIFY', 'HANDOFF', 'RECOVER'];
-const activities = { 'prototype-building': 'BUILD', 'prototype-refactoring': 'REFR', 'prototype-review': 'AUDIT', 'prototype-polishing': 'POLISH' };
-const stages = { verification: 'VAL', release: 'REL', maintenance: 'MAINT' };
+const activities = {
+  'prototype-building': ['01-prototype-building', 'BUILD'],
+  'prototype-refactoring': ['02-prototype-refactoring', 'REFR'],
+  'prototype-review': ['03-prototype-review', 'AUDIT'],
+  'prototype-polishing': ['04-prototype-polishing', 'POLISH'],
+};
+const stages = {
+  verification: ['05-verification', 'VAL'],
+  release: ['06-release', 'REL'],
+  maintenance: ['07-maintenance', 'MAINT'],
+};
 for (const guides of [activities, stages]) {
-  for (const [guide, prefix] of Object.entries(guides)) {
-    const source = readText(path.join(root, `model/stages/${guide}.md`));
+  for (const [guide, [file, prefix]] of Object.entries(guides)) {
+    const source = readText(path.join(root, `model/stages/${file}.md`));
     if (source === null) continue;
     for (const key of guideKeys) {
       if (!source.includes(`[${prefix}-${key}]`)) errors.push(`${guide}: missing ${key} prompt`);

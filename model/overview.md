@@ -22,10 +22,10 @@
 
 - [制品目录](artifact-catalog.md)：按用途选择规范、模板与教学例。
 - [初始化](practices/initialization.md)、[裁剪](tailoring.md)、[提示词协议](practices/prompt-protocol.md)：准备工作与操作方法。
-- [原型构建](stages/prototype-building.md)、[原型重构](stages/prototype-refactoring.md)、[原型审查](stages/prototype-review.md)、[原型精修](stages/prototype-polishing.md)：四项开发活动的操作链与提示词。
+- [原型构建](stages/01-prototype-building.md)、[原型重构](stages/02-prototype-refactoring.md)、[原型审查](stages/03-prototype-review.md)、[原型精修](stages/04-prototype-polishing.md)：四项开发活动的操作链与提示词。
 - [生命周期图解](visual-guide.md)：活动关系、人机协作、制品流转与组织方式。
 - [交接](practices/context.md)、[变更](practices/change-control.md)、[验证规则](practices/verification.md)：贯穿各项活动的工作机制。
-- [独立验收](stages/verification.md)、[发布](stages/release.md)、[维护](stages/maintenance.md)：候选交付与运行反馈的操作指南。
+- [独立验收](stages/05-verification.md)、[发布](stages/06-release.md)、[维护](stages/07-maintenance.md)：候选交付与运行反馈的操作指南。
 - [教学上下文](../examples/focustask/docs/context.md)：创建任务和任务列表的示例输入。
 
 制品版本、确认来源和证据失效遵循[约定](conventions.md)。文档覆盖与建设进度见[执行状态](../execution/status.md)。
@@ -40,6 +40,6 @@
 - [裁剪](tailoring.md)：不可裁剪能力、活动组织与并行、条件制品与团队规模映射；首次采用、组织方式或团队/风险变化时。
 - [制品目录](artifact-catalog.md)：A01–A27 的规范、模板与教学例入口；选择或填写制品时。机器可读清单见[制品索引](artifact-index.json)，供文档检查器校验编号与三类文档齐备。
 - 实践：对应操作开始前读相应实践，含[初始化](practices/initialization.md)、[提示词协议](practices/prompt-protocol.md)、[交接](practices/context.md)、[变更](practices/change-control.md)、[验证规则](practices/verification.md)。
-- 活动与阶段：进入对应活动或阶段时读相应指南，含四项活动（[构建](stages/prototype-building.md)、[重构](stages/prototype-refactoring.md)、[审查](stages/prototype-review.md)、[精修](stages/prototype-polishing.md)）与[独立验收](stages/verification.md)、[发布](stages/release.md)、[维护](stages/maintenance.md)。
+- 活动与阶段：进入对应活动或阶段时读相应指南，含四项活动（[构建](stages/01-prototype-building.md)、[重构](stages/02-prototype-refactoring.md)、[审查](stages/03-prototype-review.md)、[精修](stages/04-prototype-polishing.md)）与[独立验收](stages/05-verification.md)、[发布](stages/06-release.md)、[维护](stages/07-maintenance.md)。
 - [教学上下文](../examples/focustask/docs/context.md)：虚构教学输入；练习填写与检查方法时。
 - [执行状态](../execution/status.md)与[方法论建设计划](../AI_LIFECYCLE_V03_REFINEMENT_PLAN.md)：当前任务、覆盖与验收标准；接手或交付前。

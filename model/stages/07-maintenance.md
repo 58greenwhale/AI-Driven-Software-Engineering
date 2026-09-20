@@ -7,7 +7,7 @@
 - 产出：[制品目录](../artifact-catalog.md)中的 A15问题/变更单、受影响A01–A27修订、A20维护报告与新发布证据。
 - 人与AI分工：人确认新需求/风险取舍；AI复现、分析、提出最小修复、更新制品并执行验证；缺陷修复不改变原标准。
 - 退出：原问题有同用例关闭证据，相关回归通过，必要再发布完成，数据保留，交接与追踪同步。
-- 失败/返回：新语义回[原型构建](prototype-building.md)，数据/接口工程约束变化回[原型重构](prototype-refactoring.md)，表现问题回[原型精修](prototype-polishing.md)；修复经[原型审查](prototype-review.md)重新审查，同类问题按A26做全项目排查；不能仅改文案隐藏失败。
+- 失败/返回：新语义回[原型构建](01-prototype-building.md)，数据/接口工程约束变化回[原型重构](02-prototype-refactoring.md)，表现问题回[原型精修](04-prototype-polishing.md)；修复经[原型审查](03-prototype-review.md)重新审查，同类问题按A26做全项目排查；不能仅改文案隐藏失败。
 
 ## 执行步骤与提示词
 

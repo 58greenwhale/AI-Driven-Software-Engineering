@@ -29,8 +29,8 @@ function fixture(t) {
   });
   write('model/artifact-index.json', JSON.stringify(index));
   const guides = {
-    'prototype-building': 'BUILD', 'prototype-refactoring': 'REFR', 'prototype-review': 'AUDIT', 'prototype-polishing': 'POLISH',
-    verification: 'VAL', release: 'REL', maintenance: 'MAINT',
+    '01-prototype-building': 'BUILD', '02-prototype-refactoring': 'REFR', '03-prototype-review': 'AUDIT', '04-prototype-polishing': 'POLISH',
+    '05-verification': 'VAL', '06-release': 'REL', '07-maintenance': 'MAINT',
   };
   for (const [name, prefix] of Object.entries(guides)) {
     write(`model/stages/${name}.md`, `# ${name}\n\n${stagePrompts.map((key) => `[${prefix}-${key}]`).join('\n')}\n`);
@@ -74,14 +74,14 @@ const cases = [
   ['missing required chapter', (f) => f.replace('model/artifacts/A01.md', '## 必填内容与字段含义', '## Other'), /missing content or quality/],
   ['missing teaching label', (f) => f.replace('examples/A01.md', '教学填写示例', ''), /lacks evidence boundary/],
   ['missing non-evidence warning', (f) => f.replace('examples/A01.md', '不作通过结论', ''), /lacks evidence boundary/],
-  ['missing guide', (f) => fs.unlinkSync(path.join(f.root, 'model/stages/release.md')), /stages\/release.md: missing/],
-  ['missing stage prompt', (f) => f.replace('model/stages/release.md', '[REL-START]', ''), /release: missing START prompt/],
-  ['wrong stage prefix', (f) => f.replace('model/stages/release.md', '[REL-START]', '[VAL-START]'), /release: missing START prompt/],
+  ['missing guide', (f) => fs.unlinkSync(path.join(f.root, 'model/stages/06-release.md')), /stages\/06-release.md: missing/],
+  ['missing stage prompt', (f) => f.replace('model/stages/06-release.md', '[REL-START]', ''), /release: missing START prompt/],
+  ['wrong stage prefix', (f) => f.replace('model/stages/06-release.md', '[REL-START]', '[VAL-START]'), /release: missing START prompt/],
   ['missing A25 prompt', (f) => f.replace('model/artifacts/A25.md', '[A25-VERIFY]', ''), /A25: missing VERIFY prompt/],
   ['missing A27 example boundary', (f) => f.replace('examples/A27.md', '不作通过结论', ''), /A27: example lacks evidence boundary/],
-  ['missing activity guide', (f) => fs.unlinkSync(path.join(f.root, 'model/stages/prototype-review.md')), /stages\/prototype-review.md: missing/],
-  ['missing activity prompt', (f) => f.replace('model/stages/prototype-review.md', '[AUDIT-RECOVER]', ''), /prototype-review: missing RECOVER prompt/],
-  ['wrong activity prefix', (f) => f.replace('model/stages/prototype-polishing.md', '[POLISH-START]', '[BUILD-START]'), /prototype-polishing: missing START prompt/],
+  ['missing activity guide', (f) => fs.unlinkSync(path.join(f.root, 'model/stages/03-prototype-review.md')), /stages\/03-prototype-review.md: missing/],
+  ['missing activity prompt', (f) => f.replace('model/stages/03-prototype-review.md', '[AUDIT-RECOVER]', ''), /prototype-review: missing RECOVER prompt/],
+  ['wrong activity prefix', (f) => f.replace('model/stages/04-prototype-polishing.md', '[POLISH-START]', '[BUILD-START]'), /prototype-polishing: missing START prompt/],
   ['broken link', (f) => f.write('README.md', '# Fixture\n\n[Missing](absent.md)\n'), /missing link target/],
   ['broken anchor', (f) => f.write('README.md', '# Fixture\n\n[Missing](model/artifacts/A01.md#absent)\n'), /missing anchor/],
   ['invalid URL encoding', (f) => f.write('README.md', '# Fixture\n\n[Bad](%XX.md)\n'), /invalid link encoding/],

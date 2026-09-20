@@ -43,9 +43,9 @@
 
 ## 3. 四项活动指南
 
-新建 `model/stages/prototype-building.md`、`model/stages/prototype-refactoring.md`、`model/stages/prototype-review.md`、`model/stages/prototype-polishing.md`。
+新建 `model/stages/01-prototype-building.md`、`model/stages/02-prototype-refactoring.md`、`model/stages/03-prototype-review.md`、`model/stages/04-prototype-polishing.md`。
 
-结构对齐 [独立验证指南](model/stages/verification.md)：`## 进入、职责与输出`（触发/输入/产出/人与 AI 分工/退出/失败返回）、`## 执行步骤与提示词`（引导段 + 7 个 `### 前缀-KEY：说明`，每节含围栏提示词与"预期输出与判断"）、`## FocusTask 教学填写示例`、`## 交接出口`。
+结构对齐 [独立验证指南](model/stages/05-verification.md)：`## 进入、职责与输出`（触发/输入/产出/人与 AI 分工/退出/失败返回）、`## 执行步骤与提示词`（引导段 + 7 个 `### 前缀-KEY：说明`，每节含围栏提示词与"预期输出与判断"）、`## FocusTask 教学填写示例`、`## 交接出口`。
 
 提示词前缀：构建 `BUILD`、重构 `REFR`、审查 `AUDIT`、精修 `POLISH`；七类键为 `START`、`DECIDE`、`GENERATE`、`REVIEW`、`VERIFY`、`HANDOFF`、`RECOVER`。内容取自 V03 计划第 2.2–2.5 节的活动定义，逐条针对本活动写作，不复制同一段文字换名。
 
@@ -58,7 +58,7 @@
 
 每份指南的活动产出对应：构建 → A03/A10/A11/A23；重构 → A24/A04/A06/A08；审查 → A12/A25/A26；精修 → A27/A05。
 
-三份现有阶段指南只做衔接更新：`model/stages/verification.md`、`model/stages/release.md`、`model/stages/maintenance.md` 的输入与返回段点名四份活动指南及 A23–A27，教学示例提示词中的"A01–A22 规范、模板与教学例"改为"A01–A27"，其余规则、提示词与退出条件保持不变。
+三份现有阶段指南只做衔接更新：`model/stages/05-verification.md`、`model/stages/06-release.md`、`model/stages/07-maintenance.md` 的输入与返回段点名四份活动指南及 A23–A27，教学示例提示词中的"A01–A22 规范、模板与教学例"改为"A01–A27"，其余规则、提示词与退出条件保持不变。
 
 ## 4. A23–A27 制品
 
@@ -170,14 +170,14 @@ git status --short
 
 新增 32 个文件：
 
-- 活动指南 4 份：`model/stages/prototype-building.md`、`prototype-refactoring.md`、`prototype-review.md`、`prototype-polishing.md`。
+- 活动指南 4 份：`model/stages/01-prototype-building.md`、`02-prototype-refactoring.md`、`03-prototype-review.md`、`04-prototype-polishing.md`。
 - 制品规范 5 份：`model/artifacts/A23-prototype-feedback.md`、`A24-refactoring-plan.md`、`A25-implementation-guide.md`、`A26-pattern-remediation.md`、`A27-design-delivery.md`。
 - 模板 5 份：`templates/` 下同基名文件。
 - 教学例 5 份：`examples/focustask/docs/artifact-examples/` 下同基名文件。
 - 图解源码 4 份与导出 8 份：`model/diagrams/` 下 `lifecycle`、`collaboration`、`artifacts`、`organization` 的 `.mmd`、`.svg`、`.png`。
 - 本计划文件。
 
-修改 16 个文件：`model/artifact-index.json`、`model/artifact-catalog.md`、`model/conventions.md`、`model/tailoring.md`、`model/overview.md`、`model/visual-guide.md`、`model/diagrams/README.md`、`model/stages/verification.md`、`model/stages/release.md`、`model/stages/maintenance.md`、`examples/focustask/docs/context.md`、`scripts/check-docs.mjs`、`scripts/check-docs.test.mjs`、`README.md`、`AGENTS.md`、`execution/status.md`。
+修改 16 个文件：`model/artifact-index.json`、`model/artifact-catalog.md`、`model/conventions.md`、`model/tailoring.md`、`model/overview.md`、`model/visual-guide.md`、`model/diagrams/README.md`、`model/stages/05-verification.md`、`model/stages/06-release.md`、`model/stages/07-maintenance.md`、`examples/focustask/docs/context.md`、`scripts/check-docs.mjs`、`scripts/check-docs.test.mjs`、`README.md`、`AGENTS.md`、`execution/status.md`。
 
 ## 11. 禁止事项与失败恢复
 
