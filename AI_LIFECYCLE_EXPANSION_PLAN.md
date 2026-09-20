@@ -93,7 +93,7 @@
 - `model/artifact-index.json`：追加 5 条，字段与顺序沿用 `id`、`title`、`spec`、`template`、`example`。
 - [制品目录](model/artifact-catalog.md)：首段与 `[CATALOG-SELECT]` 中的 A01–A22 改为 A01–A27；导航表补 5 行，含用途链接、必需性与触发、输出位置；"依赖与更新"段补 A23–A27 的产生时机，以及 A12/A25/A26、A05/A27、A10/A24 的职责分工。
 - [约定](model/conventions.md)：制品类型使用范围由 A01–A22 改为 A01–A27。
-- [团队裁剪](model/tailoring.md)：条件制品段补 A23–A27 裁剪规则，包括无 UI 不生成 A27 但保留 A05、无重构需要不强制 A24、A23 可并入 A10/A16 章节、A25 可按模块增量、A26 未发现其他实例也须记录排查范围与方法。
+- [裁剪与组织](model/tailoring.md)：说明按功能、按迭代和混合组织方式、并行边界及 A10 记录要求；A23–A27 的适用条件由制品目录和各制品规范说明。
 - [模型总纲](model/overview.md)：活动段落点名 A23–A27 输出；"制品与操作入口"新增两条链接，分别指向四项活动指南与[图解说明](model/visual-guide.md)。
 - [教学上下文](examples/focustask/docs/context.md)：首部用途范围改为 A01–A27；末尾补一句说明 A23–A27 教学演示仍为虚构场景、运行检查未执行。
 
