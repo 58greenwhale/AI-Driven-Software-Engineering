@@ -7,7 +7,7 @@
 - 输入：当前原型与运行入口、A03功能规格（SOP）、A10计划、人的体验反馈、既有A23与A16追踪表。
 - 使用者与用途：下一轮构建执行者、重构与审查责任人、独立验收者。
 - 输出：项目内 `evidence/prototypes/{版本}/feedback.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A23-prototype-feedback.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A23-prototype-feedback.md)。
+- 配套：[模板](../templates/A23-prototype-feedback.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A23-prototype-feedback.md)。
 
 ## 必填内容与字段含义
 
@@ -53,7 +53,7 @@
 ### A23-GENERATE
 
 ```text
-[A23-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A23 原型版本与反馈确认记录，写入 {输出路径}，使用 templates/A23-prototype-feedback.md。逐章填写版本与运行入口、范围与模拟边界、反馈与差异、确认与未决、版本演化关系；未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A23-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A23 原型版本与反馈确认记录，写入 {输出路径}，使用 model/templates/A23-prototype-feedback.md。逐章填写版本与运行入口、范围与模拟边界、反馈与差异、确认与未决、版本演化关系；未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A23-REVIEW

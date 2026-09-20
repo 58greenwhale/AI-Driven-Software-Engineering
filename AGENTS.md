@@ -7,7 +7,7 @@
 ## 目录结构
 
 - `model/`：制品规范、实践和生命周期指南。
-- `templates/`：未填写的制品模板。
+- `model/templates/`：未填写的制品模板。
 - `examples/focustask/`：教学上下文和示例；请阅读其目录内的 AGENTS。
 - `execution/`：当前任务、覆盖情况和验证结果。
 - `scripts/`：文档检查和图解工具。

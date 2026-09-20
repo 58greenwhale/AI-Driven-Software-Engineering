@@ -7,7 +7,7 @@
 - 输入：当前实现与依赖、确认的A03行为、A04架构与契约、A07质量要求、A08工作规则、目标技术约束。
 - 使用者与用途：实施重构的执行者、审查责任人、独立验收者。
 - 输出：项目内 `docs/refactoring-plan.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A24-refactoring-plan.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A24-refactoring-plan.md)。
+- 配套：[模板](../templates/A24-refactoring-plan.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A24-refactoring-plan.md)。
 
 ## 必填内容与字段含义
 
@@ -53,7 +53,7 @@
 ### A24-GENERATE
 
 ```text
-[A24-GENERATE] 请依据 {输入路径} 为 {重构目标} 生成 A24 工程化差距与重构方案，写入 {输出路径}，使用 templates/A24-refactoring-plan.md。逐章填写当前与目标状态、差距清单、策略与步骤、行为映射与验证、风险与失败恢复；每项差距给依据位置；未知和不适用说明原因；未执行的检查标为待验证，不写成已通过。
+[A24-GENERATE] 请依据 {输入路径} 为 {重构目标} 生成 A24 工程化差距与重构方案，写入 {输出路径}，使用 model/templates/A24-refactoring-plan.md。逐章填写当前与目标状态、差距清单、策略与步骤、行为映射与验证、风险与失败恢复；每项差距给依据位置；未知和不适用说明原因；未执行的检查标为待验证，不写成已通过。
 ```
 
 ### A24-REVIEW

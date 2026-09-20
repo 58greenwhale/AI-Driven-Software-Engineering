@@ -7,7 +7,7 @@
 - 输入：人的目标、现有产品资料、预算和环境限制。
 - 使用者与用途：设计者和任务规划者据此选择本轮工作，验收者据此区分必做与延期。
 - 输出：项目内 `docs/scope.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A01-scope.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A01-scope.md)。
+- 配套：[模板](../templates/A01-scope.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A01-scope.md)。
 
 ## 必填内容与字段含义
 
@@ -53,7 +53,7 @@
 ### A01-GENERATE
 
 ```text
-[A01-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A01 范围说明，写入 {输出路径}，使用 templates/A01-scope.md。区分产品愿景、本轮交付与未来需求；每个范围决定引用来源。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A01-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A01 范围说明，写入 {输出路径}，使用 model/templates/A01-scope.md。区分产品愿景、本轮交付与未来需求；每个范围决定引用来源。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A01-REVIEW

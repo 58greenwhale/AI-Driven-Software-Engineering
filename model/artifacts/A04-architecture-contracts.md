@@ -7,7 +7,7 @@
 - 输入：A01–A03、已有代码、平台约束和重要 ADR。
 - 使用者与用途：工程初始化、服务端/界面实现、集成验证和发布者。
 - 输出：项目内 `docs/architecture-contracts.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A04-architecture-contracts.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A04-architecture-contracts.md)。
+- 配套：[模板](../templates/A04-architecture-contracts.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A04-architecture-contracts.md)。
 
 ## 必填内容与字段含义
 
@@ -55,7 +55,7 @@
 ### A04-GENERATE
 
 ```text
-[A04-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A04 架构与契约，写入 {输出路径}，使用 templates/A04-architecture-contracts.md。定义本项目实际组件和公共接口，不强行引入登录、成员或网络服务。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A04-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A04 架构与契约，写入 {输出路径}，使用 model/templates/A04-architecture-contracts.md。定义本项目实际组件和公共接口，不强行引入登录、成员或网络服务。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A04-REVIEW

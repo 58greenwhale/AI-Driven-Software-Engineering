@@ -7,7 +7,7 @@
 - 输入：就绪任务、确认规格/契约、工程基线、测试策略。
 - 使用者与用途：验证者、评审者、构建与发布流程。
 - 输出：项目内 `app/ 与 docs/implementation.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A11-implementation.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A11-implementation.md)。
+- 配套：[模板](../templates/A11-implementation.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A11-implementation.md)。
 
 ## 必填内容与字段含义
 
@@ -54,7 +54,7 @@
 ### A11-GENERATE
 
 ```text
-[A11-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A11 实现包，写入 {输出路径}，使用 templates/A11-implementation.md。按确认契约实现业务、安全、一致性及模块边界，保存源码版本与差异。逐章填写规范要求，未知和不适用说明原因；同时创建真正可运行的工程/代码与测试，清单不能替代实现；返回文件、版本和实际检查。
+[A11-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A11 实现包，写入 {输出路径}，使用 model/templates/A11-implementation.md。按确认契约实现业务、安全、一致性及模块边界，保存源码版本与差异。逐章填写规范要求，未知和不适用说明原因；同时创建真正可运行的工程/代码与测试，清单不能替代实现；返回文件、版本和实际检查。
 ```
 
 ### A11-REVIEW

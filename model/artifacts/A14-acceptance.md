@@ -7,7 +7,7 @@
 - 输入：确认的 AC、页面/非功能规则、指定候选、夹具与环境。
 - 使用者与用途：集成与发布责任人、修复者。
 - 输出：项目内 `evidence/acceptance.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A14-acceptance.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A14-acceptance.md)。
+- 配套：[模板](../templates/A14-acceptance.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A14-acceptance.md)。
 
 ## 必填内容与字段含义
 
@@ -52,7 +52,7 @@
 ### A14-GENERATE
 
 ```text
-[A14-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A14 独立验收报告，写入 {输出路径}，使用 templates/A14-acceptance.md。从确认标准出发，按项目实际界面/接口/数据方式取证。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A14-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A14 独立验收报告，写入 {输出路径}，使用 model/templates/A14-acceptance.md。从确认标准出发，按项目实际界面/接口/数据方式取证。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A14-REVIEW

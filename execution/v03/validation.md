@@ -46,7 +46,7 @@
 | `node scripts/check-docs.mjs` | 0 | 111 份 Markdown、381 个本地链接、artifacts 27、activities 4、stages 3、errors 0 |
 | `node --test scripts/check-docs.test.mjs` | 0 | 36 项通过、0 失败/跳过 |
 | `git diff --check` | 0 | 无空白错误 |
-| `grep -rn 任务与依赖计划 model/ templates/ examples/ README.md` | 1 | 无匹配，A10 旧名已清除 |
+| `grep -rn 任务与依赖计划 model/ model/templates/ examples/ README.md` | 1 | 无匹配，A10 旧名已清除 |
 
 改动文件：A03 与 A10 的规范、模板、教学例，`model/artifact-index.json` 两条 title，`model/artifact-catalog.md` 两行，`model/artifacts/A01-scope.md` 与 `model/artifacts/A02-domain-permissions.md` 的质量标准段，`model/artifacts/A23-prototype-feedback.md` 与 `examples/focustask/README.md` 的引用。
 
@@ -82,7 +82,7 @@
 
 | 项目 | 事实 |
 | --- | --- |
-| 制品三类文档 | `model/artifacts/`、`templates/`、`examples/focustask/docs/artifact-examples/` 各 27 份，编号 A01–A27 连续无缺 |
+| 制品三类文档 | `model/artifacts/`、`model/templates/`、`examples/focustask/docs/artifact-examples/` 各 27 份，编号 A01–A27 连续无缺 |
 | 指南 | `model/stages/` 7 份：01-prototype-building、02-prototype-refactoring、03-prototype-review、04-prototype-polishing、05-verification、06-release、07-maintenance |
 | 实践 | `model/practices/` 5 份：initialization、prompt-protocol、context、change-control、verification |
 | 图解 | `model/diagrams/` 4 份 `.mmd`（lifecycle、collaboration、artifacts、organization）、4 份 `.svg`、4 份 `.png`，另有 `mermaid-config.json` 与生成说明 |

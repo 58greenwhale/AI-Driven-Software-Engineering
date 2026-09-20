@@ -7,7 +7,7 @@
 - 输入：A01/A02、页面草稿、接口约束及已接受 ADR。
 - 使用者与用途：编码 Agent 生成实现与测试；独立验收者建立逐项用例。
 - 输出：项目内 `docs/features/TASK-001-create-task.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A03-feature-spec.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A03-feature-spec.md)。
+- 配套：[模板](../templates/A03-feature-spec.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A03-feature-spec.md)。
 
 ## 必填内容与字段含义
 
@@ -58,7 +58,7 @@
 ### A03-GENERATE
 
 ```text
-[A03-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A03 功能规格（SOP），写入 {输出路径}，使用 templates/A03-feature-spec.md。核对当前功能的输入、角色、数据变化、重试和错误语义，保留确认的验收编号与覆盖。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A03-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A03 功能规格（SOP），写入 {输出路径}，使用 model/templates/A03-feature-spec.md。核对当前功能的输入、角色、数据变化、重试和错误语义，保留确认的验收编号与覆盖。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A03-REVIEW
@@ -101,7 +101,7 @@
 
 ```text
 [A03-GENERATE / 已填示例] 请从仓库根读取 examples/focustask/docs/context.md，
-用 templates/A03-feature-spec.md 完善 TASK-001 的教学规格，
+用 model/templates/A03-feature-spec.md 完善 TASK-001 的教学规格，
 写入 examples/focustask/docs/artifact-examples/A03-feature-spec.md。
 保持 AC-01 至 AC-13 的业务判据；身份/项目/成员仅作为教学前置输入，
 本例不包含邀请功能。网络丢失后重试必须保持同键、同任务ID和一条数据。

@@ -7,7 +7,7 @@
 - 输入：范围、功能与设计、验收要求、当前工作事实。
 - 使用者与用途：协调者和执行 Agent 选择下一个就绪任务。
 - 输出：项目内 `docs/iteration-plan.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A10-task-plan.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A10-task-plan.md)。
+- 配套：[模板](../templates/A10-task-plan.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A10-task-plan.md)。
 
 ## 必填内容与字段含义
 
@@ -56,7 +56,7 @@
 ### A10-GENERATE
 
 ```text
-[A10-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A10 设计与实施计划（plan），写入 {输出路径}，使用 templates/A10-task-plan.md。区分产品目标和本轮任务，写明方案与理由、活动裁剪、并行边界、验证与集成条件；依赖无循环，初始化不要求自己的产物预先存在。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A10-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A10 设计与实施计划（plan），写入 {输出路径}，使用 model/templates/A10-task-plan.md。区分产品目标和本轮任务，写明方案与理由、活动裁剪、并行边界、验证与集成条件；依赖无循环，初始化不要求自己的产物预先存在。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A10-REVIEW

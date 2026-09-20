@@ -18,7 +18,7 @@
 | 目录 | 用途 |
 | --- | --- |
 | `model/` | 模型、制品规范与通用实践 |
-| `templates/` | 可填写的制品模板 |
+| `model/templates/` | 可填写的制品模板 |
 | `examples/focustask/` | 教学上下文及制品填写示例 |
 | `scripts/` | 文档检查和图解生成工具 |
 | `execution/` | 建设状态和任务检查结果 |

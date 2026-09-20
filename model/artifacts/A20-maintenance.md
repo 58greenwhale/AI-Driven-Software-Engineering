@@ -7,7 +7,7 @@
 - 输入：A15、诊断证据、变更候选、回归与发布记录。
 - 使用者与用途：问题责任人、下一位维护者和模型评价。
 - 输出：项目内 `evidence/maintenance/report.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A20-maintenance.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A20-maintenance.md)。
+- 配套：[模板](../templates/A20-maintenance.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A20-maintenance.md)。
 
 ## 必填内容与字段含义
 
@@ -53,7 +53,7 @@
 ### A20-GENERATE
 
 ```text
-[A20-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A20 维护验证报告，写入 {输出路径}，使用 templates/A20-maintenance.md。由问题单追踪规格/实现/验证/再交付，人为故障和正常产物隔离。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A20-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A20 维护验证报告，写入 {输出路径}，使用 model/templates/A20-maintenance.md。由问题单追踪规格/实现/验证/再交付，人为故障和正常产物隔离。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A20-REVIEW

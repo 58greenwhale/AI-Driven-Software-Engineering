@@ -7,7 +7,7 @@
 - 输入：候选与代码版本、A11实现与测试、A03/A04/A05确认规格、A12覆盖记录、A24（如有）。
 - 使用者与用途：产品与技术责任人分层审阅并下钻代码、后续维护者理解实现、独立验收者核对实现与规格关系。
 - 输出：项目内 `docs/implementation-guide.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A25-implementation-guide.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A25-implementation-guide.md)。
+- 配套：[模板](../templates/A25-implementation-guide.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A25-implementation-guide.md)。
 
 ## 必填内容与字段含义
 
@@ -54,7 +54,7 @@
 ### A25-GENERATE
 
 ```text
-[A25-GENERATE] 请依据 {输入路径} 为 {候选} 生成 A25 面向人的实现解读，写入 {输出路径}，使用 templates/A25-implementation-guide.md。按模块给出关系与数据流、A03/A05 到实现与测试位置的映射、重要判断与理由、风险与需人决定的问题，并提供可下钻的分层入口；每条结论链接代码位置与版本；未覆盖部分写明原因，不把静态阅读写成运行验证。
+[A25-GENERATE] 请依据 {输入路径} 为 {候选} 生成 A25 面向人的实现解读，写入 {输出路径}，使用 model/templates/A25-implementation-guide.md。按模块给出关系与数据流、A03/A05 到实现与测试位置的映射、重要判断与理由、风险与需人决定的问题，并提供可下钻的分层入口；每条结论链接代码位置与版本；未覆盖部分写明原因，不把静态阅读写成运行验证。
 ```
 
 ### A25-REVIEW

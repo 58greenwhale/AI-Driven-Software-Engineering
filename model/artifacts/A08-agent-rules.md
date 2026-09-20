@@ -7,7 +7,7 @@
 - 输入：仓库定位、模块边界、项目约束、可用命令。
 - 使用者与用途：任何进入仓库的新 Agent。
 - 输出：项目内 `AGENTS.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A08-agent-rules.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A08-agent-rules.md)。
+- 配套：[模板](../templates/A08-agent-rules.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A08-agent-rules.md)。
 
 ## 必填内容与字段含义
 
@@ -54,7 +54,7 @@
 ### A08-GENERATE
 
 ```text
-[A08-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A08 Agent 工作规则，写入 {输出路径}，使用 templates/A08-agent-rules.md。区分根仓库与子项目范围，写真实命令与来源，不复制全部需求。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A08-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A08 Agent 工作规则，写入 {输出路径}，使用 model/templates/A08-agent-rules.md。区分根仓库与子项目范围，写真实命令与来源，不复制全部需求。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A08-REVIEW

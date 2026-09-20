@@ -7,7 +7,7 @@
 - 输入：A01、原领域模型、权限矩阵、状态 ADR。
 - 使用者与用途：接口与数据设计者、服务端实现和权限测试。
 - 输出：项目内 `docs/domain-permissions.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A02-domain-permissions.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A02-domain-permissions.md)。
+- 配套：[模板](../templates/A02-domain-permissions.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A02-domain-permissions.md)。
 
 ## 必填内容与字段含义
 
@@ -53,7 +53,7 @@
 ### A02-GENERATE
 
 ```text
-[A02-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A02 领域与权限规则，写入 {输出路径}，使用 templates/A02-domain-permissions.md。按项目真实角色、实体、状态、时间与一致性约束建立规则，不新增未确认业务。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A02-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A02 领域与权限规则，写入 {输出路径}，使用 model/templates/A02-domain-permissions.md。按项目真实角色、实体、状态、时间与一致性约束建立规则，不新增未确认业务。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A02-REVIEW

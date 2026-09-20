@@ -21,7 +21,7 @@ function fixture(t) {
   };
   const index = Array.from({ length: 27 }, (_, i) => {
     const id = `A${String(i + 1).padStart(2, '0')}`;
-    const item = { id, title: id, spec: `model/artifacts/${id}.md`, template: `templates/${id}.md`, example: `examples/${id}.md` };
+    const item = { id, title: id, spec: `model/artifacts/${id}.md`, template: `model/templates/${id}.md`, example: `examples/${id}.md` };
     write(item.spec, `# ${id}\n\n## 必填内容与字段含义\n\n## 质量标准与边界\n\n${artifactPrompts.map((key) => `[${id}-${key}]`).join('\n')}\n`);
     write(item.template, `# ${id} Template\n`);
     write(item.example, `# ${id} Example\n\n教学填写示例，不作通过结论。\n`);
@@ -60,7 +60,7 @@ test('complete artifact set, four activities and three lifecycle guides pass', (
 
 const cases = [
   ['missing spec', (f) => fs.unlinkSync(path.join(f.root, 'model/artifacts/A01.md')), /A01: spec.*missing or unreadable/],
-  ['missing template', (f) => fs.unlinkSync(path.join(f.root, 'templates/A01.md')), /A01: template.*missing or unreadable/],
+  ['missing template', (f) => fs.unlinkSync(path.join(f.root, 'model/templates/A01.md')), /A01: template.*missing or unreadable/],
   ['missing example', (f) => fs.unlinkSync(path.join(f.root, 'examples/A01.md')), /A01: example.*missing or unreadable/],
   ['duplicate ID', (f) => { f.index[1].id = 'A01'; f.write('model/artifact-index.json', JSON.stringify(f.index)); }, /Expected 27 unique/],
   ['missing indexed type', (f) => f.write('model/artifact-index.json', JSON.stringify(f.index.slice(1))), /Expected 27 unique/],

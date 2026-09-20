@@ -3,189 +3,189 @@
     "id": "A01",
     "title": "范围说明",
     "spec": "model/artifacts/A01-scope.md",
-    "template": "templates/A01-scope.md",
+    "template": "model/templates/A01-scope.md",
     "example": "examples/focustask/docs/artifact-examples/A01-scope.md"
   },
   {
     "id": "A02",
     "title": "领域与权限规则",
     "spec": "model/artifacts/A02-domain-permissions.md",
-    "template": "templates/A02-domain-permissions.md",
+    "template": "model/templates/A02-domain-permissions.md",
     "example": "examples/focustask/docs/artifact-examples/A02-domain-permissions.md"
   },
   {
     "id": "A03",
     "title": "功能规格（SOP）",
     "spec": "model/artifacts/A03-feature-spec.md",
-    "template": "templates/A03-feature-spec.md",
+    "template": "model/templates/A03-feature-spec.md",
     "example": "examples/focustask/docs/artifact-examples/A03-feature-spec.md"
   },
   {
     "id": "A04",
     "title": "架构与契约",
     "spec": "model/artifacts/A04-architecture-contracts.md",
-    "template": "templates/A04-architecture-contracts.md",
+    "template": "model/templates/A04-architecture-contracts.md",
     "example": "examples/focustask/docs/artifact-examples/A04-architecture-contracts.md"
   },
   {
     "id": "A05",
     "title": "UI 与交互规格",
     "spec": "model/artifacts/A05-ui-spec.md",
-    "template": "templates/A05-ui-spec.md",
+    "template": "model/templates/A05-ui-spec.md",
     "example": "examples/focustask/docs/artifact-examples/A05-ui-spec.md"
   },
   {
     "id": "A06",
     "title": "重要决定记录",
     "spec": "model/artifacts/A06-adr.md",
-    "template": "templates/A06-adr.md",
+    "template": "model/templates/A06-adr.md",
     "example": "examples/focustask/docs/artifact-examples/A06-adr.md"
   },
   {
     "id": "A07",
     "title": "验证策略",
     "spec": "model/artifacts/A07-verification-strategy.md",
-    "template": "templates/A07-verification-strategy.md",
+    "template": "model/templates/A07-verification-strategy.md",
     "example": "examples/focustask/docs/artifact-examples/A07-verification-strategy.md"
   },
   {
     "id": "A08",
     "title": "Agent 工作规则",
     "spec": "model/artifacts/A08-agent-rules.md",
-    "template": "templates/A08-agent-rules.md",
+    "template": "model/templates/A08-agent-rules.md",
     "example": "examples/focustask/docs/artifact-examples/A08-agent-rules.md"
   },
   {
     "id": "A09",
     "title": "工程基线",
     "spec": "model/artifacts/A09-engineering-baseline.md",
-    "template": "templates/A09-engineering-baseline.md",
+    "template": "model/templates/A09-engineering-baseline.md",
     "example": "examples/focustask/docs/artifact-examples/A09-engineering-baseline.md"
   },
   {
     "id": "A10",
     "title": "设计与实施计划（plan）",
     "spec": "model/artifacts/A10-task-plan.md",
-    "template": "templates/A10-task-plan.md",
+    "template": "model/templates/A10-task-plan.md",
     "example": "examples/focustask/docs/artifact-examples/A10-task-plan.md"
   },
   {
     "id": "A11",
     "title": "实现包",
     "spec": "model/artifacts/A11-implementation.md",
-    "template": "templates/A11-implementation.md",
+    "template": "model/templates/A11-implementation.md",
     "example": "examples/focustask/docs/artifact-examples/A11-implementation.md"
   },
   {
     "id": "A12",
     "title": "代码与制品评审记录",
     "spec": "model/artifacts/A12-review.md",
-    "template": "templates/A12-review.md",
+    "template": "model/templates/A12-review.md",
     "example": "examples/focustask/docs/artifact-examples/A12-review.md"
   },
   {
     "id": "A13",
     "title": "会话交接",
     "spec": "model/artifacts/A13-handoff.md",
-    "template": "templates/A13-handoff.md",
+    "template": "model/templates/A13-handoff.md",
     "example": "examples/focustask/docs/artifact-examples/A13-handoff.md"
   },
   {
     "id": "A14",
     "title": "独立验收报告",
     "spec": "model/artifacts/A14-acceptance.md",
-    "template": "templates/A14-acceptance.md",
+    "template": "model/templates/A14-acceptance.md",
     "example": "examples/focustask/docs/artifact-examples/A14-acceptance.md"
   },
   {
     "id": "A15",
     "title": "缺陷与变更单",
     "spec": "model/artifacts/A15-change-defect.md",
-    "template": "templates/A15-change-defect.md",
+    "template": "model/templates/A15-change-defect.md",
     "example": "examples/focustask/docs/artifact-examples/A15-change-defect.md"
   },
   {
     "id": "A16",
     "title": "制品与验收追踪表",
     "spec": "model/artifacts/A16-traceability.md",
-    "template": "templates/A16-traceability.md",
+    "template": "model/templates/A16-traceability.md",
     "example": "examples/focustask/docs/artifact-examples/A16-traceability.md"
   },
   {
     "id": "A17",
     "title": "发布清单",
     "spec": "model/artifacts/A17-release-manifest.md",
-    "template": "templates/A17-release-manifest.md",
+    "template": "model/templates/A17-release-manifest.md",
     "example": "examples/focustask/docs/artifact-examples/A17-release-manifest.md"
   },
   {
     "id": "A18",
     "title": "部署与回退指南",
     "spec": "model/artifacts/A18-deploy-rollback.md",
-    "template": "templates/A18-deploy-rollback.md",
+    "template": "model/templates/A18-deploy-rollback.md",
     "example": "examples/focustask/docs/artifact-examples/A18-deploy-rollback.md"
   },
   {
     "id": "A19",
     "title": "发布运行记录",
     "spec": "model/artifacts/A19-release-run.md",
-    "template": "templates/A19-release-run.md",
+    "template": "model/templates/A19-release-run.md",
     "example": "examples/focustask/docs/artifact-examples/A19-release-run.md"
   },
   {
     "id": "A20",
     "title": "维护验证报告",
     "spec": "model/artifacts/A20-maintenance.md",
-    "template": "templates/A20-maintenance.md",
+    "template": "model/templates/A20-maintenance.md",
     "example": "examples/focustask/docs/artifact-examples/A20-maintenance.md"
   },
   {
     "id": "A21",
     "title": "实际人机交互记录",
     "spec": "model/artifacts/A21-interaction-log.md",
-    "template": "templates/A21-interaction-log.md",
+    "template": "model/templates/A21-interaction-log.md",
     "example": "examples/focustask/docs/artifact-examples/A21-interaction-log.md"
   },
   {
     "id": "A22",
     "title": "模型实证评价",
     "spec": "model/artifacts/A22-model-evaluation.md",
-    "template": "templates/A22-model-evaluation.md",
+    "template": "model/templates/A22-model-evaluation.md",
     "example": "examples/focustask/docs/artifact-examples/A22-model-evaluation.md"
   },
   {
     "id": "A23",
     "title": "原型版本与反馈确认记录",
     "spec": "model/artifacts/A23-prototype-feedback.md",
-    "template": "templates/A23-prototype-feedback.md",
+    "template": "model/templates/A23-prototype-feedback.md",
     "example": "examples/focustask/docs/artifact-examples/A23-prototype-feedback.md"
   },
   {
     "id": "A24",
     "title": "工程化差距与重构方案",
     "spec": "model/artifacts/A24-refactoring-plan.md",
-    "template": "templates/A24-refactoring-plan.md",
+    "template": "model/templates/A24-refactoring-plan.md",
     "example": "examples/focustask/docs/artifact-examples/A24-refactoring-plan.md"
   },
   {
     "id": "A25",
     "title": "面向人的实现解读",
     "spec": "model/artifacts/A25-implementation-guide.md",
-    "template": "templates/A25-implementation-guide.md",
+    "template": "model/templates/A25-implementation-guide.md",
     "example": "examples/focustask/docs/artifact-examples/A25-implementation-guide.md"
   },
   {
     "id": "A26",
     "title": "同类问题排查与修复记录",
     "spec": "model/artifacts/A26-pattern-remediation.md",
-    "template": "templates/A26-pattern-remediation.md",
+    "template": "model/templates/A26-pattern-remediation.md",
     "example": "examples/focustask/docs/artifact-examples/A26-pattern-remediation.md"
   },
   {
     "id": "A27",
     "title": "视觉与交互设计交付包",
     "spec": "model/artifacts/A27-design-delivery.md",
-    "template": "templates/A27-design-delivery.md",
+    "template": "model/templates/A27-design-delivery.md",
     "example": "examples/focustask/docs/artifact-examples/A27-design-delivery.md"
   }
 ]

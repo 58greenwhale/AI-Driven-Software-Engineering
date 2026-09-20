@@ -7,7 +7,7 @@
 - 输入：所有已产生制品、任务/AC编号、实际测试和证据。
 - 使用者与用途：验收、变更分析、发布审计和模型评价。
 - 输出：项目内 `evidence/traceability.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A16-traceability.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A16-traceability.md)。
+- 配套：[模板](../templates/A16-traceability.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A16-traceability.md)。
 
 ## 必填内容与字段含义
 
@@ -52,7 +52,7 @@
 ### A16-GENERATE
 
 ```text
-[A16-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A16 制品与验收追踪表，写入 {输出路径}，使用 templates/A16-traceability.md。从本项目每条AC追踪设计、实现、测试与证据，未生成引用记待生成。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A16-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A16 制品与验收追踪表，写入 {输出路径}，使用 model/templates/A16-traceability.md。从本项目每条AC追踪设计、实现、测试与证据，未生成引用记待生成。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A16-REVIEW

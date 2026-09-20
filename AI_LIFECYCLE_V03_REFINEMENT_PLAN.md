@@ -170,7 +170,7 @@ A10 记录执行粒度、采用的活动、合并/简化/跳过理由、依赖�
 
 ### 3.2 新增 A23–A27
 
-下表基名分别用于 `model/artifacts/`、`templates/` 和 `examples/focustask/docs/artifact-examples/`，均使用 `.md` 后缀。三类文件分别是规范、空白模板和已填写教学示例。
+下表基名分别用于 `model/artifacts/`、`model/templates/` 和 `examples/focustask/docs/artifact-examples/`，均使用 `.md` 后缀。三类文件分别是规范、空白模板和已填写教学示例。
 
 | 编号与基名 | 制品 | 必填内容 |
 | --- | --- | --- |

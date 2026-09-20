@@ -7,7 +7,7 @@
 - 输入：A04、A17、实际环境信息、迁移与兼容性。
 - 使用者与用途：发布或维护 Agent，人工评估风险。
 - 输出：项目内 `docs/deploy-rollback.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A18-deploy-rollback.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A18-deploy-rollback.md)。
+- 配套：[模板](../templates/A18-deploy-rollback.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A18-deploy-rollback.md)。
 
 ## 必填内容与字段含义
 
@@ -53,7 +53,7 @@
 ### A18-GENERATE
 
 ```text
-[A18-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A18 部署与回退指南，写入 {输出路径}，使用 templates/A18-deploy-rollback.md。按目标环境定义发布和恢复，记录操作归属并保留已有数据。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A18-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A18 部署与回退指南，写入 {输出路径}，使用 model/templates/A18-deploy-rollback.md。按目标环境定义发布和恢复，记录操作归属并保留已有数据。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A18-REVIEW

@@ -62,7 +62,7 @@
 
 ## 4. A23–A27 制品
 
-基名用于 `model/artifacts/`、`templates/` 与 `examples/focustask/docs/artifact-examples/` 三处，均为 `.md`。
+基名用于 `model/artifacts/`、`model/templates/` 与 `examples/focustask/docs/artifact-examples/` 三处，均为 `.md`。
 
 | 编号与基名 | 标题 | 必需性与触发 | 建议输出位置 |
 | --- | --- | --- | --- |
@@ -172,7 +172,7 @@ git status --short
 
 - 活动指南 4 份：`model/stages/01-prototype-building.md`、`02-prototype-refactoring.md`、`03-prototype-review.md`、`04-prototype-polishing.md`。
 - 制品规范 5 份：`model/artifacts/A23-prototype-feedback.md`、`A24-refactoring-plan.md`、`A25-implementation-guide.md`、`A26-pattern-remediation.md`、`A27-design-delivery.md`。
-- 模板 5 份：`templates/` 下同基名文件。
+- 模板 5 份：`model/templates/` 下同基名文件。
 - 教学例 5 份：`examples/focustask/docs/artifact-examples/` 下同基名文件。
 - 图解源码 4 份与导出 8 份：`model/diagrams/` 下 `lifecycle`、`collaboration`、`artifacts`、`organization` 的 `.mmd`、`.svg`、`.png`。
 - 本计划文件。

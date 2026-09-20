@@ -18,13 +18,13 @@
 
 基线提交 bdcef91，`master` 与 `origin/master` 一致，工作区无未提交或未跟踪改动，`.DS_Store` 由 `.gitignore` 忽略，无需保护的既有用户改动。
 
-材料齐备度：`model/artifacts/`、`templates/`、`examples/focustask/docs/artifact-examples/` 各 27 份，覆盖 A01–A27；`model/stages/` 7 份指南（构建、重构、审查、精修四项活动与独立验收、发布、维护三个阶段）；`model/practices/` 5 份；`model/diagrams/` 4 份 `.mmd` 与 8 个 SVG/PNG 导出；`model/artifact-index.json` 27 条。
+材料齐备度：`model/artifacts/`、`model/templates/`、`examples/focustask/docs/artifact-examples/` 各 27 份，覆盖 A01–A27；`model/stages/` 7 份指南（构建、重构、审查、精修四项活动与独立验收、发布、维护三个阶段）；`model/practices/` 5 份；`model/diagrams/` 4 份 `.mmd` 与 8 个 SVG/PNG 导出；`model/artifact-index.json` 27 条。
 
 主要缺口按计划章节：3.1 的 A01–A22 改写，A01–A03 与 A10 已完成（A03 为“功能规格（SOP）”、A10 为“设计与实施计划（plan）”，与活动指南表述一致），A04–A07 已完成（区分当前实现/目标约束/确认设计，A06 记录重构与精修决定，A07 区分六类验证），A08–A09 与 A11–A14 已完成（AGENTS 七项最低内容与生成指导、基线增强路线、演化来源、覆盖与解读排查入口、交接的活动状态、验收独立性依据），剩余 A15–A16、A17–A20、A21–A22 三组；3.4 的工作流索引与检查器整合；5.2 的渲染器诊断；5.3 的十二场景静态走查。逐项事实见[检查记录](validation.md)。
 
 ## 文件边界
 
-可修改：`model/`、`templates/`、`examples/focustask/`、`scripts/`、`README.md`、`AGENTS.md`、`execution/`。不修改：已导出的 SVG/PNG（只改 `.mmd` 后重新导出）、仓库依赖与 `package.json`、任何应用或数据库。教学目录同时遵循 `examples/focustask/AGENTS.md`。
+可修改：`model/`、`model/templates/`、`examples/focustask/`、`scripts/`、`README.md`、`AGENTS.md`、`execution/`。不修改：已导出的 SVG/PNG（只改 `.mmd` 后重新导出）、仓库依赖与 `package.json`、任何应用或数据库。教学目录同时遵循 `examples/focustask/AGENTS.md`。
 
 ## 未决项与下一步
 

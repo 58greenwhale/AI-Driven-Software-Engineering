@@ -7,7 +7,7 @@
 - 输入：冲突或风险、候选方案、范围和技术事实。
 - 使用者与用途：实现者解释取舍，维护者判断何时重新评估。
 - 输出：项目内 `docs/decisions/0002-example.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A06-adr.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A06-adr.md)。
+- 配套：[模板](../templates/A06-adr.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A06-adr.md)。
 
 ## 必填内容与字段含义
 
@@ -54,7 +54,7 @@
 ### A06-GENERATE
 
 ```text
-[A06-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A06 重要决定记录，写入 {输出路径}，使用 templates/A06-adr.md。记录当前决定的真实来源及备选取舍，保留被替代历史。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A06-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A06 重要决定记录，写入 {输出路径}，使用 model/templates/A06-adr.md。记录当前决定的真实来源及备选取舍，保留被替代历史。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A06-REVIEW

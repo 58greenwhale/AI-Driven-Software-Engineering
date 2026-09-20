@@ -7,7 +7,7 @@
 - 输入：A01–A05、非功能要求和风险。
 - 使用者与用途：编码者先编写有意义测试，验收者准备环境和判据。
 - 输出：项目内 `docs/test-strategy.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A07-verification-strategy.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A07-verification-strategy.md)。
+- 配套：[模板](../templates/A07-verification-strategy.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A07-verification-strategy.md)。
 
 ## 必填内容与字段含义
 
@@ -54,7 +54,7 @@
 ### A07-GENERATE
 
 ```text
-[A07-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A07 验证策略，写入 {输出路径}，使用 templates/A07-verification-strategy.md。按功能风险选择适用测试层，先确定判据再实现。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A07-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A07 验证策略，写入 {输出路径}，使用 model/templates/A07-verification-strategy.md。按功能风险选择适用测试层，先确定判据再实现。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A07-REVIEW

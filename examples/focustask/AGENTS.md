@@ -1,6 +1,6 @@
 # FocusTask Teaching Guidelines
 
-本目录提供教学上下文和制品填写示例。先读 `docs/context.md`、对应 `model/artifacts/` 规范及 `templates/` 模板；根规则继续适用。
+本目录提供教学上下文和制品填写示例。先读 `docs/context.md`、对应 `model/artifacts/` 规范及 `model/templates/` 模板；根规则继续适用。
 
 保留创建任务 AC-01–AC-13、角色权限、幂等和字段语义。教学设定不是用户对实际项目的确认，不扩展邀请、项目管理或任务编辑功能。
 

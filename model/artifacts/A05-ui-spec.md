@@ -7,7 +7,7 @@
 - 输入：A01/A03、用户旅程、设计系统和接口错误语义。
 - 使用者与用途：界面实现者、视觉和可访问性验收者。
 - 输出：项目内 `docs/pages/task-list.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A05-ui-spec.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A05-ui-spec.md)。
+- 配套：[模板](../templates/A05-ui-spec.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A05-ui-spec.md)。
 
 ## 必填内容与字段含义
 
@@ -54,7 +54,7 @@
 ### A05-GENERATE
 
 ```text
-[A05-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A05 UI 与交互规格，写入 {输出路径}，使用 templates/A05-ui-spec.md。依据实际页面和设备定义布局、交互、角色以及完整状态。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A05-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A05 UI 与交互规格，写入 {输出路径}，使用 model/templates/A05-ui-spec.md。依据实际页面和设备定义布局、交互、角色以及完整状态。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A05-REVIEW

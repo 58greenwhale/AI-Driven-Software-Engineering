@@ -7,7 +7,7 @@
 - 输入：候选快照、确认规格、差异、测试与运行证据。
 - 使用者与用途：集成责任人、修复者和后续维护者。
 - 输出：项目内 `evidence/review.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A12-review.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A12-review.md)。
+- 配套：[模板](../templates/A12-review.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A12-review.md)。
 
 ## 必填内容与字段含义
 
@@ -53,7 +53,7 @@
 ### A12-GENERATE
 
 ```text
-[A12-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A12 代码与制品评审记录，写入 {输出路径}，使用 templates/A12-review.md。检查候选的规则、异常、数据、模块和测试；区分本地评审与外部平台事实。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A12-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A12 代码与制品评审记录，写入 {输出路径}，使用 model/templates/A12-review.md。检查候选的规则、异常、数据、模块和测试；区分本地评审与外部平台事实。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A12-REVIEW

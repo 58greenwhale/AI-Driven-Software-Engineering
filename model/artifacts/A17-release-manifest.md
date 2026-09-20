@@ -7,7 +7,7 @@
 - 输入：已验收候选、构建输出、版本范围、环境与恢复方案。
 - 使用者与用途：发布执行者和维护/回退执行者。
 - 输出：目标项目内 `evidence/releases/{版本}/manifest.md`；这是推荐路径，不是本仓库文件。实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A17-release-manifest.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A17-release-manifest.md)。
+- 配套：[模板](../templates/A17-release-manifest.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A17-release-manifest.md)。
 
 ## 必填内容与字段含义
 
@@ -52,7 +52,7 @@
 ### A17-GENERATE
 
 ```text
-[A17-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A17 发布清单，写入 {输出路径}，使用 templates/A17-release-manifest.md。绑定源码、真实构建、配置和目标环境，开发运行不等于正式交付产物。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A17-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A17 发布清单，写入 {输出路径}，使用 model/templates/A17-release-manifest.md。绑定源码、真实构建、配置和目标环境，开发运行不等于正式交付产物。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A17-REVIEW

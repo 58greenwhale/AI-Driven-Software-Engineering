@@ -7,7 +7,7 @@
 - 输入：真实用户意图、提示词模板、执行者指令和工具结果。
 - 使用者与用途：接手者、模型评价者和审计读者。
 - 输出：项目内 `evidence/interactions.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A21-interaction-log.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A21-interaction-log.md)。
+- 配套：[模板](../templates/A21-interaction-log.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A21-interaction-log.md)。
 
 ## 必填内容与字段含义
 
@@ -52,7 +52,7 @@
 ### A21-GENERATE
 
 ```text
-[A21-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A21 实际人机交互记录，写入 {输出路径}，使用 templates/A21-interaction-log.md。区分模板、教学示例、实际用户输入和授权执行，不记录秘密或隐藏推理。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
+[A21-GENERATE] 请依据 {输入路径} 为 {目标} 生成 A21 实际人机交互记录，写入 {输出路径}，使用 model/templates/A21-interaction-log.md。区分模板、教学示例、实际用户输入和授权执行，不记录秘密或隐藏推理。逐章填写规范要求，未知和不适用说明原因；涉及运行结果必须来源于真实工具，未执行不得填通过；返回文件、版本和实际检查。
 ```
 
 ### A21-REVIEW

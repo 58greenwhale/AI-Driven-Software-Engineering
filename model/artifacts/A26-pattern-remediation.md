@@ -7,7 +7,7 @@
 - 输入：原始问题与复现、候选版本与位置、A12/A14/A15相关记录、代码库与确认规格。
 - 使用者与用途：修复执行者、审查责任人、维护者，以及A22模型评价的改进输入。
 - 输出：项目内 `evidence/pattern-remediation.md`；实例、版本、来源及失效遵循[约定](../conventions.md)。
-- 配套：[模板](../../templates/A26-pattern-remediation.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A26-pattern-remediation.md)。
+- 配套：[模板](../templates/A26-pattern-remediation.md) · [教学填写示例](../../examples/focustask/docs/artifact-examples/A26-pattern-remediation.md)。
 
 ## 必填内容与字段含义
 
@@ -54,7 +54,7 @@
 ### A26-GENERATE
 
 ```text
-[A26-GENERATE] 请依据 {输入路径} 为 {问题} 生成 A26 同类问题排查与修复记录，写入 {输出路径}，使用 templates/A26-pattern-remediation.md。先解释根因并提炼可能重复出现的代码模式与业务条件，再检查整个项目：不局限于相同文本，覆盖同类调用、相似模块、替代写法与相关异常路径；将实例分为已确认、疑似、不适用并说明依据、覆盖范围与未能检查的部分；在授权内修复确认实例并补充有针对性的回归验证；未执行的检查不得报告通过。
+[A26-GENERATE] 请依据 {输入路径} 为 {问题} 生成 A26 同类问题排查与修复记录，写入 {输出路径}，使用 model/templates/A26-pattern-remediation.md。先解释根因并提炼可能重复出现的代码模式与业务条件，再检查整个项目：不局限于相同文本，覆盖同类调用、相似模块、替代写法与相关异常路径；将实例分为已确认、疑似、不适用并说明依据、覆盖范围与未能检查的部分；在授权内修复确认实例并补充有针对性的回归验证；未执行的检查不得报告通过。
 ```
 
 ### A26-REVIEW
