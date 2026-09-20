@@ -1,23 +1,23 @@
-# Repository Guidelines
+# 仓库规则
 
-## Purpose and Sources
+## 用途与资料来源
 
-This repository documents a human-directed AI software lifecycle based on evolutionary prototypes. Development activities are prototype building, refactoring, review and polishing, followed by independent acceptance, direct local release and maintenance. Activities can be tailored per feature or iteration.
+本仓库记录以演化型原型为基础、由人主导的 AI 软件生命周期。开发活动包括原型构建、原型重构、原型审查和原型精修，随后进行独立验收、直接本地发布与维护。活动可按功能或迭代裁剪。
 
-## Organization
+## 目录结构
 
-- `model/`: artifact specifications, practices and lifecycle guides.
-- `templates/`: unfilled artifact templates.
-- `examples/focustask/`: teaching context and examples; read its local AGENTS.
-- `execution/`: current tasks, coverage and verification results.
-- `scripts/`: documentation checks and diagram tooling.
+- `model/`：制品规范、实践和生命周期指南。
+- `templates/`：未填写的制品模板。
+- `examples/focustask/`：教学上下文和示例；请阅读其目录内的 AGENTS。
+- `execution/`：当前任务、覆盖情况和验证结果。
+- `scripts/`：文档检查和图解工具。
 
-Teaching scenarios describe inputs and expected behavior. Actual product development or empirical work requires its own confirmed scope, implementation and evidence.
+教学场景用于说明输入和预期行为。实际产品开发或实证工作必须有单独确认的范围、实现和证据。
 
-## Working Rules
+## 工作规则
 
-Preserve unrelated edits and complete one verifiable task at a time. Update specifications, examples, indexes and links together. Confirm new business rules with the user; resolve routine choices within scope. Record consequential decisions with their source.
+保留无关修改，一次完成一个可验证任务。同步更新规范、示例、索引和链接。新的业务规则须向用户确认；范围内的常规选择由执行者处理。记录有重要影响的决定及其来源。
 
-Write standalone instructions that explain the current model, inputs, outputs and checks. Keep repository progress in execution status. Every AI-driven workflow needs actionable prompts. When a problem is found, inspect related patterns across the project, distinguish confirmed instances from suspicions, fix authorized issues and recheck them.
+编写能够独立说明当前模型、输入、输出和检查方式的指令。将仓库进度保存在执行状态中。每个由 AI 驱动的工作流都需要可执行的提示词。发现问题时，检查项目中的相关模式，区分已确认实例和疑似实例，在授权范围内修复并重新检查。
 
-After each authorized change, run the relevant checks, commit the complete task change, and push the current branch to all three configured remotes: `origin`, `github`, and `gitee`. Do not force-push. If a commit or push fails, preserve the work and report the blocker with the remote and command that failed.
+每次完成授权修改后，运行相关检查，提交该任务的完整修改，并将当前分支推送到三个已配置的远程：`origin`、`github` 和 `gitee`。不得强制推送。提交或推送失败时保留工作，并报告发生阻塞的远程和失败命令。
