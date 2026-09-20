@@ -1,6 +1,6 @@
 # 制品目录
 
-制品由用途决定，编号稳定，实例随项目和版本更新。本目录列出 A01–A27 的用途、适用条件和生成规范，每类配套空白模板及教学填写示例。
+制品由用途决定，编号稳定，实例随项目和版本更新。本目录列出 A01–A28 的用途、适用条件和生成规范，每类配套空白模板及教学填写示例。
 
 下表输出位置以目标项目为根目录，是实例存放位置的建议。教学输入见 [FocusTask 上下文](../examples/focustask/docs/context.md)，文档覆盖与建设进度见[执行状态](../execution/status.md)。
 
@@ -35,3 +35,4 @@
 | A25 | [面向人的实现解读](artifacts/A25-implementation-guide.md) | 首轮系统审查后必要；可按模块增量；代码变化后同步更新 | `docs/implementation-guide.md` |
 | A26 | [同类问题排查与修复记录](artifacts/A26-pattern-remediation.md) | 发现缺陷、验收失败或维护问题时必要；未发现其他实例也记录范围、方法与限制 | `evidence/pattern-remediation.md` |
 | A27 | [视觉与交互设计交付包](artifacts/A27-design-delivery.md) | 有UI且开展精修时必要；无UI不生成但保留A05；设计来源、版本或交付内容变化时更新 | `docs/design/{特性}/delivery.md` |
+| A28 | [模块蓝图](artifacts/A28-module-blueprint.md) | 需要为业务模块建立整体上下文时必要；模块边界、能力地图、跨模块关系或功能清单变化时更新 | `docs/modules/{模块}/module-blueprint.md` |

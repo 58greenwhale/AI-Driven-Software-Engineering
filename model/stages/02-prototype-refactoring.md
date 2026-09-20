@@ -77,7 +77,7 @@
 
 ```text
 [REFR-START / 已填参数示例] 从仓库根读取 examples/focustask/docs/context.md
-及对应的 A01–A27 规范、模板与教学例。请以教学架构（Next.js/React/TypeScript 与 PostgreSQL/Prisma）为当前设定，
+及对应的 A01–A28 规范、模板与教学例。请以教学架构（Next.js/React/TypeScript 与 PostgreSQL/Prisma）为当前设定，
 填写 A24 教学例：列出权限与幂等实现差距、行为映射、保留/调整/替换策略与未执行的验证方式。
 只更新教学文档，不启动应用或数据库；不伪造确认、执行结果或发布身份。
 若实际项目要执行本活动，请先提供当前实现、确认行为清单、目标约束与授权。

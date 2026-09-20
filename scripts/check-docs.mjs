@@ -90,9 +90,10 @@ if (indexText !== null) {
   } catch { errors.push('model/artifact-index.json: expected a JSON array'); }
 }
 const promptTypes = ['START', 'CLARIFY', 'SELECT', 'GENERATE', 'REVIEW', 'REVISE', 'VERIFY', 'HANDOFF', 'FAILURE'];
-const expectedIds = Array.from({ length: 27 }, (_, i) => `A${String(i + 1).padStart(2, '0')}`);
+const artifactPromptTypes = { A28: ['START', 'GENERATE', 'CLARIFY', 'REVIEW', 'REVISE', 'HANDOFF'] };
+const expectedIds = Array.from({ length: 28 }, (_, i) => `A${String(i + 1).padStart(2, '0')}`);
 const ids = new Set(artifacts.map((item) => item?.id));
-if (artifacts.length !== 27 || ids.size !== 27 || expectedIds.some((id) => !ids.has(id))) errors.push('Expected 27 unique artifact types A01-A27');
+if (artifacts.length !== 28 || ids.size !== 28 || expectedIds.some((id) => !ids.has(id))) errors.push('Expected 28 unique artifact types A01-A28');
 for (const item of artifacts) {
   if (!item || typeof item !== 'object' || typeof item.id !== 'string' || typeof item.title !== 'string') {
     errors.push('Invalid artifact entry: id and title are required');
@@ -107,7 +108,8 @@ for (const item of artifacts) {
     texts[type] = readText(path.resolve(root, item[type]), `${item.id}: ${type} ${item[type]}`);
   }
   if (typeof texts.spec === 'string') {
-    for (const type of promptTypes) if (!texts.spec.includes(`[${item.id}-${type}]`)) errors.push(`${item.id}: missing ${type} prompt`);
+    const requiredPrompts = artifactPromptTypes[item.id] ?? promptTypes;
+    for (const type of requiredPrompts) if (!texts.spec.includes(`[${item.id}-${type}]`)) errors.push(`${item.id}: missing ${type} prompt`);
     if (!texts.spec.includes('## 必填内容与字段含义') || !texts.spec.includes('## 质量标准与边界')) errors.push(`${item.id}: missing content or quality specification`);
   }
   if (typeof texts.example === 'string' && (!texts.example.includes('教学填写示例') || !texts.example.includes('不作通过结论'))) errors.push(`${item.id}: example lacks evidence boundary`);

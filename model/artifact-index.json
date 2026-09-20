@@ -187,5 +187,12 @@
     "spec": "model/artifacts/A27-design-delivery.md",
     "template": "model/templates/A27-design-delivery.md",
     "example": "examples/focustask/docs/artifact-examples/A27-design-delivery.md"
+  },
+  {
+    "id": "A28",
+    "title": "模块蓝图",
+    "spec": "model/artifacts/A28-module-blueprint.md",
+    "template": "model/templates/A28-module-blueprint.md",
+    "example": "examples/focustask/docs/artifact-examples/A28-module-blueprint.md"
   }
 ]
