@@ -19,10 +19,10 @@ function fixture(t) {
     fs.mkdirSync(path.dirname(file), { recursive: true });
     fs.writeFileSync(file, content);
   };
-  const index = Array.from({ length: 28 }, (_, i) => {
+  const index = Array.from({ length: 29 }, (_, i) => {
     const id = `A${String(i + 1).padStart(2, '0')}`;
     const item = { id, title: id, spec: `model/artifacts/${id}.md`, template: `model/templates/${id}.md`, example: `examples/${id}.md` };
-    const prompts = id === 'A28' ? ['START', 'GENERATE', 'CLARIFY', 'REVIEW', 'REVISE', 'HANDOFF'] : artifactPrompts;
+    const prompts = ['A28', 'A29'].includes(id) ? ['START', 'GENERATE', 'CLARIFY', 'REVIEW', 'REVISE', 'HANDOFF'] : artifactPrompts;
     write(item.spec, `# ${id}\n\n## 必填内容与字段含义\n\n## 质量标准与边界\n\n${prompts.map((key) => `[${id}-${key}]`).join('\n')}\n`);
     write(item.template, `# ${id} Template\n`);
     write(item.example, `# ${id} Example\n\n教学填写示例，不作通过结论。\n`);
@@ -53,7 +53,7 @@ test('complete artifact set, four activities and three lifecycle guides pass', (
   const { code, report } = run(f.root);
   assert.equal(code, 0);
   assert.deepEqual(report.errors, []);
-  assert.equal(report.artifacts, 28);
+  assert.equal(report.artifacts, 29);
   assert.equal(report.activities, 4);
   assert.equal(report.stages, 3);
   assert.equal(report.localLinks, 1);
@@ -63,10 +63,10 @@ const cases = [
   ['missing spec', (f) => fs.unlinkSync(path.join(f.root, 'model/artifacts/A01.md')), /A01: spec.*missing or unreadable/],
   ['missing template', (f) => fs.unlinkSync(path.join(f.root, 'model/templates/A01.md')), /A01: template.*missing or unreadable/],
   ['missing example', (f) => fs.unlinkSync(path.join(f.root, 'examples/A01.md')), /A01: example.*missing or unreadable/],
-  ['duplicate ID', (f) => { f.index[1].id = 'A01'; f.write('model/artifact-index.json', JSON.stringify(f.index)); }, /Expected 28 unique/],
-  ['missing indexed type', (f) => f.write('model/artifact-index.json', JSON.stringify(f.index.slice(1))), /Expected 28 unique/],
-  ['missing A23 entry', (f) => { f.index.splice(22, 1); f.write('model/artifact-index.json', JSON.stringify(f.index)); }, /Expected 28 unique/],
-  ['unexpected ID', (f) => { f.index[27].id = 'A99'; f.write('model/artifact-index.json', JSON.stringify(f.index)); }, /Expected 28 unique/],
+  ['duplicate ID', (f) => { f.index[1].id = 'A01'; f.write('model/artifact-index.json', JSON.stringify(f.index)); }, /Expected 29 unique/],
+  ['missing indexed type', (f) => f.write('model/artifact-index.json', JSON.stringify(f.index.slice(1))), /Expected 29 unique/],
+  ['missing A23 entry', (f) => { f.index.splice(22, 1); f.write('model/artifact-index.json', JSON.stringify(f.index)); }, /Expected 29 unique/],
+  ['unexpected ID', (f) => { f.index[28].id = 'A99'; f.write('model/artifact-index.json', JSON.stringify(f.index)); }, /Expected 29 unique/],
   ['malformed JSON', (f) => f.write('model/artifact-index.json', '{'), /expected a JSON array/],
   ['wrong index shape', (f) => f.write('model/artifact-index.json', '{}'), /expected a JSON array/],
   ['invalid entry', (f) => { f.index[0] = null; f.write('model/artifact-index.json', JSON.stringify(f.index)); }, /Invalid artifact entry/],
@@ -76,6 +76,10 @@ const cases = [
   ['missing A28 spec', (f) => fs.unlinkSync(path.join(f.root, 'model/artifacts/A28.md')), /A28: spec.*missing or unreadable/],
   ['missing A28 template', (f) => fs.unlinkSync(path.join(f.root, 'model/templates/A28.md')), /A28: template.*missing or unreadable/],
   ['missing A28 example', (f) => fs.unlinkSync(path.join(f.root, 'examples/A28.md')), /A28: example.*missing or unreadable/],
+  ['missing A29 prompt', (f) => f.replace('model/artifacts/A29.md', '[A29-HANDOFF]', ''), /A29: missing HANDOFF prompt/],
+  ['missing A29 spec', (f) => fs.unlinkSync(path.join(f.root, 'model/artifacts/A29.md')), /A29: spec.*missing or unreadable/],
+  ['missing A29 template', (f) => fs.unlinkSync(path.join(f.root, 'model/templates/A29.md')), /A29: template.*missing or unreadable/],
+  ['missing A29 example', (f) => fs.unlinkSync(path.join(f.root, 'examples/A29.md')), /A29: example.*missing or unreadable/],
   ['missing required chapter', (f) => f.replace('model/artifacts/A01.md', '## 必填内容与字段含义', '## Other'), /missing content or quality/],
   ['missing teaching label', (f) => f.replace('examples/A01.md', '教学填写示例', ''), /lacks evidence boundary/],
   ['missing non-evidence warning', (f) => f.replace('examples/A01.md', '不作通过结论', ''), /lacks evidence boundary/],
@@ -157,7 +161,7 @@ test('renderer lists only the sources still missing', (t) => {
   assert.doesNotMatch(result.stderr, /lifecycle\.mmd/);
 });
 
-test('repository diagram sources and exports exist and cover A01-A28', () => {
+test('repository diagram sources and exports exist and cover A01-A29', () => {
   const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
   const directory = path.join(root, 'model/diagrams');
   for (const name of ['lifecycle', 'collaboration', 'artifacts', 'organization']) {
@@ -168,7 +172,7 @@ test('repository diagram sources and exports exist and cover A01-A28', () => {
     }
   }
   const artifactsSource = fs.readFileSync(path.join(directory, 'artifacts.mmd'), 'utf8');
-  for (let i = 1; i <= 28; i += 1) {
+  for (let i = 1; i <= 29; i += 1) {
     const id = `A${String(i).padStart(2, '0')}`;
     assert.ok(artifactsSource.includes(`${id} `), `artifacts.mmd misses ${id}`);
   }

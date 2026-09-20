@@ -9,7 +9,9 @@ flowchart LR
   end
   subgraph G10["模块上下文"]
     direction TB
+    A29["A29 系统蓝图"]
     A28["A28 模块蓝图"]
+    A29 --> A28
   end
   subgraph G2["设计与约束"]
     direction TB
@@ -72,7 +74,8 @@ flowchart LR
     A21 --> A22
   end
   A03 --> A04
-  A01 --> A28
+  A01 --> A29
+  A29 --> A28
   A28 --> A02
   A28 --> A03
   A28 --> A04

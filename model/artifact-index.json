@@ -194,5 +194,12 @@
     "spec": "model/artifacts/A28-module-blueprint.md",
     "template": "model/templates/A28-module-blueprint.md",
     "example": "examples/focustask/docs/artifact-examples/A28-module-blueprint.md"
+  },
+  {
+    "id": "A29",
+    "title": "系统蓝图",
+    "spec": "model/artifacts/A29-system-blueprint.md",
+    "template": "model/templates/A29-system-blueprint.md",
+    "example": "examples/focustask/docs/artifact-examples/A29-system-blueprint.md"
   }
 ]

@@ -38,7 +38,7 @@
 - [生命周期图解](visual-guide.md)：四组图解与读图要点；需要整体关系或向人解释模型时，改源码或重新导出见[生成说明](diagrams/README.md)。
 - [约定](conventions.md)：制品标识、状态分类、证据与失效规则；生成或修订任何制品前核对。
 - [裁剪](tailoring.md)：活动组织、并行边界和 A10 记录要求；首次采用、组织方式或团队/风险变化时。
-- [制品目录](artifact-catalog.md)：A01–A28 的规范、模板与教学例入口；选择或填写制品时。机器可读清单见[制品索引](artifact-index.json)，供文档检查器校验编号与三类文档齐备。
+- [制品目录](artifact-catalog.md)：A01–A29 的规范、模板与教学例入口；选择或填写制品时。机器可读清单见[制品索引](artifact-index.json)，供文档检查器校验编号与三类文档齐备。
 - 实践：对应操作开始前读相应实践，含[初始化](practices/initialization.md)、[提示词协议](practices/prompt-protocol.md)、[交接](practices/context.md)、[变更](practices/change-control.md)、[验证规则](practices/verification.md)。
 - 活动与阶段：进入对应活动或阶段时读相应指南，含四项活动（[构建](stages/01-prototype-building.md)、[重构](stages/02-prototype-refactoring.md)、[审查](stages/03-prototype-review.md)、[精修](stages/04-prototype-polishing.md)）与[独立验收](stages/05-verification.md)、[发布](stages/06-release.md)、[维护](stages/07-maintenance.md)。
 - [教学上下文](../examples/focustask/docs/context.md)：虚构教学输入；练习填写与检查方法时。

@@ -36,3 +36,4 @@
 | A26 | [同类问题排查与修复记录](artifacts/A26-pattern-remediation.md) | 发现缺陷、验收失败或维护问题时必要；未发现其他实例也记录范围、方法与限制 | `evidence/pattern-remediation.md` |
 | A27 | [视觉与交互设计交付包](artifacts/A27-design-delivery.md) | 有UI且开展精修时必要；无UI不生成但保留A05；设计来源、版本或交付内容变化时更新 | `docs/design/{特性}/delivery.md` |
 | A28 | [模块蓝图](artifacts/A28-module-blueprint.md) | 需要为业务模块建立整体上下文时必要；模块边界、能力地图、跨模块关系或功能清单变化时更新 | `docs/modules/{模块}/module-blueprint.md` |
+| A29 | [系统蓝图](artifacts/A29-system-blueprint.md) | 每个项目需要系统级上下文时必要；系统边界、模块地图、跨模块旅程或外部关系变化时更新 | `docs/system-blueprint.md` |

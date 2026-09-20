@@ -1,6 +1,16 @@
 # A29 系统蓝图建设计划
 
-> 计划版本：1.0 · 目标模型版本：0.5 · 状态：待执行
+> 计划版本：1.0 · 目标模型版本：0.5 · 状态：已完成
+
+## 12. 实际执行记录
+
+- A29 规范、模板、FocusTask 教学例、索引和目录已建立。
+- 检查器已扩展到 A01–A29；A28/A29 使用 6 类提示词，A01–A27 保持原有 9 类提示词。
+- A29 已接入 A28、A03、原型构建入口、README、总纲、约定和执行状态。
+- Mermaid 源码已更新并重新导出 4 组 SVG/PNG；`artifacts.png` 已完成视觉核对，A29 系统蓝图和 A29→A28 关系可读。
+- `node scripts/check-docs.mjs`：退出 0，`files: 119`、`localLinks: 386`、`artifacts: 29`、`activities: 4`、`stages: 3`、`errors: []`。
+- `node --test scripts/check-docs.test.mjs`：44 项通过，0 失败/跳过。
+- `git diff --check`：退出 0。
 >
 > 用途：为每个项目建立一份系统级上下文，连接项目目标、系统模块、跨模块流程、外部系统和 A28 模块蓝图，作为 AI 进入模块和功能实现前的全局 handoff 入口。
 

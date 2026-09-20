@@ -90,10 +90,13 @@ if (indexText !== null) {
   } catch { errors.push('model/artifact-index.json: expected a JSON array'); }
 }
 const promptTypes = ['START', 'CLARIFY', 'SELECT', 'GENERATE', 'REVIEW', 'REVISE', 'VERIFY', 'HANDOFF', 'FAILURE'];
-const artifactPromptTypes = { A28: ['START', 'GENERATE', 'CLARIFY', 'REVIEW', 'REVISE', 'HANDOFF'] };
-const expectedIds = Array.from({ length: 28 }, (_, i) => `A${String(i + 1).padStart(2, '0')}`);
+const artifactPromptTypes = {
+  A28: ['START', 'GENERATE', 'CLARIFY', 'REVIEW', 'REVISE', 'HANDOFF'],
+  A29: ['START', 'GENERATE', 'CLARIFY', 'REVIEW', 'REVISE', 'HANDOFF'],
+};
+const expectedIds = Array.from({ length: 29 }, (_, i) => `A${String(i + 1).padStart(2, '0')}`);
 const ids = new Set(artifacts.map((item) => item?.id));
-if (artifacts.length !== 28 || ids.size !== 28 || expectedIds.some((id) => !ids.has(id))) errors.push('Expected 28 unique artifact types A01-A28');
+if (artifacts.length !== 29 || ids.size !== 29 || expectedIds.some((id) => !ids.has(id))) errors.push('Expected 29 unique artifact types A01-A29');
 for (const item of artifacts) {
   if (!item || typeof item !== 'object' || typeof item.id !== 'string' || typeof item.title !== 'string') {
     errors.push('Invalid artifact entry: id and title are required');
